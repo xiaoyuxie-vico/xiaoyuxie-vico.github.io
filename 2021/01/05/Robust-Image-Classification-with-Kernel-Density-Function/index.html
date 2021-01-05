@@ -7,7 +7,7 @@
 
     
 
-    <title>Robust Image Classification with Kernel Density Function | Machine Learning, Deep Learning, Computer Vision</title>
+    <title>Robust and Explainable Image Classification Based on Logits Kernel Density Estimation | Machine Learning, Deep Learning, Computer Vision</title>
     <meta name="author" content="Xiaoyu Xie">
     
     <meta name="description" content="Track The past. Organize the present. Design the future.">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="Robust Image Classification with Kernel Density Function"/>
+    <meta property="og:title" content="Robust and Explainable Image Classification Based on Logits Kernel Density Estimation"/>
     <meta property="og:site_name" content="Xiaoyu Xie&#39;s Blog"/>
 
     
@@ -197,12 +197,12 @@
             <div class="article-title">
                 
     
-        <h1>Robust Image Classification with Kernel Density Function</h1>
+        <h1>Robust and Explainable Image Classification Based on Logits Kernel Density Estimation</h1>
     
 
 
             </div>
-            <time class="pink-link-context" datetime="2021-01-05T08:39:04.000Z"><a href="/2021/01/05/Robust-Image-Classification-with-Kernel-Density-Function/">2021-01-05</a></time>
+            <time class="pink-link-context" datetime="2021-01-05T10:51:00.000Z"><a href="/2021/01/05/Robust-Image-Classification-with-Kernel-Density-Function/">2021-01-05</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -212,6 +212,8 @@
             
     <div class="tags-row">
         
+            <a href="/tags/Project/" class="chip pink lighten-1">Project</a>
+        
             <a href="/tags/Deep-Learning/" class="chip pink lighten-1">Deep Learning</a>
         
             <a href="/tags/Computer-Vision/" class="chip pink lighten-1">Computer Vision</a>
@@ -220,13 +222,51 @@
 
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Project-Description"><span class="section table-of-contents-text">Project Description</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Dataset"><span class="section table-of-contents-text">Dataset</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Model-Training"><span class="section table-of-contents-text">Model Training</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Error-analysis-test-set"><span class="section table-of-contents-text">Error analysis (test set)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Distribution-analysis"><span class="section table-of-contents-text">Distribution analysis</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Analyze-the-robustness-of-classi%EF%AC%81cation-using-logits-kernel-density-estimation"><span class="section table-of-contents-text">Analyze the robustness of classiﬁcation using logits kernel density estimation</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Conclusion"><span class="section table-of-contents-text">Conclusion</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#More-resources"><span class="section table-of-contents-text">More resources</span></a></li></ol>
 </div>
 
 
             <div class="entry pink-link-context">
-                <p><img src="/images/20210105/image_classification_KDE.jpg"></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/xiaoyuxie-vico/ExplainableAI">Github Link</a></p>
+                <h1 id="Project-Description"><a href="#Project-Description" class="headerlink" title="Project Description"></a>Project Description</h1><p>For a classiﬁcation problem, we generally use a softmax function to get the predicted score. Although a softmax function can normalize the results, it cannot be used to identify unknown class samples and hard samples. A low predict score for a certain class does not mean an unknown class or a hard sample. In addition, it is hard to understand which part of images have a strong inﬂuence on the ﬁnal prediction, especially for these hard samples. So, I used Gradientweighted Class Activation Mapping (Grad-CAM) to explain the results.</p>
+<a id="more"></a>
+
+<p>There are two contributions in this ﬁnal project. First, I proposed a robust classiﬁcation approach to identify samples from unknown classes and hard samples. Second, I used Grad-CAM to visualization the attention of neural networks to make the results more explainable. Speciﬁcally, I ﬁnd that apparent misclassiﬁcations tend to have a larger attention area and understandable misclassiﬁcations tend to have a smaller attention are.</p>
+<h1 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h1><p>The cat and dog dataset used in this project is downloaded from <a target="_blank" rel="noopener" href="https://www.kaggle.com/tongpython/cat-and-dog">Kaggel</a>. Several images are shown in the below:</p>
+<p>The data augmentation in the training set includes random rotation (20), random crop scale (0.8, 1.0), Random Horizontal Flip, Random Aﬃne, Normalization. The test set does not use data augmentation.</p>
+<p>The batch size is 32 and the dataset will be shuﬄed.</p>
+<h1 id="Model-Training"><a href="#Model-Training" class="headerlink" title="Model Training"></a>Model Training</h1><p>Detailed information about model training can be found in <a target="_blank" rel="noopener" href="https://github.com/xiaoyuxie-vico/ExplainableAI/blob/master/trainer_cat_dog.ipynb">trainer_cat_dog.ipynb</a>.</p>
+<p>The accuracy in the training set and the test set are 0.9809 and 0.9812 respectively.</p>
+<h1 id="Error-analysis-test-set"><a href="#Error-analysis-test-set" class="headerlink" title="Error analysis (test set)"></a>Error analysis (test set)</h1><p>Althought the accuracy is high (more than 0.98), the trained model still can make some errors. True label is cat, but predicted label is dog and the score is high.</p>
+<p><img src="1.png"></p>
+<p>True label is dog, but predicted label is cat and the score is high.</p>
+<p><img src="2.png"></p>
+<p>The Grad-CAM results for these wrong predicted images are:</p>
+<p><img src="3.png"></p>
+<p>We can ﬁnd that: </p>
+<ol>
+<li> Apparent misclassiﬁcations tend to have a larger attention area; </li>
+<li>Understandable misclassiﬁcations tend to have a smaller attention area;</li>
+</ol>
+<h1 id="Distribution-analysis"><a href="#Distribution-analysis" class="headerlink" title="Distribution analysis"></a>Distribution analysis</h1><p>To solve the problem about apparent misclassiﬁcations and reduce the number of understandable misclassiﬁcations, we want to analyze the distribution of logits and scores for diﬀerent classes.</p>
+<p>Below, we analyzed the distribution of logits for cat and dog class. The results show that the absolute value for most of logits are in [2, 7], which means that in our training set it is rarely for the model to make a prediction with a lower logits (around 0) or a higher logit (greater than 7 or less than -7). Thus, it is unresonable to believe the prediction if model give such logits. This is the key observation in this project.</p>
+<p><img src="4.png"></p>
+<p>Kernel density estimation for logits is:</p>
+<p><img src="5.png"></p>
+<h1 id="Analyze-the-robustness-of-classiﬁcation-using-logits-kernel-density-estimation"><a href="#Analyze-the-robustness-of-classiﬁcation-using-logits-kernel-density-estimation" class="headerlink" title="Analyze the robustness of classiﬁcation using logits kernel density estimation"></a>Analyze the robustness of classiﬁcation using logits kernel density estimation</h1><p>It is common and unavoidable for a model to predict some unkonwn images, including images from unknown classes. Thus, we downloaded three kind of images including a human face, landscape, and apples, which are shown in the below. All of these classes are not included in the training set. We want our model give a low score for these images. But we can ﬁnd that for the ﬁrst and third image the model give a high score, which means the model make some serious misclassiﬁcations.</p>
+<p>For the fourth and ﬁveth image, even though they are also come from the Internet, the model can give a good prediciton and high scores. Thus, the trained model have a good generalization.</p>
+<p>If we see the average of density, we can ﬁnd that if we use a thershold of 0.04, these wrong predicitons can be alleviated. This is because our model has not “seen” these classes, it will give a low logits for these images. Then we can use this conclusion to identify the unseen classes images and improve the robustness of the model.</p>
+<p><img src="6.png"></p>
+<p>In the above, we test some images from the Internet. Now, we will analyze the test set. The results are shown below. These results also show that a threshold of 0.04 for the average of density is good enough to elimate the wrong predictions.</p>
+<p><img src="7.png"></p>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><ul>
+<li>The proposed image classiﬁcation approach can identify data out of training set based on logits kernel density estimation; </li>
+<li>The proposed image classiﬁcation approach can help to improve accuracy by identifying data with low density; </li>
+<li>The proposed approach is explainable and can be understand visually;</li>
+</ul>
+<h1 id="More-resources"><a href="#More-resources" class="headerlink" title="More resources"></a>More resources</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiaoyuxie-vico/ExplainableAI">Github</a></li>
+<li><a target="_blank" rel="noopener" href="https://youtu.be/cIIOdQHTQu4">Youtube Explanation</a></li>
+</ul>
 
                 
 
