@@ -7,7 +7,7 @@
 
     
 
-    <title>Notes | Machine Learning, Deep Learning, Computer Vision</title>
+    <title>CS61B-Week2-Notes | Machine Learning, Deep Learning, Computer Vision</title>
     <meta name="author" content="Xiaoyu Xie">
     
     <meta name="description" content="Track The past. Organize the present. Design the future.">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="CS61B-Week2-Notes"/>
     <meta property="og:site_name" content="Xiaoyu Xie&#39;s Blog"/>
 
     
@@ -209,42 +209,89 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
         <span class="breadcrumb">Current page(Categories)</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/Notes/">Notes</a>
+
 
         
-            <a class="breadcrumb" href="/categories/Notes/">Notes</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>CS61B-Week2-Notes</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2021-04-24T14:26:44.000Z"><a href="/2021/04/24/CS61B-Week2/">2021-04-24</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2021/04/24/CS61B-Week2/" class="collection-item grey-text text-darken-1">
-                <time datetime="2021-04-24T14:26:44.000Z">2021-04-24</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                CS61B-Week2-Notes
-            </a>
+            <a href="/tags/Algorithm/" class="chip pink lighten-1">Algorithm</a>
         
-            <a href="/2021/02/17/Machine-Learning-Deep-Learning-for-Partial-Differential-Equations-PDEs-Solvers/" class="collection-item grey-text text-darken-1">
-                <time datetime="2021-02-17T03:38:03.000Z">2021-02-17</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                Machine Learning / Deep Learning for Partial Differential Equations (PDEs) Solvers
-            </a>
+            <a href="/tags/Online-Course/" class="chip pink lighten-1">Online Course</a>
         
-            <a href="/2021/02/14/notes-ML-FM/" class="collection-item grey-text text-darken-1">
-                <time datetime="2021-02-14T12:50:17.000Z">2021-02-14</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                Applications of Machine Learning for Fluid Mechanics
-            </a>
+            <a href="/tags/Data-structure/" class="chip pink lighten-1">Data structure</a>
+        
+            <a href="/tags/Notes/" class="chip pink lighten-1">Notes</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Week-2-Notes"><span class="section table-of-contents-text">Week 2 - Notes</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Exercise-B-Level"><span class="section table-of-contents-text">Exercise B Level</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="Week-2-Notes"><a href="#Week-2-Notes" class="headerlink" title="Week 2 - Notes"></a>Week 2 - Notes</h1><h2 id="Exercise-B-Level"><a href="#Exercise-B-Level" class="headerlink" title="Exercise B Level"></a>Exercise B Level</h2><ol>
+<li>Starting from the copy of SLList.java provided to you in the lecture code repository, implement the method <code>deleteFirst</code>, which deletes the first element in your SLList. Don’t forget to maintain the three invariants discussed above.</li>
+<li>Starting from the copy of SLList.java provided to you in the lecture code repository, implement a second constructor that takes in an array of integers, and creates an SLList with those integers. Again, remember to maintain your invariants.</li>
+</ol>
+<a id="more"></a>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Code for the question 1 and 2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> edu.princeton.cs.algs4.In;</span><br><span class="line"></span><br><span class="line"><span class="comment">//import java.util.Arrays;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Using sentinel to replace the first</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SLList2</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">IntNode</span> </span>&#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> item;</span><br><span class="line">        <span class="keyword">public</span> IntNode next;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">IntNode</span><span class="params">(<span class="keyword">int</span> i, IntNode n)</span> </span>&#123;</span><br><span class="line">            item = i;</span><br><span class="line">            next = n;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> IntNode sentinel;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SLList2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// initialize with no inputs</span></span><br><span class="line">        sentinel = <span class="keyword">new</span> IntNode(<span class="number">63</span>, <span class="keyword">null</span>);</span><br><span class="line">        size = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SLList2</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// initialize with a integer</span></span><br><span class="line">        sentinel = <span class="keyword">new</span> IntNode(<span class="number">63</span>, <span class="keyword">null</span>);</span><br><span class="line">        sentinel.next = <span class="keyword">new</span> IntNode(x, <span class="keyword">null</span>);</span><br><span class="line">        size = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SLList2</span><span class="params">(<span class="keyword">int</span>[] x)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// initialize with an array</span></span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">        sentinel = <span class="keyword">new</span> IntNode(<span class="number">63</span>, <span class="keyword">null</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; x.length; i++) &#123;</span><br><span class="line">            <span class="comment">// get the item from array inversely</span></span><br><span class="line">            sentinel.next = <span class="keyword">new</span> IntNode(x[x.length-i-<span class="number">1</span>], <span class="keyword">null</span>);</span><br><span class="line">            size += <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Add the first item in the list */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addFirst</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        sentinel.next = <span class="keyword">new</span> IntNode(x, sentinel.next);</span><br><span class="line">        size += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Returns the first item in the list */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getFirst</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> sentinel.next.item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Returns the last item in the list</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> the last item</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getLast</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (sentinel.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> sentinel.item;</span><br><span class="line">        &#125;</span><br><span class="line">        sentinel = sentinel.next;</span><br><span class="line">        <span class="keyword">return</span> getLast();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Add an item to a list</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args int x</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addLast</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        size += <span class="number">1</span>;</span><br><span class="line">        IntNode p = sentinel;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* Advance p to the end of the list. */</span></span><br><span class="line">        <span class="keyword">while</span> (p.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            p = p.next;</span><br><span class="line">        &#125;</span><br><span class="line">        p.next = <span class="keyword">new</span> IntNode(x, <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> size;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">deleteFirst</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">/* sentinel.next or sentinel.next.next</span></span><br><span class="line"><span class="comment">        could be null when size == 0 */</span></span><br><span class="line">        <span class="keyword">if</span> (sentinel.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        IntNode deleteNode = sentinel.next;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (sentinel.next.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">            sentinel.next = <span class="keyword">new</span> IntNode(-<span class="number">1</span>, <span class="keyword">null</span>);</span><br><span class="line">            <span class="keyword">return</span> deleteNode.item;</span><br><span class="line">        &#125;</span><br><span class="line">        sentinel.next = sentinel.next.next;</span><br><span class="line">        <span class="keyword">return</span> deleteNode.item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/** Test the constructor that takes in an array of integers*/</span></span><br><span class="line">        <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">        SLList2 L = <span class="keyword">new</span> SLList2(arr);</span><br><span class="line">        System.out.println(L.getFirst());</span><br><span class="line">      </span><br><span class="line">        SLList2 L = <span class="keyword">new</span> SLList2(<span class="number">1</span>);</span><br><span class="line">        L.addFirst(<span class="number">2</span>);</span><br><span class="line">        System.out.println(L.getFirst());</span><br><span class="line">        L.addFirst(<span class="number">3</span>);</span><br><span class="line">        L.deleteFirst();</span><br><span class="line">        System.out.print(<span class="string">&quot;Final: &quot;</span>);</span><br><span class="line">        System.out.println(L.getFirst());</span><br><span class="line"><span class="comment">//        L.addLast(100);</span></span><br><span class="line"><span class="comment">//        System.out.println(L.getLast());</span></span><br><span class="line"><span class="comment">//        System.out.println(L.size());</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2021/02/17/Machine-Learning-Deep-Learning-for-Partial-Differential-Equations-PDEs-Solvers/" rel="next" title="Machine Learning / Deep Learning for Partial Differential Equations (PDEs) Solvers">
+    Next: Machine Learning / Deep Learning for Partial Differential Equations (PDEs) Solvers
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
