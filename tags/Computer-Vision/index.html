@@ -7,7 +7,7 @@
 
     
 
-    <title>Computer vision | Machine Learning, Deep Learning, Computer Vision</title>
+    <title>Computer Vision | Machine Learning, Deep Learning, Computer Vision</title>
     <meta name="author" content="Xiaoyu Xie">
     
     <meta name="description" content="Track The past. Organize the present. Design the future.">
@@ -64,10 +64,26 @@
                     </li>
                 
                     <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            Categories
+                        </a>
+                    </li>
+                
+                    <li>
                         <a class="menu-about " href="/about" >
                             <i class="fa fa-user "></i>
                             
                             About
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            Search
                         </a>
                     </li>
                 
@@ -108,10 +124,26 @@
             </li>
         
             <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    Categories
+                </a>
+            </li>
+        
+            <li class="no-padding">
                 <a class="waves-effect menu-about " href="/about" >
                     <i class="fa fa-user "></i>
                     
                     About
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    Search
                 </a>
             </li>
         
@@ -123,16 +155,24 @@
             
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/Notes/">
-                    Notes <span class="right">3</span></a>
+                <a class="no-padding" href="/categories/Class-notes/">
+                    Class-notes <span class="right">1</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/Research/">
-                    Research <span class="right">1</span></a>
+                <a class="no-padding" href="/categories/Notes/">
+                    Notes <span class="right">2</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Course-project/">
+                    Course-project <span class="right">2</span></a>
                 </a>
             </li>
 
@@ -169,7 +209,7 @@
         
 
         
-            <a class="breadcrumb" href="/tags/Computer-vision/">Computer vision</a>
+            <a class="breadcrumb" href="/tags/Computer-Vision/">Computer Vision</a>
         
     </div>
 </nav>
@@ -178,10 +218,10 @@
 
     <div class="collection mt-0">
         
-            <a href="/2021/04/25/Survey-vision-transformer/" class="collection-item grey-text text-darken-1">
-                <time datetime="2021-04-25T05:02:11.000Z">2021-04-25</time>
+            <a href="/2021/01/05/Robust-Image-Classification-with-Kernel-Density-Function/" class="collection-item grey-text text-darken-1">
+                <time datetime="2021-01-05T10:51:00.000Z">2021-01-05</time>
                 <span>&nbsp;&nbsp;&nbsp;</span>
-                A Survey for Vision Transformers (By Mar. 2021)
+                Robust and Explainable Image Classification Based on Logits Kernel Density Estimation
             </a>
         
     </div>
@@ -406,9 +446,7 @@
                                     index_title = data_title.indexOf(keyword);
                                     index_content = data_content.indexOf(keyword);
                                     if (index_title < 0 && index_content < 0) {
-                                        isMatch = false;
-                                    } else {
-                                        if (index_content < 0) {
+                                        isMa                             if (index_content < 0) {
                                             index_content = 0;
                                         }
                                         if (i == 0) {
