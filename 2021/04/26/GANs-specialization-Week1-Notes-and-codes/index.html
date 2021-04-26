@@ -1,0 +1,776 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>GANs specialization Week1: Notes and codes | Machine Learning, Deep Learning, Computer Vision</title>
+    <meta name="author" content="Xiaoyu Xie">
+    
+    <meta name="description" content="Track The past. Organize the present. Design the future.">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="GANs specialization Week1: Notes and codes"/>
+    <meta property="og:site_name" content="Xiaoyu Xie&#39;s Blog"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="Xiaoyu Xie&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">Xiaoyu Xie&#39;s Blog</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            Home
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            Archives
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            Categories
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            About
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            Search
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://vico-image.oss-cn-hongkong.aliyuncs.com/avatar.jpg" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">Xiaoyu Xie</p>
+                        <p class="desc">Deep Learning</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    Home
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    Archives
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    Categories
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    About
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    Search
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Class-notes/">
+                    Class-notes <span class="right">2</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Notes/">
+                    Notes <span class="right">2</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Course-project/">
+                    Course-project <span class="right">2</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">Search</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">Current page(Categories)</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/Class-notes/">Class notes</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>GANs specialization Week1: Notes and codes</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2021-04-26T04:30:40.000Z"><a href="/2021/04/26/GANs-specialization-Week1-Notes-and-codes/">2021-04-26</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Notes/" class="chip pink lighten-1">Notes</a>
+        
+            <a href="/tags/Online-course/" class="chip pink lighten-1">Online course</a>
+        
+            <a href="/tags/GANs/" class="chip pink lighten-1">GANs</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Notes"><span class="section table-of-contents-text">Notes</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Week-1-Assignment-Your-First-GAN"><span class="section table-of-contents-text">Week 1 Assignment: Your First GAN</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Goal"><span class="section table-of-contents-text">Goal</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Learning-Objectives"><span class="section table-of-contents-text">Learning Objectives</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Getting-Started"><span class="section table-of-contents-text">Getting Started</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#MNIST-Dataset"><span class="section table-of-contents-text">MNIST Dataset</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#Tensor"><span class="section table-of-contents-text">Tensor</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#Batches"><span class="section table-of-contents-text">Batches</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Generator"><span class="section table-of-contents-text">Generator</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Noise"><span class="section table-of-contents-text">Noise</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Discriminator"><span class="section table-of-contents-text">Discriminator</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Training"><span class="section table-of-contents-text">Training</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p>This is week 1 notes for the first course (<a target="_blank" rel="noopener" href="https://www.coursera.org/learn/build-basic-generative-adversarial-networks-gans">Build Basic Generative Adversarial Networks (GANs)</a>)  in the <a target="_blank" rel="noopener" href="https://www.coursera.org/specializations/generative-adversarial-networks-gans">GANs specialization</a>. I actually leant a lot about some pratical things in doing the assignment, like how to set some hyperparameters and the usage of truncation to balance the diversity and quality.  I really like DeepLearning.AI’s courses. The lectures and assignments are always well-designed.</p>
+<a id="more"></a>
+
+<h1 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h1><ul>
+<li><p>Generator needs more time steps to train</p>
+<blockquote>
+<p> This can be a much harder task than discrimination. Typically, you will need the generator to take multiple steps to improve itself for every step the discriminator takes.</p>
+</blockquote>
+</li>
+<li><p>Noise vector 𝑧</p>
+<blockquote>
+<p> The noise vector 𝑧 has the important role of making sure the images generated from the same class 𝑦 don’t all look the same—think of it as a random seed. You generate it randomly, usually by sampling random numbers either between 0 and 1 uniformly, or from the normal distribution, which you can denote 𝑧 ~ 𝑁(0,1). The zero means the normal distribution has a mean of zero, and the 1 means that the normal distribution has a variance of 1.</p>
+</blockquote>
+<blockquote>
+<p>In reality, 𝑧 is usually larger than just 1 value to allow for more combinations of what 𝑧 could be. There’s no special number that determines what works, but 100 is standard. Some researchers might use a power of 2, like 128 or 512, but again, nothing special about the number itself, just that it’s large enough to contain a lot of possibilities. As a result, you would sample 𝑧 from that many different dimensions (constituting multiple normal distributions).</p>
+</blockquote>
+<blockquote>
+<p>Fun Fact: this is also called a spherical normal and denoted 𝑧 ~ 𝑁(0,𝐼) where the 𝐼 represents the identity matrix and means the variance is 1 in all dimensions.*</p>
+</blockquote>
+</li>
+<li><p>Truncation trick</p>
+<blockquote>
+<p>So now that you’re a bit familiar with noise vectors, here’s another cool concept that people use to tune their outputs. It’s called the truncation trick. I like to think of the truncation trick as a way of trading off fidelity (quality) and diversity in the samples. It works like this: when you randomly sample your noise vector 𝑧, you can choose to keep that random 𝑧 or you can sample another one.</p>
+</blockquote>
+<blockquote>
+<p>Why would you want to sample another one?</p>
+</blockquote>
+<blockquote>
+<p>Well, since I’m sampling 𝑧 from a normal distribution, my model will see more of those 𝑧 values within a standard deviation from the mean than those at the tails of the distribution—and this happens during training. This means that while the model is training, it’s likely to be familiar with certain noise vectors and as a result model those areas coming from familiar noise vector regions. In these areas, my model will likely have much more realistic results, but nothing too funky, it’s not taking as many risks in those regions mapped from those familiar noise vectors. This is the trade-off between fidelity (realistic, high quality images) and diversity (variety in images).</p>
+</blockquote>
+<p><img src="image-20210426120534698.png" alt="image-20210426120534698"></p>
+<blockquote>
+<p>Image Credit: Modelica</p>
+</blockquote>
+<blockquote>
+<p>What the truncation trick does is resamples the noise vector 𝑧 until it falls within some bounds of the normal distribution. In fact, it samples 𝑧 from a truncated normal distribution where the tails are cut off at different values (red line in graph is truncated normal, blue is original). You can tune these values and thus tune fidelity/diversity. Recall that having a lot of fidelity is not always the goal—one failure mode of that is that you get one really real image but nothing else (no diversity), and that’s not very interesting or successful from a model that’s supposed to model the realm of all possible human faces or that of all possible coconuts—including that of a cat pouncing after a flying coconut (but with extremely low probability).</p>
+</blockquote>
+<blockquote>
+<p><strong>truncation</strong>: The positive truncation value. 1 is low truncation (high diversity) and 0 is all truncation except for the mean (high quality/fidelity). A lower value increases fidelity and decreases diversity, and vice versa.</p>
+</blockquote>
+<p><img src="image-20210426120448703.png" alt="image-20210426120448703"></p>
+</li>
+<li><p>Playing with code</p>
+<p>interpolation</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">z_dim = Gs.input_shape[<span class="number">1</span>]</span><br><span class="line">first_noise = rnd.randn(<span class="number">1</span>, z_dim)</span><br><span class="line">second_noise = rnd.randn(<span class="number">1</span>, z_dim)</span><br><span class="line">percent_first_noise = np.linspace(<span class="number">0</span>, <span class="number">1</span>, n_interpolation)[:, <span class="literal">None</span>]</span><br><span class="line">interpolation_noise = first_noise * percent_first_noise + second_noise * (<span class="number">1</span> - percent_first_noise)</span><br></pre></td></tr></table></figure></li>
+<li><p>Random vector</p>
+<blockquote>
+<p>Note that whenever you create a new tensor using torch.ones, torch.zeros, or torch.randn, you either need to create it on the target device, e.g. torch.ones(3, 3, device=device), or move it onto the target device using torch.ones(3, 3).to(device). You do not need to do this if you’re creating a tensor by manipulating another tensor or by using a variation that defaults the device to the input, such as torch.ones_like. In general, use torch.ones_like and torch.zeros_like instead of torch.ones or torch.zeros where possible.</p>
+</blockquote>
+</li>
+<li><p>HW</p>
+<blockquote>
+<p>Since the generator is needed when calculating the discriminator’s loss, you will need to call .detach() on the generator result to ensure that only the discriminator is updated!</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="Week-1-Assignment-Your-First-GAN"><a href="#Week-1-Assignment-Your-First-GAN" class="headerlink" title="Week 1 Assignment: Your First GAN"></a>Week 1 Assignment: Your First GAN</h1><h3 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h3><p>In this notebook, you’re going to create your first generative adversarial network (GAN) for this course! Specifically, you will build and train a GAN that can generate hand-written images of digits (0-9). You will be using PyTorch in this specialization, so if you’re not familiar with this framework, you may find the <a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/index.html">PyTorch documentation</a> useful. The hints will also often include links to relevant documentation.</p>
+<h3 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h3><ol>
+<li>  Build the generator and discriminator components of a GAN from scratch.</li>
+<li>  Create generator and discriminator loss functions.</li>
+<li>  Train your GAN and visualize the generated images.</li>
+</ol>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>You will begin by importing some useful packages and the dataset you will use to build and train your GAN. You are also provided with a visualizer function to help you investigate the images your GAN will create.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch <span class="keyword">import</span> nn</span><br><span class="line"><span class="keyword">from</span> tqdm.auto <span class="keyword">import</span> tqdm</span><br><span class="line"><span class="keyword">from</span> torchvision <span class="keyword">import</span> transforms</span><br><span class="line"><span class="keyword">from</span> torchvision.datasets <span class="keyword">import</span> MNIST <span class="comment"># Training dataset</span></span><br><span class="line"><span class="keyword">from</span> torchvision.utils <span class="keyword">import</span> make_grid</span><br><span class="line"><span class="keyword">from</span> torch.utils.data <span class="keyword">import</span> DataLoader</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">torch.manual_seed(<span class="number">0</span>) <span class="comment"># Set for testing purposes, please do not change!</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_tensor_images</span>(<span class="params">image_tensor, num_images=<span class="number">25</span>, size=(<span class="params"><span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span></span>)</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Function for visualizing images: Given a tensor of images, number of images, and</span></span><br><span class="line"><span class="string">    size per image, plots and prints the images in a uniform grid.</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    image_unflat = image_tensor.detach().cpu().view(-<span class="number">1</span>, *size)</span><br><span class="line">    image_grid = make_grid(image_unflat[:num_images], nrow=<span class="number">5</span>)</span><br><span class="line">    plt.imshow(image_grid.permute(<span class="number">1</span>, <span class="number">2</span>, <span class="number">0</span>).squeeze())</span><br><span class="line">    plt.show()</span><br></pre></td></tr></table></figure>
+<h4 id="MNIST-Dataset"><a href="#MNIST-Dataset" class="headerlink" title="MNIST Dataset"></a>MNIST Dataset</h4><p>The training images your discriminator will be using is from a dataset called <a target="_blank" rel="noopener" href="http://yann.lecun.com/exdb/mnist/">MNIST</a>. It contains 60,000 images of handwritten digits, from 0 to 9, like these:</p>
+<p><img src="MnistExamples.png" alt="MNIST Digits"></p>
+<p>You may notice that the images are quite pixelated – this is because they are all only 28 x 28! The small size of its images makes MNIST ideal for simple training. Additionally, these images are also in black-and-white so only one dimension, or “color channel”, is needed to represent them (more on this later in the course).</p>
+<h4 id="Tensor"><a href="#Tensor" class="headerlink" title="Tensor"></a>Tensor</h4><p>You will represent the data using <a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/tensors.html">tensors</a>. Tensors are a generalization of matrices: for example, a stack of three matrices with the amounts of red, green, and blue at different locations in a 64 x 64 pixel image is a tensor with the shape 3 x 64 x 64.</p>
+<p>Tensors are easy to manipulate and supported by <a target="_blank" rel="noopener" href="https://pytorch.org/">PyTorch</a>, the machine learning library you will be using. Feel free to explore them more, but you can imagine these as multi-dimensional matrices or vectors!</p>
+<h4 id="Batches"><a href="#Batches" class="headerlink" title="Batches"></a>Batches</h4><p>While you could train your model after generating one image, it is extremely inefficient and leads to less stable training. In GANs, and in machine learning in general, you will process multiple images per training step. These are called batches.</p>
+<p>This means that your generator will generate an entire batch of images and receive the discriminator’s feedback on each before updating the model. The same goes for the discriminator, it will calculate its loss on the entire batch of generated images as well as on the reals before the model is updated.</p>
+<h2 id="Generator"><a href="#Generator" class="headerlink" title="Generator"></a>Generator</h2><p>The first step is to build the generator component.</p>
+<p>You will start by creating a function to make a single layer/block for the generator’s neural network. Each block should include a <a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.Linear.html">linear transformation</a> to map to another shape, a <a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm1d.html">batch normalization</a> for stabilization, and finally a non-linear activation function (you use a <a target="_blank" rel="noopener" href="https://pytorch.org/docs/master/generated/torch.nn.ReLU.html">ReLU here</a>) so the output can be transformed in complex ways. You will learn more about activations and batch normalization later in the course.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C1 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="comment"># GRADED FUNCTION: get_generator_block</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_generator_block</span>(<span class="params">input_dim, output_dim</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Function for returning a block of the generator&#x27;s neural network</span></span><br><span class="line"><span class="string">    given input and output dimensions.</span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">        input_dim: the dimension of the input vector, a scalar</span></span><br><span class="line"><span class="string">        output_dim: the dimension of the output vector, a scalar</span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">        a generator neural network layer, with a linear transformation </span></span><br><span class="line"><span class="string">          followed by a batch normalization and then a relu activation</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> nn.Sequential(</span><br><span class="line">        <span class="comment"># Hint: Replace all of the &quot;None&quot; with the appropriate dimensions.</span></span><br><span class="line">        <span class="comment"># The documentation may be useful if you&#x27;re less familiar with PyTorch:</span></span><br><span class="line">        <span class="comment"># https://pytorch.org/docs/stable/nn.html.</span></span><br><span class="line">        <span class="comment">#### START CODE HERE ####</span></span><br><span class="line">        nn.Linear(input_dim, output_dim),</span><br><span class="line">        nn.BatchNorm1d(output_dim),</span><br><span class="line">        nn.ReLU(inplace=<span class="literal">True</span>),</span><br><span class="line">        <span class="comment">#### END CODE HERE ####</span></span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Verify the generator block function</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_gen_block</span>(<span class="params">in_features, out_features, num_test=<span class="number">1000</span></span>):</span></span><br><span class="line">    block = get_generator_block(in_features, out_features)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Check the three parts</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">len</span>(block) == <span class="number">3</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">type</span>(block[<span class="number">0</span>]) == nn.Linear</span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">type</span>(block[<span class="number">1</span>]) == nn.BatchNorm1d</span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">type</span>(block[<span class="number">2</span>]) == nn.ReLU</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Check the output shape</span></span><br><span class="line">    test_input = torch.randn(num_test, in_features)</span><br><span class="line">    test_output = block(test_input)</span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">tuple</span>(test_output.shape) == (num_test, out_features)</span><br><span class="line">    <span class="keyword">assert</span> test_output.std() &gt; <span class="number">0.55</span></span><br><span class="line">    <span class="keyword">assert</span> test_output.std() &lt; <span class="number">0.65</span></span><br><span class="line"></span><br><span class="line">test_gen_block(<span class="number">25</span>, <span class="number">12</span>)</span><br><span class="line">test_gen_block(<span class="number">15</span>, <span class="number">28</span>)</span><br><span class="line">print(<span class="string">&quot;Success!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Success!</code></pre>
+<p>Now you can build the generator class. It will take 3 values:</p>
+<ul>
+<li>  The noise vector dimension</li>
+<li>  The image dimension</li>
+<li>  The initial hidden dimension</li>
+</ul>
+<p>Using these values, the generator will build a neural network with 5 layers/blocks. Beginning with the noise vector, the generator will apply non-linear transformations via the block function until the tensor is mapped to the size of the image to be outputted (the same size as the real images from MNIST). You will need to fill in the code for final layer since it is different than the others. The final layer does not need a normalization or activation function, but does need to be scaled with a <a target="_blank" rel="noopener" href="https://pytorch.org/docs/master/generated/torch.nn.Sigmoid.html">sigmoid function</a>. </p>
+<p>Finally, you are given a forward pass function that takes in a noise vector and generates an image of the output dimension using your neural network.</p>
+<details>
+
+
+<summary>
+<font size="3" color="green">
+<b>Optional hints for <code><font size="4">Generator</font></code></b>
+</font>
+</summary>
+
+<ol>
+<li>The output size of the final linear transformation should be im_dim, but remember you need to scale the outputs between 0 and 1 using the sigmoid function.</li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/master/generated/torch.nn.Linear.html">nn.Linear</a> and <a target="_blank" rel="noopener" href="https://pytorch.org/docs/master/generated/torch.nn.Sigmoid.html">nn.Sigmoid</a> will be useful here. </details>
+
+
+
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C2 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="comment"># GRADED FUNCTION: Generator</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Generator</span>(<span class="params">nn.Module</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Generator Class</span></span><br><span class="line"><span class="string">    Values:</span></span><br><span class="line"><span class="string">        z_dim: the dimension of the noise vector, a scalar</span></span><br><span class="line"><span class="string">        im_dim: the dimension of the images, fitted for the dataset used, a scalar</span></span><br><span class="line"><span class="string">          (MNIST images are 28 x 28 = 784 so that is your default)</span></span><br><span class="line"><span class="string">        hidden_dim: the inner dimension, a scalar</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, z_dim=<span class="number">10</span>, im_dim=<span class="number">784</span>, hidden_dim=<span class="number">128</span></span>):</span></span><br><span class="line">        <span class="built_in">super</span>(Generator, self).__init__()</span><br><span class="line">        <span class="comment"># Build the neural network</span></span><br><span class="line">        self.gen = nn.Sequential(</span><br><span class="line">            get_generator_block(z_dim, hidden_dim),</span><br><span class="line">            get_generator_block(hidden_dim, hidden_dim * <span class="number">2</span>),</span><br><span class="line">            get_generator_block(hidden_dim * <span class="number">2</span>, hidden_dim * <span class="number">4</span>),</span><br><span class="line">            get_generator_block(hidden_dim * <span class="number">4</span>, hidden_dim * <span class="number">8</span>),</span><br><span class="line">            <span class="comment"># There is a dropdown with hints if you need them! </span></span><br><span class="line">            <span class="comment">#### START CODE HERE ####</span></span><br><span class="line">            nn.Linear(hidden_dim * <span class="number">8</span>, im_dim),</span><br><span class="line">            nn.Sigmoid()</span><br><span class="line">            <span class="comment">#### END CODE HERE ####</span></span><br><span class="line">        )</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">self, noise</span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Function for completing a forward pass of the generator: Given a noise tensor, </span></span><br><span class="line"><span class="string">        returns generated images.</span></span><br><span class="line"><span class="string">        Parameters:</span></span><br><span class="line"><span class="string">            noise: a noise tensor with dimensions (n_samples, z_dim)</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> self.gen(noise)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Needed for grading</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_gen</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Returns:</span></span><br><span class="line"><span class="string">            the sequential model</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> self.gen</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Verify the generator class</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_generator</span>(<span class="params">z_dim, im_dim, hidden_dim, num_test=<span class="number">10000</span></span>):</span></span><br><span class="line">    gen = Generator(z_dim, im_dim, hidden_dim).get_gen()</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Check there are six modules in the sequential part</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">len</span>(gen) == <span class="number">6</span></span><br><span class="line">    test_input = torch.randn(num_test, z_dim)</span><br><span class="line">    test_output = gen(test_input)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Check that the output shape is correct</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">tuple</span>(test_output.shape) == (num_test, im_dim)</span><br><span class="line">    <span class="keyword">assert</span> test_output.<span class="built_in">max</span>() &lt; <span class="number">1</span>, <span class="string">&quot;Make sure to use a sigmoid&quot;</span></span><br><span class="line">    <span class="keyword">assert</span> test_output.<span class="built_in">min</span>() &gt; <span class="number">0</span>, <span class="string">&quot;Make sure to use a sigmoid&quot;</span></span><br><span class="line">    <span class="keyword">assert</span> test_output.<span class="built_in">min</span>() &lt; <span class="number">0.5</span>, <span class="string">&quot;Don&#x27;t use a block in your solution&quot;</span></span><br><span class="line">    <span class="keyword">assert</span> test_output.std() &gt; <span class="number">0.05</span>, <span class="string">&quot;Don&#x27;t use batchnorm here&quot;</span></span><br><span class="line">    <span class="keyword">assert</span> test_output.std() &lt; <span class="number">0.15</span>, <span class="string">&quot;Don&#x27;t use batchnorm here&quot;</span></span><br><span class="line"></span><br><span class="line">test_generator(<span class="number">5</span>, <span class="number">10</span>, <span class="number">20</span>)</span><br><span class="line">test_generator(<span class="number">20</span>, <span class="number">8</span>, <span class="number">24</span>)</span><br><span class="line">print(<span class="string">&quot;Success!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Success!</code></pre>
+<h2 id="Noise"><a href="#Noise" class="headerlink" title="Noise"></a>Noise</h2><p>To be able to use your generator, you will need to be able to create noise vectors. The noise vector z has the important role of making sure the images generated from the same class don’t all look the same – think of it as a random seed. You will generate it randomly using PyTorch by sampling random numbers from the normal distribution. Since multiple images will be processed per pass, you will generate all the noise vectors at once.</p>
+<p>Note that whenever you create a new tensor using torch.ones, torch.zeros, or torch.randn, you either need to create it on the target device, e.g. <code>torch.ones(3, 3, device=device)</code>, or move it onto the target device using <code>torch.ones(3, 3).to(device)</code>. You do not need to do this if you’re creating a tensor by manipulating another tensor or by using a variation that defaults the device to the input, such as <code>torch.ones_like</code>. In general, use <code>torch.ones_like</code> and <code>torch.zeros_like</code> instead of <code>torch.ones</code> or <code>torch.zeros</code> where possible.</p>
+<details>
+
+
+<summary>
+<font size="3" color="green">
+<b>Optional hint for <code><font size="4">get_noise</font></code></b>
+</font>
+</summary>
+
+<ol>
+<li>You will probably find <a target="_blank" rel="noopener" href="https://pytorch.org/docs/master/generated/torch.randn.html">torch.randn</a> useful here.</details>
+
+
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C3 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="comment"># GRADED FUNCTION: get_noise</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_noise</span>(<span class="params">n_samples, z_dim, device=<span class="string">&#x27;cpu&#x27;</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Function for creating noise vectors: Given the dimensions (n_samples, z_dim),</span></span><br><span class="line"><span class="string">    creates a tensor of that shape filled with random numbers from the normal distribution.</span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">        n_samples: the number of samples to generate, a scalar</span></span><br><span class="line"><span class="string">        z_dim: the dimension of the noise vector, a scalar</span></span><br><span class="line"><span class="string">        device: the device type</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="comment"># <span class="doctag">NOTE:</span> To use this on GPU with device=&#x27;cuda&#x27;, make sure to pass the device </span></span><br><span class="line">    <span class="comment"># argument to the function you use to generate the noise.</span></span><br><span class="line">    <span class="comment">#### START CODE HERE ####</span></span><br><span class="line">    <span class="keyword">return</span> torch.randn(n_samples, z_dim, device=device)</span><br><span class="line">    <span class="comment">#### END CODE HERE ####</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Verify the noise vector function</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_get_noise</span>(<span class="params">n_samples, z_dim, device=<span class="string">&#x27;cpu&#x27;</span></span>):</span></span><br><span class="line">    noise = get_noise(n_samples, z_dim, device)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Make sure a normal distribution was used</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">tuple</span>(noise.shape) == (n_samples, z_dim)</span><br><span class="line">    <span class="keyword">assert</span> torch.<span class="built_in">abs</span>(noise.std() - torch.tensor(<span class="number">1.0</span>)) &lt; <span class="number">0.01</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">str</span>(noise.device).startswith(device)</span><br><span class="line"></span><br><span class="line">test_get_noise(<span class="number">1000</span>, <span class="number">100</span>, <span class="string">&#x27;cpu&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> torch.cuda.is_available():</span><br><span class="line">    test_get_noise(<span class="number">1000</span>, <span class="number">32</span>, <span class="string">&#x27;cuda&#x27;</span>)</span><br><span class="line">print(<span class="string">&quot;Success!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Success!</code></pre>
+<h2 id="Discriminator"><a href="#Discriminator" class="headerlink" title="Discriminator"></a>Discriminator</h2><p>The second component that you need to construct is the discriminator. As with the generator component, you will start by creating a function that builds a neural network block for the discriminator.</p>
+<p><em>Note: You use leaky ReLUs to prevent the “dying ReLU” problem, which refers to the phenomenon where the parameters stop changing due to consistently negative values passed to a ReLU, which result in a zero gradient. You will learn more about this in the following lectures!</em> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C4 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="comment"># GRADED FUNCTION: get_discriminator_block</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_discriminator_block</span>(<span class="params">input_dim, output_dim</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Discriminator Block</span></span><br><span class="line"><span class="string">    Function for returning a neural network of the discriminator given input and output dimensions.</span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">        input_dim: the dimension of the input vector, a scalar</span></span><br><span class="line"><span class="string">        output_dim: the dimension of the output vector, a scalar</span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">        a discriminator neural network layer, with a linear transformation </span></span><br><span class="line"><span class="string">          followed by an nn.LeakyReLU activation with negative slope of 0.2 </span></span><br><span class="line"><span class="string">          (https://pytorch.org/docs/master/generated/torch.nn.LeakyReLU.html)</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> nn.Sequential(</span><br><span class="line">        <span class="comment">#### START CODE HERE ####</span></span><br><span class="line">        nn.Linear(input_dim, output_dim),</span><br><span class="line">        nn.LeakyReLU(negative_slope=<span class="number">0.2</span>)</span><br><span class="line">        <span class="comment">#### END CODE HERE ####</span></span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Verify the discriminator block function</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_disc_block</span>(<span class="params">in_features, out_features, num_test=<span class="number">10000</span></span>):</span></span><br><span class="line">    block = get_discriminator_block(in_features, out_features)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Check there are two parts</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">len</span>(block) == <span class="number">2</span></span><br><span class="line">    test_input = torch.randn(num_test, in_features)</span><br><span class="line">    test_output = block(test_input)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Check that the shape is right</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">tuple</span>(test_output.shape) == (num_test, out_features)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Check that the LeakyReLU slope is about 0.2</span></span><br><span class="line">    <span class="keyword">assert</span> -test_output.<span class="built_in">min</span>() / test_output.<span class="built_in">max</span>() &gt; <span class="number">0.1</span></span><br><span class="line">    <span class="keyword">assert</span> -test_output.<span class="built_in">min</span>() / test_output.<span class="built_in">max</span>() &lt; <span class="number">0.3</span></span><br><span class="line">    <span class="keyword">assert</span> test_output.std() &gt; <span class="number">0.3</span></span><br><span class="line">    <span class="keyword">assert</span> test_output.std() &lt; <span class="number">0.5</span></span><br><span class="line"></span><br><span class="line">test_disc_block(<span class="number">25</span>, <span class="number">12</span>)</span><br><span class="line">test_disc_block(<span class="number">15</span>, <span class="number">28</span>)</span><br><span class="line">print(<span class="string">&quot;Success!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Success!</code></pre>
+<p>Now you can use these blocks to make a discriminator! The discriminator class holds 2 values:</p>
+<ul>
+<li>  The image dimension</li>
+<li>  The hidden dimension</li>
+</ul>
+<p>The discriminator will build a neural network with 4 layers. It will start with the image tensor and transform it until it returns a single number (1-dimension tensor) output. This output classifies whether an image is fake or real. Note that you do not need a sigmoid after the output layer since it is included in the loss function. Finally, to use your discrimator’s neural network you are given a forward pass function that takes in an image tensor to be classified.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C5 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="comment"># GRADED FUNCTION: Discriminator</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Discriminator</span>(<span class="params">nn.Module</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Discriminator Class</span></span><br><span class="line"><span class="string">    Values:</span></span><br><span class="line"><span class="string">        im_dim: the dimension of the images, fitted for the dataset used, a scalar</span></span><br><span class="line"><span class="string">            (MNIST images are 28x28 = 784 so that is your default)</span></span><br><span class="line"><span class="string">        hidden_dim: the inner dimension, a scalar</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, im_dim=<span class="number">784</span>, hidden_dim=<span class="number">128</span></span>):</span></span><br><span class="line">        <span class="built_in">super</span>(Discriminator, self).__init__()</span><br><span class="line">        self.disc = nn.Sequential(</span><br><span class="line">            get_discriminator_block(im_dim, hidden_dim * <span class="number">4</span>),</span><br><span class="line">            get_discriminator_block(hidden_dim * <span class="number">4</span>, hidden_dim * <span class="number">2</span>),</span><br><span class="line">            get_discriminator_block(hidden_dim * <span class="number">2</span>, hidden_dim),</span><br><span class="line">            <span class="comment"># Hint: You want to transform the final output into a single value,</span></span><br><span class="line">            <span class="comment">#       so add one more linear map.</span></span><br><span class="line">            <span class="comment">#### START CODE HERE ####</span></span><br><span class="line">            nn.Linear(hidden_dim, <span class="number">1</span>)</span><br><span class="line">            <span class="comment">#### END CODE HERE ####</span></span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">self, image</span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Function for completing a forward pass of the discriminator: Given an image tensor, </span></span><br><span class="line"><span class="string">        returns a 1-dimension tensor representing fake/real.</span></span><br><span class="line"><span class="string">        Parameters:</span></span><br><span class="line"><span class="string">            image: a flattened image tensor with dimension (im_dim)</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> self.disc(image)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Needed for grading</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_disc</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Returns:</span></span><br><span class="line"><span class="string">            the sequential model</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> self.disc</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Verify the discriminator class</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_discriminator</span>(<span class="params">z_dim, hidden_dim, num_test=<span class="number">100</span></span>):</span></span><br><span class="line">    </span><br><span class="line">    disc = Discriminator(z_dim, hidden_dim).get_disc()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Check there are three parts</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">len</span>(disc) == <span class="number">4</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Check the linear layer is correct</span></span><br><span class="line">    test_input = torch.randn(num_test, z_dim)</span><br><span class="line">    test_output = disc(test_input)</span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">tuple</span>(test_output.shape) == (num_test, <span class="number">1</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Don&#x27;t use a block</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(disc[-<span class="number">1</span>], nn.Sequential)</span><br><span class="line"></span><br><span class="line">test_discriminator(<span class="number">5</span>, <span class="number">10</span>)</span><br><span class="line">test_discriminator(<span class="number">20</span>, <span class="number">8</span>)</span><br><span class="line">print(<span class="string">&quot;Success!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Success!</code></pre>
+<h2 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h2><p>Now you can put it all together!<br>First, you will set your parameters:</p>
+<ul>
+<li>  criterion: the loss function</li>
+<li>  n_epochs: the number of times you iterate through the entire dataset when training</li>
+<li>  z_dim: the dimension of the noise vector</li>
+<li>  display_step: how often to display/visualize the images</li>
+<li>  batch_size: the number of images per forward/backward pass</li>
+<li>  lr: the learning rate</li>
+<li>  device: the device type, here using a GPU (which runs CUDA), not CPU</li>
+</ul>
+<p>Next, you will load the MNIST dataset as tensors using a dataloader.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Set your parameters</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">Notes for nn.BCEWithLogitsLoss():</span></span><br><span class="line"><span class="string">This loss combines a Sigmoid layer and the BCELoss in one single class. </span></span><br><span class="line"><span class="string">This version is more numerically stable than using a plain Sigmoid followed by a BCELoss as, </span></span><br><span class="line"><span class="string">by combining the operations into one layer, </span></span><br><span class="line"><span class="string">we take advantage of the log-sum-exp trick for numerical stability.</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">criterion = nn.BCEWithLogitsLoss()</span><br><span class="line">n_epochs = <span class="number">200</span></span><br><span class="line">z_dim = <span class="number">64</span></span><br><span class="line">display_step = <span class="number">500</span></span><br><span class="line">batch_size = <span class="number">128</span></span><br><span class="line">lr = <span class="number">0.00001</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Load MNIST dataset as tensors</span></span><br><span class="line">dataloader = DataLoader(</span><br><span class="line">    MNIST(<span class="string">&#x27;.&#x27;</span>, download=<span class="literal">False</span>, transform=transforms.ToTensor()),</span><br><span class="line">    batch_size=batch_size,</span><br><span class="line">    shuffle=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">### DO NOT EDIT ###</span></span><br><span class="line">device = <span class="string">&#x27;cuda&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>Now, you can initialize your generator, discriminator, and optimizers. Note that each optimizer only takes the parameters of one particular model, since we want each optimizer to optimize only one of the models.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gen = Generator(z_dim).to(device)</span><br><span class="line">gen_opt = torch.optim.Adam(gen.parameters(), lr=lr)</span><br><span class="line">disc = Discriminator().to(device) </span><br><span class="line">disc_opt = torch.optim.Adam(disc.parameters(), lr=lr)</span><br></pre></td></tr></table></figure>
+<p>Before you train your GAN, you will need to create functions to calculate the discriminator’s loss and the generator’s loss. This is how the discriminator and generator will know how they are doing and improve themselves. <strong>Since the generator is needed when calculating the discriminator’s loss, you will need to call .detach() on the generator result to ensure that only the discriminator is updated!</strong></p>
+<p>Remember that you have already defined a loss function earlier (<code>criterion</code>) and you are encouraged to use <code>torch.ones_like</code> and <code>torch.zeros_like</code> instead of <code>torch.ones</code> or <code>torch.zeros</code>. If you use <code>torch.ones</code> or <code>torch.zeros</code>, you’ll need to pass <code>device=device</code> to them.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C6 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="comment"># GRADED FUNCTION: get_disc_loss</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_disc_loss</span>(<span class="params">gen, disc, criterion, real, num_images, z_dim, device</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Return the loss of the discriminator given inputs.</span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">        gen: the generator model, which returns an image given z-dimensional noise</span></span><br><span class="line"><span class="string">        disc: the discriminator model, which returns a single-dimensional prediction of real/fake</span></span><br><span class="line"><span class="string">        criterion: the loss function, which should be used to compare </span></span><br><span class="line"><span class="string">               the discriminator&#x27;s predictions to the ground truth reality of the images </span></span><br><span class="line"><span class="string">               (e.g. fake = 0, real = 1)</span></span><br><span class="line"><span class="string">        real: a batch of real images</span></span><br><span class="line"><span class="string">        num_images: the number of images the generator should produce, </span></span><br><span class="line"><span class="string">                which is also the length of the real images</span></span><br><span class="line"><span class="string">        z_dim: the dimension of the noise vector, a scalar</span></span><br><span class="line"><span class="string">        device: the device type</span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">        disc_loss: a torch scalar loss value for the current batch</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="comment">#     These are the steps you will need to complete:</span></span><br><span class="line">    <span class="comment">#       1) Create noise vectors and generate a batch (num_images) of fake images. </span></span><br><span class="line">    <span class="comment">#            Make sure to pass the device argument to the noise.</span></span><br><span class="line">    <span class="comment">#       2) Get the discriminator&#x27;s prediction of the fake image </span></span><br><span class="line">    <span class="comment">#            and calculate the loss. Don&#x27;t forget to detach the generator!</span></span><br><span class="line">    <span class="comment">#            (Remember the loss function you set earlier -- criterion. You need a </span></span><br><span class="line">    <span class="comment">#            &#x27;ground truth&#x27; tensor in order to calculate the loss. </span></span><br><span class="line">    <span class="comment">#            For example, a ground truth tensor for a fake image is all zeros.)</span></span><br><span class="line">    <span class="comment">#       3) Get the discriminator&#x27;s prediction of the real image and calculate the loss.</span></span><br><span class="line">    <span class="comment">#       4) Calculate the discriminator&#x27;s loss by averaging the real and fake loss</span></span><br><span class="line">    <span class="comment">#            and set it to disc_loss.</span></span><br><span class="line">    <span class="comment">#     Note: Please do not use concatenation in your solution. The tests are being updated to </span></span><br><span class="line">    <span class="comment">#           support this, but for now, average the two losses as described in step (4).</span></span><br><span class="line">    <span class="comment">#     *Important*: You should NOT write your own loss function here - use criterion(pred, true)!</span></span><br><span class="line">    <span class="comment">#### START CODE HERE ####</span></span><br><span class="line">    <span class="comment"># step 1</span></span><br><span class="line">    noise = get_noise(num_images, z_dim, device)</span><br><span class="line">    fake_imgs = gen(noise)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step 2</span></span><br><span class="line">    disc_output_fake = disc(fake_imgs.detach())</span><br><span class="line">    ground_truth_fake = torch.zeros_like(disc_output_fake)</span><br><span class="line">    loss_fake = criterion(disc_output_fake, ground_truth_fake)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step 3</span></span><br><span class="line">    disc_output_real = disc(real)</span><br><span class="line">    ground_truth_real = torch.ones_like(disc_output_real)</span><br><span class="line">    loss_real = criterion(disc_output_real, ground_truth_real)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 3tep 4</span></span><br><span class="line">    disc_loss = (loss_fake + loss_real) / <span class="number">2.0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#### END CODE HERE ####</span></span><br><span class="line">    <span class="keyword">return</span> disc_loss</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_disc_reasonable</span>(<span class="params">num_images=<span class="number">10</span></span>):</span></span><br><span class="line">    <span class="comment"># Don&#x27;t use explicit casts to cuda - use the device argument</span></span><br><span class="line">    <span class="keyword">import</span> inspect, re</span><br><span class="line">    lines = inspect.getsource(get_disc_loss)</span><br><span class="line">    <span class="keyword">assert</span> (re.search(<span class="string">r&quot;to\(.cuda.\)&quot;</span>, lines)) <span class="keyword">is</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">assert</span> (re.search(<span class="string">r&quot;\.cuda\(\)&quot;</span>, lines)) <span class="keyword">is</span> <span class="literal">None</span></span><br><span class="line">    </span><br><span class="line">    z_dim = <span class="number">64</span></span><br><span class="line">    gen = torch.zeros_like</span><br><span class="line">    disc = <span class="keyword">lambda</span> x: x.mean(<span class="number">1</span>)[:, <span class="literal">None</span>]</span><br><span class="line">    criterion = torch.mul <span class="comment"># Multiply</span></span><br><span class="line">    real = torch.ones(num_images, z_dim)</span><br><span class="line">    disc_loss = get_disc_loss(gen, disc, criterion, real, num_images, z_dim, <span class="string">&#x27;cpu&#x27;</span>)</span><br><span class="line">    <span class="keyword">assert</span> torch.<span class="built_in">all</span>(torch.<span class="built_in">abs</span>(disc_loss.mean() - <span class="number">0.5</span>) &lt; <span class="number">1e-5</span>)</span><br><span class="line">    </span><br><span class="line">    gen = torch.ones_like</span><br><span class="line">    criterion = torch.mul <span class="comment"># Multiply</span></span><br><span class="line">    real = torch.zeros(num_images, z_dim)</span><br><span class="line">    <span class="keyword">assert</span> torch.<span class="built_in">all</span>(torch.<span class="built_in">abs</span>(get_disc_loss(gen, disc, criterion, real, num_images, z_dim, <span class="string">&#x27;cpu&#x27;</span>)) &lt; <span class="number">1e-5</span>)</span><br><span class="line">    </span><br><span class="line">    gen = <span class="keyword">lambda</span> x: torch.ones(num_images, <span class="number">10</span>)</span><br><span class="line">    disc = <span class="keyword">lambda</span> x: x.mean(<span class="number">1</span>)[:, <span class="literal">None</span>] + <span class="number">10</span></span><br><span class="line">    criterion = torch.mul <span class="comment"># Multiply</span></span><br><span class="line">    real = torch.zeros(num_images, <span class="number">10</span>)</span><br><span class="line">    <span class="keyword">assert</span> torch.<span class="built_in">all</span>(torch.<span class="built_in">abs</span>(get_disc_loss(gen, disc, criterion, real, num_images, z_dim, <span class="string">&#x27;cpu&#x27;</span>).mean() - <span class="number">5</span>) &lt; <span class="number">1e-5</span>)</span><br><span class="line"></span><br><span class="line">    gen = torch.ones_like</span><br><span class="line">    disc = nn.Linear(<span class="number">64</span>, <span class="number">1</span>, bias=<span class="literal">False</span>)</span><br><span class="line">    real = torch.ones(num_images, <span class="number">64</span>) * <span class="number">0.5</span></span><br><span class="line">    disc.weight.data = torch.ones_like(disc.weight.data) * <span class="number">0.5</span></span><br><span class="line">    disc_opt = torch.optim.Adam(disc.parameters(), lr=lr)</span><br><span class="line">    criterion = <span class="keyword">lambda</span> x, y: torch.<span class="built_in">sum</span>(x) + torch.<span class="built_in">sum</span>(y)</span><br><span class="line">    disc_loss = get_disc_loss(gen, disc, criterion, real, num_images, z_dim, <span class="string">&#x27;cpu&#x27;</span>).mean()</span><br><span class="line">    disc_loss.backward()</span><br><span class="line">    <span class="keyword">assert</span> torch.isclose(torch.<span class="built_in">abs</span>(disc.weight.grad.mean() - <span class="number">11.25</span>), torch.tensor(<span class="number">3.75</span>))</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_disc_loss</span>(<span class="params">max_tests = <span class="number">10</span></span>):</span></span><br><span class="line">    z_dim = <span class="number">64</span></span><br><span class="line">    gen = Generator(z_dim).to(device)</span><br><span class="line">    gen_opt = torch.optim.Adam(gen.parameters(), lr=lr)</span><br><span class="line">    disc = Discriminator().to(device) </span><br><span class="line">    disc_opt = torch.optim.Adam(disc.parameters(), lr=lr)</span><br><span class="line">    num_steps = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> real, _ <span class="keyword">in</span> dataloader:</span><br><span class="line">        cur_batch_size = <span class="built_in">len</span>(real)</span><br><span class="line">        real = real.view(cur_batch_size, -<span class="number">1</span>).to(device)</span><br><span class="line"></span><br><span class="line">        <span class="comment">### Update discriminator ###</span></span><br><span class="line">        <span class="comment"># Zero out the gradient before backpropagation</span></span><br><span class="line">        disc_opt.zero_grad()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Calculate discriminator loss</span></span><br><span class="line">        disc_loss = get_disc_loss(gen, disc, criterion, real, cur_batch_size, z_dim, device)</span><br><span class="line">        <span class="keyword">assert</span> (disc_loss - <span class="number">0.68</span>).<span class="built_in">abs</span>() &lt; <span class="number">0.05</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Update gradients</span></span><br><span class="line">        disc_loss.backward(retain_graph=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Check that they detached correctly</span></span><br><span class="line">        <span class="keyword">assert</span> gen.gen[<span class="number">0</span>][<span class="number">0</span>].weight.grad <span class="keyword">is</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Update optimizer</span></span><br><span class="line">        old_weight = disc.disc[<span class="number">0</span>][<span class="number">0</span>].weight.data.clone()</span><br><span class="line">        disc_opt.step()</span><br><span class="line">        new_weight = disc.disc[<span class="number">0</span>][<span class="number">0</span>].weight.data</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Check that some discriminator weights changed</span></span><br><span class="line">        <span class="keyword">assert</span> <span class="keyword">not</span> torch.<span class="built_in">all</span>(torch.eq(old_weight, new_weight))</span><br><span class="line">        num_steps += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> num_steps &gt;= max_tests:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">test_disc_reasonable()</span><br><span class="line">test_disc_loss()</span><br><span class="line">print(<span class="string">&quot;Success!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Success!</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C7 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="comment"># GRADED FUNCTION: get_gen_loss</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_gen_loss</span>(<span class="params">gen, disc, criterion, num_images, z_dim, device</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Return the loss of the generator given inputs.</span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">        gen: the generator model, which returns an image given z-dimensional noise</span></span><br><span class="line"><span class="string">        disc: the discriminator model, which returns a single-dimensional prediction of real/fake</span></span><br><span class="line"><span class="string">        criterion: the loss function, which should be used to compare </span></span><br><span class="line"><span class="string">               the discriminator&#x27;s predictions to the ground truth reality of the images </span></span><br><span class="line"><span class="string">               (e.g. fake = 0, real = 1)</span></span><br><span class="line"><span class="string">        num_images: the number of images the generator should produce, </span></span><br><span class="line"><span class="string">                which is also the length of the real images</span></span><br><span class="line"><span class="string">        z_dim: the dimension of the noise vector, a scalar</span></span><br><span class="line"><span class="string">        device: the device type</span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">        gen_loss: a torch scalar loss value for the current batch</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="comment">#     These are the steps you will need to complete:</span></span><br><span class="line">    <span class="comment">#       1) Create noise vectors and generate a batch of fake images. </span></span><br><span class="line">    <span class="comment">#           Remember to pass the device argument to the get_noise function.</span></span><br><span class="line">    <span class="comment">#       2) Get the discriminator&#x27;s prediction of the fake image.</span></span><br><span class="line">    <span class="comment">#       3) Calculate the generator&#x27;s loss. Remember the generator wants</span></span><br><span class="line">    <span class="comment">#          the discriminator to think that its fake images are real</span></span><br><span class="line">    <span class="comment">#     *Important*: You should NOT write your own loss function here - use criterion(pred, true)!</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#### START CODE HERE ####</span></span><br><span class="line">    <span class="comment"># step 1</span></span><br><span class="line">    noise = get_noise(num_images, z_dim, device)</span><br><span class="line">    gen_output_fake = gen(noise)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step 2</span></span><br><span class="line">    disc_output_fake = disc(gen_output_fake)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step 3</span></span><br><span class="line">    ground_truth_fake = torch.ones_like(disc_output_fake)</span><br><span class="line">    gen_loss = criterion(disc_output_fake, ground_truth_fake)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#### END CODE HERE ####</span></span><br><span class="line">    <span class="keyword">return</span> gen_loss</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_gen_reasonable</span>(<span class="params">num_images=<span class="number">10</span></span>):</span></span><br><span class="line">    <span class="comment"># Don&#x27;t use explicit casts to cuda - use the device argument</span></span><br><span class="line">    <span class="keyword">import</span> inspect, re</span><br><span class="line">    lines = inspect.getsource(get_gen_loss)</span><br><span class="line">    <span class="keyword">assert</span> (re.search(<span class="string">r&quot;to\(.cuda.\)&quot;</span>, lines)) <span class="keyword">is</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">assert</span> (re.search(<span class="string">r&quot;\.cuda\(\)&quot;</span>, lines)) <span class="keyword">is</span> <span class="literal">None</span></span><br><span class="line">    </span><br><span class="line">    z_dim = <span class="number">64</span></span><br><span class="line">    gen = torch.zeros_like</span><br><span class="line">    disc = nn.Identity()</span><br><span class="line">    criterion = torch.mul <span class="comment"># Multiply</span></span><br><span class="line">    gen_loss_tensor = get_gen_loss(gen, disc, criterion, num_images, z_dim, <span class="string">&#x27;cpu&#x27;</span>)</span><br><span class="line">    <span class="keyword">assert</span> torch.<span class="built_in">all</span>(torch.<span class="built_in">abs</span>(gen_loss_tensor) &lt; <span class="number">1e-5</span>)</span><br><span class="line">    <span class="comment">#Verify shape. Related to gen_noise parametrization</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">tuple</span>(gen_loss_tensor.shape) == (num_images, z_dim)</span><br><span class="line"></span><br><span class="line">    gen = torch.ones_like</span><br><span class="line">    disc = nn.Identity()</span><br><span class="line">    criterion = torch.mul <span class="comment"># Multiply</span></span><br><span class="line">    real = torch.zeros(num_images, <span class="number">1</span>)</span><br><span class="line">    gen_loss_tensor = get_gen_loss(gen, disc, criterion, num_images, z_dim, <span class="string">&#x27;cpu&#x27;</span>)</span><br><span class="line">    <span class="keyword">assert</span> torch.<span class="built_in">all</span>(torch.<span class="built_in">abs</span>(gen_loss_tensor - <span class="number">1</span>) &lt; <span class="number">1e-5</span>)</span><br><span class="line">    <span class="comment">#Verify shape. Related to gen_noise parametrization</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">tuple</span>(gen_loss_tensor.shape) == (num_images, z_dim)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_gen_loss</span>(<span class="params">num_images</span>):</span></span><br><span class="line">    z_dim = <span class="number">64</span></span><br><span class="line">    gen = Generator(z_dim).to(device)</span><br><span class="line">    gen_opt = torch.optim.Adam(gen.parameters(), lr=lr)</span><br><span class="line">    disc = Discriminator().to(device) </span><br><span class="line">    disc_opt = torch.optim.Adam(disc.parameters(), lr=lr)</span><br><span class="line">    </span><br><span class="line">    gen_loss = get_gen_loss(gen, disc, criterion, num_images, z_dim, device)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Check that the loss is reasonable</span></span><br><span class="line">    <span class="keyword">assert</span> (gen_loss - <span class="number">0.7</span>).<span class="built_in">abs</span>() &lt; <span class="number">0.1</span></span><br><span class="line">    gen_loss.backward()</span><br><span class="line">    old_weight = gen.gen[<span class="number">0</span>][<span class="number">0</span>].weight.clone()</span><br><span class="line">    gen_opt.step()</span><br><span class="line">    new_weight = gen.gen[<span class="number">0</span>][<span class="number">0</span>].weight</span><br><span class="line">    <span class="keyword">assert</span> <span class="keyword">not</span> torch.<span class="built_in">all</span>(torch.eq(old_weight, new_weight))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">test_gen_reasonable(<span class="number">10</span>)</span><br><span class="line">test_gen_loss(<span class="number">18</span>)</span><br><span class="line">print(<span class="string">&quot;Success!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Success!</code></pre>
+<p>Finally, you can put everything together! For each epoch, you will process the entire dataset in batches. For every batch, you will need to update the discriminator and generator using their loss. Batches are sets of images that will be predicted on before the loss functions are calculated (instead of calculating the loss function after each image). Note that you may see a loss to be greater than 1, this is okay since binary cross entropy loss can be any positive number for a sufficiently confident wrong guess. </p>
+<p>It’s also often the case that the discriminator will outperform the generator, especially at the start, because its job is easier. It’s important that neither one gets too good (that is, near-perfect accuracy), which would cause the entire model to stop learning. Balancing the two models is actually remarkably hard to do in a standard GAN and something you will see more of in later lectures and assignments.</p>
+<p>After you’ve submitted a working version with the original architecture, feel free to play around with the architecture if you want to see how different architectural choices can lead to better or worse GANs. For example, consider changing the size of the hidden dimension, or making the networks shallower or deeper by changing the number of layers.</p>
+<!-- In addition, be warned that this runs very slowly on a CPU. One way to run this more quickly is to use Google Colab: 
+
+1.   Download the .ipynb
+2.   Upload it to Google Drive and open it with Google Colab
+3.   Make the runtime type GPU (under “Runtime” -> “Change runtime type” -> Select “GPU” from the dropdown)
+4.   Replace `device = "cpu"` with `device = "cuda"`
+5.   Make sure your `get_noise` function uses the right device -->
+
+<p>But remember, don’t expect anything spectacular: this is only the first lesson. The results will get better with later lessons as you learn methods to help keep your generator and discriminator at similar levels.</p>
+<p>You should roughly expect to see this progression. On a GPU, this should take about 15 seconds per 500 steps, on average, while on CPU it will take roughly 1.5 minutes:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C8 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="comment"># GRADED FUNCTION: </span></span><br><span class="line"></span><br><span class="line">cur_step = <span class="number">0</span></span><br><span class="line">mean_generator_loss = <span class="number">0</span></span><br><span class="line">mean_discriminator_loss = <span class="number">0</span></span><br><span class="line">test_generator = <span class="literal">True</span> <span class="comment"># Whether the generator should be tested</span></span><br><span class="line">gen_loss = <span class="literal">False</span></span><br><span class="line">error = <span class="literal">False</span></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(n_epochs):</span><br><span class="line">  </span><br><span class="line">    <span class="comment"># Dataloader returns the batches</span></span><br><span class="line">    <span class="keyword">for</span> real, _ <span class="keyword">in</span> tqdm(dataloader):</span><br><span class="line">        cur_batch_size = <span class="built_in">len</span>(real)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Flatten the batch of real images from the dataset</span></span><br><span class="line">        real = real.view(cur_batch_size, -<span class="number">1</span>).to(device)</span><br><span class="line"></span><br><span class="line">        <span class="comment">### Update discriminator ###</span></span><br><span class="line">        <span class="comment"># Zero out the gradients before backpropagation</span></span><br><span class="line">        disc_opt.zero_grad()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Calculate discriminator loss</span></span><br><span class="line">        disc_loss = get_disc_loss(gen, disc, criterion, real, cur_batch_size, z_dim, device)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Update gradients</span></span><br><span class="line">        disc_loss.backward(retain_graph=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Update optimizer</span></span><br><span class="line">        disc_opt.step()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># For testing purposes, to keep track of the generator weights</span></span><br><span class="line">        <span class="keyword">if</span> test_generator:</span><br><span class="line">            old_generator_weights = gen.gen[<span class="number">0</span>][<span class="number">0</span>].weight.detach().clone()</span><br><span class="line"></span><br><span class="line">        <span class="comment">### Update generator ###</span></span><br><span class="line">        <span class="comment">#     Hint: This code will look a lot like the discriminator updates!</span></span><br><span class="line">        <span class="comment">#     These are the steps you will need to complete:</span></span><br><span class="line">        <span class="comment">#       1) Zero out the gradients.</span></span><br><span class="line">        <span class="comment">#       2) Calculate the generator loss, assigning it to gen_loss.</span></span><br><span class="line">        <span class="comment">#       3) Backprop through the generator: update the gradients and optimizer.</span></span><br><span class="line">        <span class="comment">#### START CODE HERE ####</span></span><br><span class="line">        <span class="comment"># step 1</span></span><br><span class="line">        gen_opt.zero_grad()</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># step 2</span></span><br><span class="line">        gen_loss = get_gen_loss(gen, disc, criterion, cur_batch_size, z_dim, device)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># step 3</span></span><br><span class="line">        gen_loss.backward(retain_graph=<span class="literal">True</span>)</span><br><span class="line">        gen_opt.step()</span><br><span class="line">        <span class="comment">#### END CODE HERE ####</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># For testing purposes, to check that your code changes the generator weights</span></span><br><span class="line">        <span class="keyword">if</span> test_generator:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="keyword">assert</span> lr &gt; <span class="number">0.0000002</span> <span class="keyword">or</span> (gen.gen[<span class="number">0</span>][<span class="number">0</span>].weight.grad.<span class="built_in">abs</span>().<span class="built_in">max</span>() &lt; <span class="number">0.0005</span> <span class="keyword">and</span> epoch == <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">assert</span> torch.<span class="built_in">any</span>(gen.gen[<span class="number">0</span>][<span class="number">0</span>].weight.detach().clone() != old_generator_weights)</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                error = <span class="literal">True</span></span><br><span class="line">                print(<span class="string">&quot;Runtime tests have failed&quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Keep track of the average discriminator loss</span></span><br><span class="line">        mean_discriminator_loss += disc_loss.item() / display_step</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Keep track of the average generator loss</span></span><br><span class="line">        mean_generator_loss += gen_loss.item() / display_step</span><br><span class="line"></span><br><span class="line">        <span class="comment">### Visualization code ###</span></span><br><span class="line">        <span class="keyword">if</span> cur_step % display_step == <span class="number">0</span> <span class="keyword">and</span> cur_step &gt; <span class="number">0</span>:</span><br><span class="line">            print(<span class="string">f&quot;Epoch <span class="subst">&#123;epoch&#125;</span>, step <span class="subst">&#123;cur_step&#125;</span>: Generator loss: <span class="subst">&#123;mean_generator_loss&#125;</span>, discriminator loss: <span class="subst">&#123;mean_discriminator_loss&#125;</span>&quot;</span>)</span><br><span class="line">            fake_noise = get_noise(cur_batch_size, z_dim, device=device)</span><br><span class="line">            fake = gen(fake_noise)</span><br><span class="line">            show_tensor_images(fake)</span><br><span class="line">            show_tensor_images(real)</span><br><span class="line">            mean_generator_loss = <span class="number">0</span></span><br><span class="line">            mean_discriminator_loss = <span class="number">0</span></span><br><span class="line">        cur_step += <span class="number">1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value=&#39;&#39;)))
+
+HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value=&#39;&#39;)))
+
+
+Epoch 1, step 500: Generator loss: 1.537445880770684, discriminator loss: 0.4010176688432697</code></pre>
+<p><img src="output_31_4.png" alt="png"></p>
+<p><img src="output_31_5.png" alt="png"></p>
+<p> <strong>Notes that there are only two epoch’s results.</strong></p>
+<pre><code>HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value=&#39;&#39;)))
+
+
+Epoch 199, step 93500: Generator loss: 1.095844237446786, discriminator loss: 0.5419520480632782</code></pre>
+<p><img src="output_31_958.png" alt="png"></p>
+<p><img src="output_31_959.png" alt="png"></p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2021/04/25/Survey-vision-transformer/" rel="next" title="A Survey for Vision Transformers (By Mar. 2021)">
+    Next: A Survey for Vision Transformers (By Mar. 2021)
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="Return to top"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="Menu"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+    <div class="footer-container container">
+        <div class="row">
+            
+            <div class="social-group col m4 s12">
+                <h5 class="white-text">Social</h5>
+                
+                    <a class="social-link" href="https://github.com/xiaoyuxie-vico" target="_blank">
+                        <i class="fa fa-2x fa-github"></i>
+                    </a>
+                
+                
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <div class="site-visitors-container white-text">
+        <span>
+            <i class="fa fa-user"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+        </span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>
+            <i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+
+
+            </div>
+            
+
+            
+            <div class="col m8 s12">
+                <h5 class="white-text">Links</h5>
+                
+                    <a class="social-link" href="xiaoyuxie.vico@gmail.com" target="_blank">Email</a>
+                
+                    <a class="social-link" href="https://www.linkedin.com/in/xyxie/" target="_blank">Linkedin</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2016 example.com, All rights reserved.
+            <p class="right" style="margin-top: 0;">Blog powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('pink lighten-2');
+
+            
+            // 添加new标签
+            $('.menu-about').append('<span class="new badge pink"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
