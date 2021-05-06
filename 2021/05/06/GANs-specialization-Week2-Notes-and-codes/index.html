@@ -1,0 +1,693 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>GANs specialization Week2: Notes and codes | Machine Learning, Deep Learning, Computer Vision</title>
+    <meta name="author" content="Xiaoyu Xie">
+    
+    <meta name="description" content="Track The past. Organize the present. Design the future.">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="GANs specialization Week2: Notes and codes"/>
+    <meta property="og:site_name" content="Xiaoyu Xie&#39;s Blog"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="Xiaoyu Xie&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">Xiaoyu Xie&#39;s Blog</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            Home
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            Archives
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            Categories
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            About
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            Search
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://vico-image.oss-cn-hongkong.aliyuncs.com/avatar.jpg" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">Xiaoyu Xie</p>
+                        <p class="desc">Deep Learning</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    Home
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    Archives
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    Categories
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    About
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    Search
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Class-notes/">
+                    Class-notes <span class="right">2</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Notes/">
+                    Notes <span class="right">2</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Course-project/">
+                    Course-project <span class="right">2</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">Search</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">Current page(Categories)</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/Class-notes/">Class-notes</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>GANs specialization Week2: Notes and codes</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2021-05-06T05:35:19.000Z"><a href="/2021/05/06/GANs-specialization-Week2-Notes-and-codes/">2021-05-06</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Notes/" class="chip pink lighten-1">Notes</a>
+        
+            <a href="/tags/Deep-Learning/" class="chip pink lighten-1">Deep Learning</a>
+        
+            <a href="/tags/Online-course/" class="chip pink lighten-1">Online course</a>
+        
+            <a href="/tags/GANs/" class="chip pink lighten-1">GANs</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Notes"><span class="section table-of-contents-text">Notes</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Week-2-Assignment-Deep-Convolutional-GAN-DCGAN"><span class="section table-of-contents-text">Week 2 - Assignment - Deep Convolutional GAN (DCGAN)</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Goal"><span class="section table-of-contents-text">Goal</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Learning-Objectives"><span class="section table-of-contents-text">Learning Objectives</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Getting-Started"><span class="section table-of-contents-text">Getting Started</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#DCGAN"><span class="section table-of-contents-text">DCGAN</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Discriminator"><span class="section table-of-contents-text">Discriminator</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Training"><span class="section table-of-contents-text">Training</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h1><p>In this week, I learnt how to implement DCGAN and TGA. The code are very helpful due to a lot of suggestions.</p>
+<p>There is an very useful interactive blog to illustrate the checkboard effects in transposed convolution. The link is <a target="_blank" rel="noopener" href="https://distill.pub/2016/deconv-checkerboard/">here</a>.</p>
+<p><img src="33EBFA00-A891-4948-801C-DDA4E0550EB3.png" alt="Transposed conv"></p>
+<a id="more"></a>
+
+<h1 id="Week-2-Assignment-Deep-Convolutional-GAN-DCGAN"><a href="#Week-2-Assignment-Deep-Convolutional-GAN-DCGAN" class="headerlink" title="Week 2 - Assignment - Deep Convolutional GAN (DCGAN)"></a>Week 2 - Assignment - Deep Convolutional GAN (DCGAN)</h1><h3 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h3><p>In this notebook, you’re going to create another GAN using the MNIST dataset. You will implement a Deep Convolutional GAN (DCGAN), a very successful and influential GAN model developed in 2015.</p>
+<p><em>Note: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1511.06434v1.pdf">here</a> is the paper if you are interested! It might look dense now, but soon you’ll be able to understand many parts of it :)</em></p>
+<h3 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h3><ol>
+<li>  Get hands-on experience making a widely used GAN: Deep Convolutional GAN (DCGAN).</li>
+<li>  Train a powerful generative model.</li>
+</ol>
+<p><img src="dcgan-gen.png" alt="Generator architecture"></p>
+<p>Figure: Architectural drawing of a generator from DCGAN from <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1511.06434v1.pdf">Radford et al (2016)</a>.</p>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><h4 id="DCGAN"><a href="#DCGAN" class="headerlink" title="DCGAN"></a>DCGAN</h4><p>Here are the main features of DCGAN (don’t worry about memorizing these, you will be guided through the implementation!): </p>
+<!-- ```
+Architecture guidelines for stable Deep Convolutional GANs
+• Replace any pooling layers with strided convolutions (discriminator) and fractional-strided
+convolutions (generator).
+• Use BatchNorm in both the generator and the discriminator.
+• Remove fully connected hidden layers for deeper architectures.
+• Use ReLU activation in generator for all layers except for the output, which uses Tanh.
+• Use LeakyReLU activation in the discriminator for all layers.
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">*   Use convolutions without any pooling layers</span><br><span class="line">*   Use batchnorm in both the generator and the discriminator</span><br><span class="line">*   Don&#39;t use fully connected hidden layers</span><br><span class="line">*   Use ReLU activation in the generator for all layers except for the output, which uses a Tanh activation.</span><br><span class="line">*   Use LeakyReLU activation in the discriminator for all layers except for the output, which does not use an activation</span><br><span class="line"></span><br><span class="line">You will begin by importing some useful packages and data that will help you create your GAN. You are also provided a visualizer function to help see the images your GAN will create.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​&#96;&#96;&#96;python</span><br><span class="line">import torch</span><br><span class="line">from torch import nn</span><br><span class="line">from tqdm.auto import tqdm</span><br><span class="line">from torchvision import transforms</span><br><span class="line">from torchvision.datasets import MNIST</span><br><span class="line">from torchvision.utils import make_grid</span><br><span class="line">from torch.utils.data import DataLoader</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">torch.manual_seed(0) # Set for testing purposes, please do not change!</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def show_tensor_images(image_tensor, num_images&#x3D;25, size&#x3D;(1, 28, 28)):</span><br><span class="line">    &#39;&#39;&#39;</span><br><span class="line">    Function for visualizing images: Given a tensor of images, number of images, and</span><br><span class="line">    size per image, plots and prints the images in an uniform grid.</span><br><span class="line">    &#39;&#39;&#39;</span><br><span class="line">    image_tensor &#x3D; (image_tensor + 1) &#x2F; 2</span><br><span class="line">    image_unflat &#x3D; image_tensor.detach().cpu()</span><br><span class="line">    image_grid &#x3D; make_grid(image_unflat[:num_images], nrow&#x3D;5)</span><br><span class="line">    plt.imshow(image_grid.permute(1, 2, 0).squeeze())</span><br><span class="line">    plt.show()</span><br></pre></td></tr></table></figure>
+<h2 id="Generator"><a href="#Generator" class="headerlink" title="Generator"></a>Generator</h2><p>The first component you will make is the generator. You may notice that instead of passing in the image dimension, you will pass the number of image channels to the generator. This is because with DCGAN, you use convolutions which don’t depend on the number of pixels on an image. However, the number of channels is important to determine the size of the filters.</p>
+<p>You will build a generator using 4 layers (3 hidden layers + 1 output layer). As before, you will need to write a function to create a single block for the generator’s neural network.</p>
+<!-- From the paper, we know to "[u]se batchnorm in both the generator and the discriminator" and "[u]se ReLU activation in generator for all layers except for the output, which uses Tanh." --> 
+<p>Since in DCGAN the activation function will be different for the output layer, you will need to check what layer is being created. You are supplied with some tests following the code cell so you can see if you’re on the right track!</p>
+<p>At the end of the generator class, you are given a forward pass function that takes in a noise vector and generates an image of the output dimension using your neural network. You are also given a function to create a noise vector. These functions are the same as the ones from the last assignment.</p>
+<details>
+<summary>
+<font size="3" color="green">
+<b>Optional hint for <code><font size="4">make_gen_block</font></code></b>
+</font>
+</summary>
+
+
+<ol>
+<li>You’ll find <a target="_blank" rel="noopener" href="https://pytorch.org/docs/master/generated/torch.nn.ConvTranspose2d.html">nn.ConvTranspose2d</a> and <a target="_blank" rel="noopener" href="https://pytorch.org/docs/master/generated/torch.nn.BatchNorm2d.html">nn.BatchNorm2d</a> useful!</details>
+
+
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C1 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="comment"># GRADED FUNCTION: Generator</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Generator</span>(<span class="params">nn.Module</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Generator Class</span></span><br><span class="line"><span class="string">    Values:</span></span><br><span class="line"><span class="string">        z_dim: the dimension of the noise vector, a scalar</span></span><br><span class="line"><span class="string">        im_chan: the number of channels in the images, fitted for the dataset used, a scalar</span></span><br><span class="line"><span class="string">              (MNIST is black-and-white, so 1 channel is your default)</span></span><br><span class="line"><span class="string">        hidden_dim: the inner dimension, a scalar</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, z_dim=<span class="number">10</span>, im_chan=<span class="number">1</span>, hidden_dim=<span class="number">64</span></span>):</span></span><br><span class="line">        <span class="built_in">super</span>(Generator, self).__init__()</span><br><span class="line">        self.z_dim = z_dim</span><br><span class="line">        <span class="comment"># Build the neural network</span></span><br><span class="line">        self.gen = nn.Sequential(</span><br><span class="line">            self.make_gen_block(z_dim, hidden_dim * <span class="number">4</span>),</span><br><span class="line">            self.make_gen_block(hidden_dim * <span class="number">4</span>, hidden_dim * <span class="number">2</span>, kernel_size=<span class="number">4</span>, stride=<span class="number">1</span>),</span><br><span class="line">            self.make_gen_block(hidden_dim * <span class="number">2</span>, hidden_dim),</span><br><span class="line">            self.make_gen_block(hidden_dim, im_chan, kernel_size=<span class="number">4</span>, final_layer=<span class="literal">True</span>),</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">make_gen_block</span>(<span class="params">self, input_channels, output_channels, kernel_size=<span class="number">3</span>, stride=<span class="number">2</span>, final_layer=<span class="literal">False</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Function to return a sequence of operations corresponding to a generator block of DCGAN, </span></span><br><span class="line"><span class="string">        corresponding to a transposed convolution, a batchnorm (except for in the last layer), and an activation.</span></span><br><span class="line"><span class="string">        Parameters:</span></span><br><span class="line"><span class="string">            input_channels: how many channels the input feature representation has</span></span><br><span class="line"><span class="string">            output_channels: how many channels the output feature representation should have</span></span><br><span class="line"><span class="string">            kernel_size: the size of each convolutional filter, equivalent to (kernel_size, kernel_size)</span></span><br><span class="line"><span class="string">            stride: the stride of the convolution</span></span><br><span class="line"><span class="string">            final_layer: a boolean, true if it is the final layer and false otherwise </span></span><br><span class="line"><span class="string">                      (affects activation and batchnorm)</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#     Steps:</span></span><br><span class="line">        <span class="comment">#       1) Do a transposed convolution using the given parameters.</span></span><br><span class="line">        <span class="comment">#       2) Do a batchnorm, except for the last layer.</span></span><br><span class="line">        <span class="comment">#       3) Follow each batchnorm with a ReLU activation.</span></span><br><span class="line">        <span class="comment">#       4) If its the final layer, use a Tanh activation after the deconvolution.</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Build the neural block</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> final_layer:</span><br><span class="line">            <span class="keyword">return</span> nn.Sequential(</span><br><span class="line">                <span class="comment">#### START CODE HERE ####</span></span><br><span class="line">                <span class="comment"># step 1</span></span><br><span class="line">                nn.ConvTranspose2d(input_channels, output_channels, kernel_size, stride),</span><br><span class="line">                <span class="comment"># step 2</span></span><br><span class="line">                nn.BatchNorm2d(output_channels),</span><br><span class="line">                <span class="comment"># step 3</span></span><br><span class="line">                nn.ReLU()</span><br><span class="line">                <span class="comment">#### END CODE HERE ####</span></span><br><span class="line">            )</span><br><span class="line">        <span class="keyword">else</span>: <span class="comment"># Final Layer</span></span><br><span class="line">            <span class="keyword">return</span> nn.Sequential(</span><br><span class="line">                <span class="comment">#### START CODE HERE ####</span></span><br><span class="line">                <span class="comment"># step 4</span></span><br><span class="line">                nn.ConvTranspose2d(input_channels, output_channels, kernel_size, stride),</span><br><span class="line">                nn.Tanh()</span><br><span class="line">                <span class="comment">#### END CODE HERE ####</span></span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">unsqueeze_noise</span>(<span class="params">self, noise</span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Function for completing a forward pass of the generator: Given a noise tensor, </span></span><br><span class="line"><span class="string">        returns a copy of that noise with width and height = 1 and channels = z_dim.</span></span><br><span class="line"><span class="string">        Parameters:</span></span><br><span class="line"><span class="string">            noise: a noise tensor with dimensions (n_samples, z_dim)</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> noise.view(<span class="built_in">len</span>(noise), self.z_dim, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">self, noise</span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Function for completing a forward pass of the generator: Given a noise tensor, </span></span><br><span class="line"><span class="string">        returns generated images.</span></span><br><span class="line"><span class="string">        Parameters:</span></span><br><span class="line"><span class="string">            noise: a noise tensor with dimensions (n_samples, z_dim)</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        x = self.unsqueeze_noise(noise)</span><br><span class="line">        <span class="keyword">return</span> self.gen(x)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_noise</span>(<span class="params">n_samples, z_dim, device=<span class="string">&#x27;cpu&#x27;</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Function for creating noise vectors: Given the dimensions (n_samples, z_dim)</span></span><br><span class="line"><span class="string">    creates a tensor of that shape filled with random numbers from the normal distribution.</span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">        n_samples: the number of samples to generate, a scalar</span></span><br><span class="line"><span class="string">        z_dim: the dimension of the noise vector, a scalar</span></span><br><span class="line"><span class="string">        device: the device type</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> torch.randn(n_samples, z_dim, device=device)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C2 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Test your make_gen_block() function</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">gen = Generator()</span><br><span class="line">num_test = <span class="number">100</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Test the hidden block</span></span><br><span class="line">test_hidden_noise = get_noise(num_test, gen.z_dim)</span><br><span class="line">test_hidden_block = gen.make_gen_block(<span class="number">10</span>, <span class="number">20</span>, kernel_size=<span class="number">4</span>, stride=<span class="number">1</span>)</span><br><span class="line">test_uns_noise = gen.unsqueeze_noise(test_hidden_noise)</span><br><span class="line">hidden_output = test_hidden_block(test_uns_noise)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check that it works with other strides</span></span><br><span class="line">test_hidden_block_stride = gen.make_gen_block(<span class="number">20</span>, <span class="number">20</span>, kernel_size=<span class="number">4</span>, stride=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">test_final_noise = get_noise(num_test, gen.z_dim) * <span class="number">20</span></span><br><span class="line">test_final_block = gen.make_gen_block(<span class="number">10</span>, <span class="number">20</span>, final_layer=<span class="literal">True</span>)</span><br><span class="line">test_final_uns_noise = gen.unsqueeze_noise(test_final_noise)</span><br><span class="line">final_output = test_final_block(test_final_uns_noise)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Test the whole thing:</span></span><br><span class="line">test_gen_noise = get_noise(num_test, gen.z_dim)</span><br><span class="line">test_uns_gen_noise = gen.unsqueeze_noise(test_gen_noise)</span><br><span class="line">gen_output = gen(test_uns_gen_noise)</span><br></pre></td></tr></table></figure>
+<p>Here’s the test for your generator block:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNIT TESTS</span></span><br><span class="line"><span class="keyword">assert</span> <span class="built_in">tuple</span>(hidden_output.shape) == (num_test, <span class="number">20</span>, <span class="number">4</span>, <span class="number">4</span>)</span><br><span class="line"><span class="keyword">assert</span> hidden_output.<span class="built_in">max</span>() &gt; <span class="number">1</span></span><br><span class="line"><span class="keyword">assert</span> hidden_output.<span class="built_in">min</span>() == <span class="number">0</span></span><br><span class="line"><span class="keyword">assert</span> hidden_output.std() &gt; <span class="number">0.2</span></span><br><span class="line"><span class="keyword">assert</span> hidden_output.std() &lt; <span class="number">1</span></span><br><span class="line"><span class="keyword">assert</span> hidden_output.std() &gt; <span class="number">0.5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span> <span class="built_in">tuple</span>(test_hidden_block_stride(hidden_output).shape) == (num_test, <span class="number">20</span>, <span class="number">10</span>, <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span> final_output.<span class="built_in">max</span>().item() == <span class="number">1</span></span><br><span class="line"><span class="keyword">assert</span> final_output.<span class="built_in">min</span>().item() == -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span> <span class="built_in">tuple</span>(gen_output.shape) == (num_test, <span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>)</span><br><span class="line"><span class="keyword">assert</span> gen_output.std() &gt; <span class="number">0.5</span></span><br><span class="line"><span class="keyword">assert</span> gen_output.std() &lt; <span class="number">0.8</span></span><br><span class="line">print(<span class="string">&quot;Success!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Success!</code></pre>
+<h2 id="Discriminator"><a href="#Discriminator" class="headerlink" title="Discriminator"></a>Discriminator</h2><p>The second component you need to create is the discriminator.</p>
+<p>You will use 3 layers in your discriminator’s neural network. Like with the generator, you will need create the function to create a single neural network block for the discriminator.</p>
+<!-- From the paper, we know that we need to "[u]se LeakyReLU activation in the discriminator for all layers." And for the LeakyReLUs, "the slope of the leak was set to 0.2" in DCGAN. -->
+<p>There are also tests at the end for you to use.</p>
+<details>
+<summary>
+<font size="3" color="green">
+<b>Optional hint for <code><font size="4">make_disc_block</font></code></b>
+</font>
+</summary>
+
+
+<ol>
+<li>You’ll find <a target="_blank" rel="noopener" href="https://pytorch.org/docs/master/generated/torch.nn.Conv2d.html">nn.Conv2d</a>, <a target="_blank" rel="noopener" href="https://pytorch.org/docs/master/generated/torch.nn.BatchNorm2d.html">nn.BatchNorm2d</a>, and <a target="_blank" rel="noopener" href="https://pytorch.org/docs/master/generated/torch.nn.LeakyReLU.html">nn.LeakyReLU</a> useful!</details>
+
+
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C3 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="comment"># GRADED FUNCTION: Discriminator</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Discriminator</span>(<span class="params">nn.Module</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Discriminator Class</span></span><br><span class="line"><span class="string">    Values:</span></span><br><span class="line"><span class="string">        im_chan: the number of channels in the images, fitted for the dataset used, a scalar</span></span><br><span class="line"><span class="string">              (MNIST is black-and-white, so 1 channel is your default)</span></span><br><span class="line"><span class="string">    hidden_dim: the inner dimension, a scalar</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, im_chan=<span class="number">1</span>, hidden_dim=<span class="number">16</span></span>):</span></span><br><span class="line">        <span class="built_in">super</span>(Discriminator, self).__init__()</span><br><span class="line">        self.disc = nn.Sequential(</span><br><span class="line">            self.make_disc_block(im_chan, hidden_dim),</span><br><span class="line">            self.make_disc_block(hidden_dim, hidden_dim * <span class="number">2</span>),</span><br><span class="line">            self.make_disc_block(hidden_dim * <span class="number">2</span>, <span class="number">1</span>, final_layer=<span class="literal">True</span>),</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">make_disc_block</span>(<span class="params">self, input_channels, output_channels, kernel_size=<span class="number">4</span>, stride=<span class="number">2</span>, final_layer=<span class="literal">False</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Function to return a sequence of operations corresponding to a discriminator block of DCGAN, </span></span><br><span class="line"><span class="string">        corresponding to a convolution, a batchnorm (except for in the last layer), and an activation.</span></span><br><span class="line"><span class="string">        Parameters:</span></span><br><span class="line"><span class="string">            input_channels: how many channels the input feature representation has</span></span><br><span class="line"><span class="string">            output_channels: how many channels the output feature representation should have</span></span><br><span class="line"><span class="string">            kernel_size: the size of each convolutional filter, equivalent to (kernel_size, kernel_size)</span></span><br><span class="line"><span class="string">            stride: the stride of the convolution</span></span><br><span class="line"><span class="string">            final_layer: a boolean, true if it is the final layer and false otherwise </span></span><br><span class="line"><span class="string">                      (affects activation and batchnorm)</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="comment">#     Steps:</span></span><br><span class="line">        <span class="comment">#       1) Add a convolutional layer using the given parameters.</span></span><br><span class="line">        <span class="comment">#       2) Do a batchnorm, except for the last layer.</span></span><br><span class="line">        <span class="comment">#       3) Follow each batchnorm with a LeakyReLU activation with slope 0.2.</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Build the neural block</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> final_layer:</span><br><span class="line">            <span class="keyword">return</span> nn.Sequential(</span><br><span class="line">                <span class="comment">#### START CODE HERE #### #</span></span><br><span class="line">                <span class="comment"># step 1</span></span><br><span class="line">                nn.Conv2d(input_channels, output_channels, kernel_size, stride),</span><br><span class="line">                <span class="comment"># step 2</span></span><br><span class="line">                nn.BatchNorm2d(output_channels),</span><br><span class="line">                <span class="comment"># step 3</span></span><br><span class="line">                nn.LeakyReLU(<span class="number">0.2</span>),</span><br><span class="line">                <span class="comment">#### END CODE HERE ####</span></span><br><span class="line">            )</span><br><span class="line">        <span class="keyword">else</span>: <span class="comment"># Final Layer</span></span><br><span class="line">            <span class="keyword">return</span> nn.Sequential(</span><br><span class="line">                <span class="comment">#### START CODE HERE #### #</span></span><br><span class="line">                nn.Conv2d(input_channels, output_channels, kernel_size, stride),</span><br><span class="line">                <span class="comment">#### END CODE HERE ####</span></span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">self, image</span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Function for completing a forward pass of the discriminator: Given an image tensor, </span></span><br><span class="line"><span class="string">        returns a 1-dimension tensor representing fake/real.</span></span><br><span class="line"><span class="string">        Parameters:</span></span><br><span class="line"><span class="string">            image: a flattened image tensor with dimension (im_dim)</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        disc_pred = self.disc(image)</span><br><span class="line">        <span class="keyword">return</span> disc_pred.view(<span class="built_in">len</span>(disc_pred), -<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># UNQ_C4 (UNIQUE CELL IDENTIFIER, DO NOT EDIT)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Test your make_disc_block() function</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">num_test = <span class="number">100</span></span><br><span class="line"></span><br><span class="line">gen = Generator()</span><br><span class="line">disc = Discriminator()</span><br><span class="line">test_images = gen(get_noise(num_test, gen.z_dim))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Test the hidden block</span></span><br><span class="line">test_hidden_block = disc.make_disc_block(<span class="number">1</span>, <span class="number">5</span>, kernel_size=<span class="number">6</span>, stride=<span class="number">3</span>)</span><br><span class="line">hidden_output = test_hidden_block(test_images)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Test the final block</span></span><br><span class="line">test_final_block = disc.make_disc_block(<span class="number">1</span>, <span class="number">10</span>, kernel_size=<span class="number">2</span>, stride=<span class="number">5</span>, final_layer=<span class="literal">True</span>)</span><br><span class="line">final_output = test_final_block(test_images)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Test the whole thing:</span></span><br><span class="line">disc_output = disc(test_images)</span><br></pre></td></tr></table></figure>
+<p>Here’s a test for your discriminator block:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Test the hidden block</span></span><br><span class="line"><span class="keyword">assert</span> <span class="built_in">tuple</span>(hidden_output.shape) == (num_test, <span class="number">5</span>, <span class="number">8</span>, <span class="number">8</span>)</span><br><span class="line"><span class="comment"># Because of the LeakyReLU slope</span></span><br><span class="line"><span class="keyword">assert</span> -hidden_output.<span class="built_in">min</span>() / hidden_output.<span class="built_in">max</span>() &gt; <span class="number">0.15</span></span><br><span class="line"><span class="keyword">assert</span> -hidden_output.<span class="built_in">min</span>() / hidden_output.<span class="built_in">max</span>() &lt; <span class="number">0.25</span></span><br><span class="line"><span class="keyword">assert</span> hidden_output.std() &gt; <span class="number">0.5</span></span><br><span class="line"><span class="keyword">assert</span> hidden_output.std() &lt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Test the final block</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span> <span class="built_in">tuple</span>(final_output.shape) == (num_test, <span class="number">10</span>, <span class="number">6</span>, <span class="number">6</span>)</span><br><span class="line"><span class="keyword">assert</span> final_output.<span class="built_in">max</span>() &gt; <span class="number">1.0</span></span><br><span class="line"><span class="keyword">assert</span> final_output.<span class="built_in">min</span>() &lt; -<span class="number">1.0</span></span><br><span class="line"><span class="keyword">assert</span> final_output.std() &gt; <span class="number">0.3</span></span><br><span class="line"><span class="keyword">assert</span> final_output.std() &lt; <span class="number">0.6</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Test the whole thing:</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span> <span class="built_in">tuple</span>(disc_output.shape) == (num_test, <span class="number">1</span>)</span><br><span class="line"><span class="keyword">assert</span> disc_output.std() &gt; <span class="number">0.25</span></span><br><span class="line"><span class="keyword">assert</span> disc_output.std() &lt; <span class="number">0.5</span></span><br><span class="line">print(<span class="string">&quot;Success!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Success!</code></pre>
+<h2 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h2><p>Now you can put it all together!<br>Remember that these are your parameters:</p>
+<ul>
+<li>  criterion: the loss function</li>
+<li>  n_epochs: the number of times you iterate through the entire dataset when training</li>
+<li>  z_dim: the dimension of the noise vector</li>
+<li>  display_step: how often to display/visualize the images</li>
+<li>  batch_size: the number of images per forward/backward pass</li>
+<li>  lr: the learning rate</li>
+<li>  beta_1, beta_2: the momentum term</li>
+<li>  device: the device type</li>
+</ul>
+<!-- In addition, be warned that **this runs very slowly on the default CPU**. One way to run this more quickly is to download the .ipynb and upload it to Google Drive, then open it with Google Colab, click on `Runtime -> Change runtime type` and set hardware accelerator to GPU and replace
+`device = "cpu"`
+with
+`device = "cuda"`. The code should then run without any more changes, over 1,000 times faster.  -->
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">criterion = nn.BCEWithLogitsLoss()</span><br><span class="line">z_dim = <span class="number">64</span></span><br><span class="line">display_step = <span class="number">500</span></span><br><span class="line">batch_size = <span class="number">128</span></span><br><span class="line"><span class="comment"># A learning rate of 0.0002 works well on DCGAN</span></span><br><span class="line">lr = <span class="number">0.0002</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># These parameters control the optimizer&#x27;s momentum, which you can read more about here:</span></span><br><span class="line"><span class="comment"># https://distill.pub/2017/momentum/ but you don’t need to worry about it for this course!</span></span><br><span class="line">beta_1 = <span class="number">0.5</span> </span><br><span class="line">beta_2 = <span class="number">0.999</span></span><br><span class="line">device = <span class="string">&#x27;cuda&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># You can tranform the image values to be between -1 and 1 (the range of the tanh activation)</span></span><br><span class="line">transform = transforms.Compose([</span><br><span class="line">    transforms.ToTensor(),</span><br><span class="line">    transforms.Normalize((<span class="number">0.5</span>,), (<span class="number">0.5</span>,)),</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line">dataloader = DataLoader(</span><br><span class="line">    MNIST(<span class="string">&#x27;.&#x27;</span>, download=<span class="literal">False</span>, transform=transform),</span><br><span class="line">    batch_size=batch_size,</span><br><span class="line">    shuffle=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<p>Then, you can initialize your generator, discriminator, and optimizers.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">gen = Generator(z_dim).to(device)</span><br><span class="line">gen_opt = torch.optim.Adam(gen.parameters(), lr=lr, betas=(beta_1, beta_2))</span><br><span class="line">disc = Discriminator().to(device) </span><br><span class="line">disc_opt = torch.optim.Adam(disc.parameters(), lr=lr, betas=(beta_1, beta_2))</span><br><span class="line"></span><br><span class="line"><span class="comment"># You initialize the weights to the normal distribution</span></span><br><span class="line"><span class="comment"># with mean 0 and standard deviation 0.02</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">weights_init</span>(<span class="params">m</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isinstance</span>(m, nn.Conv2d) <span class="keyword">or</span> <span class="built_in">isinstance</span>(m, nn.ConvTranspose2d):</span><br><span class="line">        torch.nn.init.normal_(m.weight, <span class="number">0.0</span>, <span class="number">0.02</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isinstance</span>(m, nn.BatchNorm2d):</span><br><span class="line">        torch.nn.init.normal_(m.weight, <span class="number">0.0</span>, <span class="number">0.02</span>)</span><br><span class="line">        torch.nn.init.constant_(m.bias, <span class="number">0</span>)</span><br><span class="line">gen = gen.apply(weights_init)</span><br><span class="line">disc = disc.apply(weights_init)</span><br></pre></td></tr></table></figure>
+<p>Finally, you can train your GAN!<br>For each epoch, you will process the entire dataset in batches. For every batch, you will update the discriminator and generator. Then, you can see DCGAN’s results!</p>
+<p>Here’s roughly the progression you should be expecting. On GPU this takes about 30 seconds per thousand steps. On CPU, this can take about 8 hours per thousand steps. You might notice that in the image of Step 5000, the generator is disproprotionately producing things that look like ones. If the discriminator didn’t learn to detect this imbalance quickly enough, then the generator could just produce more ones. As a result, it may have ended up tricking the discriminator so well that there would be no more improvement, known as mode collapse:<br><img src="MNIST_DCGAN_Progression.png" alt="MNIST Digits Progression"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">n_epochs = <span class="number">50</span></span><br><span class="line">cur_step = <span class="number">0</span></span><br><span class="line">mean_generator_loss = <span class="number">0</span></span><br><span class="line">mean_discriminator_loss = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(n_epochs):</span><br><span class="line">    <span class="comment"># Dataloader returns the batches</span></span><br><span class="line">    <span class="keyword">for</span> real, _ <span class="keyword">in</span> tqdm(dataloader):</span><br><span class="line">        cur_batch_size = <span class="built_in">len</span>(real)</span><br><span class="line">        real = real.to(device)</span><br><span class="line"></span><br><span class="line">        <span class="comment">## Update discriminator ##</span></span><br><span class="line">        disc_opt.zero_grad()</span><br><span class="line">        fake_noise = get_noise(cur_batch_size, z_dim, device=device)</span><br><span class="line">        fake = gen(fake_noise)</span><br><span class="line">        disc_fake_pred = disc(fake.detach())</span><br><span class="line">        disc_fake_loss = criterion(disc_fake_pred, torch.zeros_like(disc_fake_pred))</span><br><span class="line">        disc_real_pred = disc(real)</span><br><span class="line">        disc_real_loss = criterion(disc_real_pred, torch.ones_like(disc_real_pred))</span><br><span class="line">        disc_loss = (disc_fake_loss + disc_real_loss) / <span class="number">2</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Keep track of the average discriminator loss</span></span><br><span class="line">        mean_discriminator_loss += disc_loss.item() / display_step</span><br><span class="line">        <span class="comment"># Update gradients</span></span><br><span class="line">        disc_loss.backward(retain_graph=<span class="literal">True</span>)</span><br><span class="line">        <span class="comment"># Update optimizer</span></span><br><span class="line">        disc_opt.step()</span><br><span class="line"></span><br><span class="line">        <span class="comment">## Update generator ##</span></span><br><span class="line">        gen_opt.zero_grad()</span><br><span class="line">        fake_noise_2 = get_noise(cur_batch_size, z_dim, device=device)</span><br><span class="line">        fake_2 = gen(fake_noise_2)</span><br><span class="line">        disc_fake_pred = disc(fake_2)</span><br><span class="line">        gen_loss = criterion(disc_fake_pred, torch.ones_like(disc_fake_pred))</span><br><span class="line">        gen_loss.backward()</span><br><span class="line">        gen_opt.step()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Keep track of the average generator loss</span></span><br><span class="line">        mean_generator_loss += gen_loss.item() / display_step</span><br><span class="line"></span><br><span class="line">        <span class="comment">## Visualization code ##</span></span><br><span class="line">        <span class="keyword">if</span> cur_step % display_step == <span class="number">0</span> <span class="keyword">and</span> cur_step &gt; <span class="number">0</span>:</span><br><span class="line">            print(<span class="string">f&quot;Step <span class="subst">&#123;cur_step&#125;</span>: Generator loss: <span class="subst">&#123;mean_generator_loss&#125;</span>, discriminator loss: <span class="subst">&#123;mean_discriminator_loss&#125;</span>&quot;</span>)</span><br><span class="line">            show_tensor_images(fake)</span><br><span class="line">            show_tensor_images(real)</span><br><span class="line">            mean_generator_loss = <span class="number">0</span></span><br><span class="line">            mean_discriminator_loss = <span class="number">0</span></span><br><span class="line">        cur_step += <span class="number">1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value=&#39;&#39;)))</code></pre>
+<p>​    </p>
+<pre><code>HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value=&#39;&#39;)))
+
+
+Step 500: Generator loss: 0.9676521250009537, discriminator loss: 0.5025659155845642</code></pre>
+<p><img src="output_20_4.png" alt="png"></p>
+<p><img src="output_20_5.png" alt="png"></p>
+<pre><code>HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value=&#39;&#39;)))
+
+
+Step 23000: Generator loss: 0.7005814965963376, discriminator loss: 0.6960778114795685</code></pre>
+<p><img src="output_20_235.png" alt="png"></p>
+<p><img src="output_20_236.png" alt="png"></p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2021/04/26/GANs-specialization-Week1-Notes-and-codes/" rel="next" title="GANs specialization Week1: Notes and codes">
+    Next: GANs specialization Week1: Notes and codes
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="Return to top"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="Menu"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+    <div class="footer-container container">
+        <div class="row">
+            
+            <div class="social-group col m4 s12">
+                <h5 class="white-text">Social</h5>
+                
+                    <a class="social-link" href="https://github.com/xiaoyuxie-vico" target="_blank">
+                        <i class="fa fa-2x fa-github"></i>
+                    </a>
+                
+                
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <div class="site-visitors-container white-text">
+        <span>
+            <i class="fa fa-user"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+        </span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>
+            <i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+
+
+            </div>
+            
+
+            
+            <div class="col m8 s12">
+                <h5 class="white-text">Links</h5>
+                
+                    <a class="social-link" href="xiaoyuxie.vico@gmail.com" target="_blank">Email</a>
+                
+                    <a class="social-link" href="https://www.linkedin.com/in/xyxie/" target="_blank">Linkedin</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2016 example.com, All rights reserved.
+            <p class="right" style="margin-top: 0;">Blog powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('pink lighten-2');
+
+            
+            // 添加new标签
+            $('.menu-about').append('<span class="new badge pink"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
