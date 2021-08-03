@@ -141,7 +141,7 @@
 </ul>
 <h1 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h1><p>If you like, please star or fork.</p>
 <p>Welcome any comments or feedbacks!</p>
-<p>Email: <a href="mailto:&#x78;&#105;&#x61;&#111;&#x79;&#x75;&#x78;&#x69;&#x65;&#50;&#48;&#50;&#x30;&#64;&#117;&#x2e;&#x6e;&#x6f;&#114;&#x74;&#x68;&#x77;&#x65;&#x73;&#x74;&#101;&#x72;&#x6e;&#46;&#x65;&#100;&#117;">&#x78;&#105;&#x61;&#111;&#x79;&#x75;&#x78;&#x69;&#x65;&#50;&#48;&#50;&#x30;&#64;&#117;&#x2e;&#x6e;&#x6f;&#114;&#x74;&#x68;&#x77;&#x65;&#x73;&#x74;&#101;&#x72;&#x6e;&#46;&#x65;&#100;&#117;</a></p>
+<p>Email: <a href="mailto:&#x78;&#x69;&#x61;&#111;&#121;&#117;&#120;&#105;&#101;&#50;&#48;&#x32;&#48;&#64;&#117;&#x2e;&#x6e;&#x6f;&#x72;&#x74;&#x68;&#119;&#101;&#x73;&#x74;&#x65;&#x72;&#x6e;&#46;&#x65;&#100;&#117;">&#x78;&#x69;&#x61;&#111;&#121;&#117;&#120;&#105;&#101;&#50;&#48;&#x32;&#48;&#64;&#117;&#x2e;&#x6e;&#x6f;&#x72;&#x74;&#x68;&#119;&#101;&#x73;&#x74;&#x65;&#x72;&#x6e;&#46;&#x65;&#100;&#117;</a></p>
 ]]></content>
       <categories>
         <category>Notes</category>
@@ -1498,8 +1498,8 @@ Epoch 199, step 93500: Generator loss: 1.095844237446786, discriminator loss: 0.
 <li>Bayesian Deep Learning;</li>
 </ul>
 <h1 id="Publications"><a href="#Publications" class="headerlink" title="Publications"></a>Publications</h1><ul>
-<li><a href="https://www.nature.com/articles/s41524-021-00555-z"><strong>Xie, X.</strong>, Bennett, J., Saha, S., Lu, Y., Cao, J., Liu, W. K., &amp; Gan, Z. (2021). Mechanistic data-driven prediction of as-built mechanical properties in metal additive manufacturing. <strong>Npj Computational Materials.</strong></a></li>
-<li><a href="https://www.sciencedirect.com/science/article/pii/S004578252030637X">Saha, S., Gan, Z., Cheng, L., Gao, J., Kafka, O. L., <strong>Xie, X.</strong>, Li, H., Tajdari, M., Kim, H. A., &amp; Liu, W. K. (2021). Hierarchical Deep Learning Neural Network (HiDeNN): An artificial intelligence (AI) framework for computational science and engineering. <strong><em>Computer Methods in Applied Mechanics and Engineering</em></strong>, <em>373</em>, 113452. https://doi.org/10.1016/j.cma.2020.113452</a></li>
+<li><strong>Xie, X.</strong>, Bennett, J., Saha, S., Lu, Y., Cao, J., Liu, W. K., &amp; Gan, Z. (2021). Mechanistic data-driven prediction of as-built mechanical properties in metal additive manufacturing. <strong>Npj Computational Materials.</strong>, <a href="https://www.nature.com/articles/s41524-021-00555-z">Paper</a></li>
+<li>Saha, S., Gan, Z., Cheng, L., Gao, J., Kafka, O. L., <strong>Xie, X.</strong>, Li, H., Tajdari, M., Kim, H. A., &amp; Liu, W. K. (2021). Hierarchical Deep Learning Neural Network (HiDeNN): An artificial intelligence (AI) framework for computational science and engineering. <strong>Computer Methods in Applied Mechanics and Engineering</strong>, 373, 113452. <a href="https://doi.org/10.1016/j.cma.2020.113452">https://doi.org/10.1016/j.cma.2020.113452</a>, <a href="https://www.sciencedirect.com/science/article/pii/S004578252030637X">Paper</a></li>
 </ul>
 <h1 id="Conference-Presentation"><a href="#Conference-Presentation" class="headerlink" title="Conference Presentation"></a>Conference Presentation</h1><ul>
 <li><a href="http://16.usnccm.org/">16th U.S. National Congress on Computational Mechanics (USNCCM16) - July 25-29, 2021 - Virtual Event</a></li>
