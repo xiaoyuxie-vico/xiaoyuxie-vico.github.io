@@ -141,7 +141,7 @@
 </ul>
 <h1 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h1><p>If you like, please star or fork.</p>
 <p>Welcome any comments or feedbacks!</p>
-<p>Email: <a href="mailto:&#x78;&#x69;&#x61;&#111;&#121;&#117;&#120;&#105;&#101;&#50;&#48;&#x32;&#48;&#64;&#117;&#x2e;&#x6e;&#x6f;&#x72;&#x74;&#x68;&#119;&#101;&#x73;&#x74;&#x65;&#x72;&#x6e;&#46;&#x65;&#100;&#117;">&#x78;&#x69;&#x61;&#111;&#121;&#117;&#120;&#105;&#101;&#50;&#48;&#x32;&#48;&#64;&#117;&#x2e;&#x6e;&#x6f;&#x72;&#x74;&#x68;&#119;&#101;&#x73;&#x74;&#x65;&#x72;&#x6e;&#46;&#x65;&#100;&#117;</a></p>
+<p>Email: <a href="mailto:&#120;&#105;&#x61;&#111;&#x79;&#117;&#120;&#105;&#x65;&#x32;&#x30;&#x32;&#x30;&#64;&#117;&#x2e;&#x6e;&#x6f;&#114;&#116;&#x68;&#119;&#x65;&#x73;&#116;&#x65;&#114;&#110;&#46;&#101;&#100;&#x75;">&#120;&#105;&#x61;&#111;&#x79;&#117;&#120;&#105;&#x65;&#x32;&#x30;&#x32;&#x30;&#64;&#117;&#x2e;&#x6e;&#x6f;&#114;&#116;&#x68;&#119;&#x65;&#x73;&#116;&#x65;&#114;&#110;&#46;&#101;&#100;&#x75;</a></p>
 ]]></content>
       <categories>
         <category>Notes</category>
@@ -1491,7 +1491,7 @@ Epoch 199, step 93500: Generator loss: 1.095844237446786, discriminator loss: 0.
     <url>/about/index.html</url>
     <content><![CDATA[<!-- <img src="https://vico-image.oss-cn-hongkong.aliyuncs.com/avatar.jpg" width = "300" height = "200" alt="" align=center /> -->
 
-<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>I am Xiaoyu Xie, a first-year PhD student at Northwestern University. </p>
+<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>I am a second-year PhD student in Mechanical Engineering at Northwestern University. Before that, I graduated from University of Chinese Academy of Sciences and China University of Mining and Technology with master and undergraduate degree respectively.</p>
 <h1 id="Research-Interests"><a href="#Research-Interests" class="headerlink" title="Research Interests:"></a>Research Interests:</h1><ul>
 <li>Computer Vision;</li>
 <li>Deep Learning in Manufacturing and Mechanics;</li>
@@ -1543,13 +1543,13 @@ Epoch 199, step 93500: Generator loss: 1.095844237446786, discriminator loss: 0.
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Reading</title>
-    <url>/reading/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title>Reading</title>
+    <url>/reading/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
