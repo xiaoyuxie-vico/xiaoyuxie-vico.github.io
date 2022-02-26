@@ -148,18 +148,13 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Research</title>
-    <url>/Research/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Blog</title>
-    <url>/Blog/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>About</title>
     <url>/about/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Research</title>
+    <url>/Research/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
