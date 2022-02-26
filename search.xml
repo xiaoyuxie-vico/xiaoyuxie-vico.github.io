@@ -10,6 +10,10 @@
 <li>Computer Vision;</li>
 </ul>
 <h1 id="Research"><a href="#Research" class="headerlink" title="Research"></a>Research</h1><h3 id="1-Dimensionless-learning-for-scientific-discovery"><a href="#1-Dimensionless-learning-for-scientific-discovery" class="headerlink" title="1. Dimensionless learning for scientific discovery"></a>1. Dimensionless learning for scientific discovery</h3><p>Dimensionless numbers and scaling laws provide elegant insights into the characteristic properties of physical systems. Classical dimensional analysis and similitude theory fail to identify a set of unique dimensionless numbers for a highly-multivariable system with incomplete governing equations. …</p>
+<p align="center">
+  <img height="500px" src="/images/DimensionlessLearning.png">
+</p>
+
 <details>
     <summary>Read more </summary>
 
@@ -23,6 +27,10 @@
 </details>
 
 <h3 id="2-Predictive-Deep-Learning-Model-for-Additive-Manufacturing"><a href="#2-Predictive-Deep-Learning-Model-for-Additive-Manufacturing" class="headerlink" title="2. Predictive Deep Learning Model for Additive Manufacturing"></a>2. Predictive Deep Learning Model for Additive Manufacturing</h3><p>Metal additive manufacturing provides remarkable flexibility in geometry and component design, but localized heating/cooling heterogeneity leads to spatial variations of as-built mechanical properties, significantly complicating the materials design process. …</p>
+<p align="center">
+  <img height="500px" src="/images/npj.png">
+</p>
+
 <details>
     <summary>Read more </summary>
 
