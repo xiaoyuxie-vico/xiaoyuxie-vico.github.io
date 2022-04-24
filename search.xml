@@ -62,6 +62,7 @@
 <li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/395-mechanistic-data-science-for-engineering.html">Mechanistic Data Science for Engineering</a></li>
 <li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/441-engineering-optimization-for-product-design-and-manufacturing.html">Engineering Optimization for Product Design and Manufacturing</a></li>
 <li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/470-high-performance-computing-for-multiphysics-applications.html">High Performance Computing for Multiphysics Applications</a></li>
+<li><a href="https://www.mccormick.northwestern.edu/electrical-computer/academics/courses/descriptions/368-468.html">Programming Massively Parallel Processors with CUDA</a></li>
 </ul>
 <p>Coursera:</p>
 <ul>
@@ -153,13 +154,13 @@
 ]]></content>
   </entry>
   <entry>
-    <title>About</title>
-    <url>/about/index.html</url>
+    <title>Research</title>
+    <url>/Research/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Research</title>
-    <url>/Research/index.html</url>
+    <title>About</title>
+    <url>/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
