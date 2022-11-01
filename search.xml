@@ -9,6 +9,9 @@
 <li>Deep Learning in Manufacturing and Mechanics;</li>
 <li>Computer Vision;</li>
 </ul>
+<h1 id="News"><a href="#News" class="headerlink" title="News"></a>News</h1><ul>
+<li>[10/2022]: Our latest work called <strong>“Data-driven discovery of dimensionless numbers and governing laws from scarce measurements”</strong> was accepted by <strong>Nature Communications</strong>!</li>
+</ul>
 <h1 id="Research"><a href="#Research" class="headerlink" title="Research"></a>Research</h1><h3 id="1-Dimensionless-Learning-for-scientific-discovery-scaling-laws-amp-PDEs"><a href="#1-Dimensionless-Learning-for-scientific-discovery-scaling-laws-amp-PDEs" class="headerlink" title="1. Dimensionless Learning for scientific discovery (scaling laws &amp; PDEs)"></a>1. Dimensionless Learning for scientific discovery (scaling laws &amp; PDEs)</h3><p>Dimensionless numbers and scaling laws provide elegant insights into the characteristic properties of physical systems. Classical dimensional analysis and similitude theory fail to identify a set of unique dimensionless numbers for a highly-multivariable system with incomplete governing equations. …</p>
 <details>
     <summary>Read more </summary>
