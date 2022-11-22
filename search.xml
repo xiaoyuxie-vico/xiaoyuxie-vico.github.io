@@ -36,7 +36,8 @@
 <li>[10/2022]: Our latest work called <strong>“Data-driven discovery of dimensionless numbers and governing laws from scarce measurements”</strong> was accepted by <strong><em>Nature Communications</em></strong>!</li>
 <li>[08/2022]: Our team won <strong>three 1st places</strong> and <strong>two 2nd places</strong> in Additive Manufacturing Benchmark Challenge (AM-Bench), NIST, US, 2022!</li>
 </ul>
-<h1 id="Research"><a href="#Research" class="headerlink" title="Research"></a>Research</h1><h3 id="1-Dimensionless-Learning-for-scientific-discovery-scaling-laws-amp-PDEs"><a href="#1-Dimensionless-Learning-for-scientific-discovery-scaling-laws-amp-PDEs" class="headerlink" title="1. Dimensionless Learning for scientific discovery (scaling laws &amp; PDEs)"></a>1. Dimensionless Learning for scientific discovery (scaling laws &amp; PDEs)</h3><p>Dimensionless numbers and scaling laws provide elegant insights into the characteristic properties of physical systems. Classical dimensional analysis and similitude theory fail to identify a set of unique dimensionless numbers for a highly-multivariable system with incomplete governing equations. …</p>
+<h1 id="Research"><a href="#Research" class="headerlink" title="Research"></a>Research</h1><h3 id="1-Physics-for-AI"><a href="#1-Physics-for-AI" class="headerlink" title="1. Physics for AI"></a><strong>1. Physics for AI</strong></h3><p><strong>Dimensionless Learning (Dimensional Analysis + Machine Learning) for scientific discovery</strong></p>
+<p>Dimensionless numbers and scaling laws provide elegant insights into the characteristic properties of physical systems. Classical dimensional analysis and similitude theory fail to identify a set of unique dimensionless numbers for a highly-multivariable system with incomplete governing equations. …</p>
 <details>
     <summary>Read more </summary>
 
@@ -57,7 +58,8 @@
 
 </details>
 
-<h3 id="2-AI-empowered-scientific-discovery-and-digital-twin-in-additive-manufacturing"><a href="#2-AI-empowered-scientific-discovery-and-digital-twin-in-additive-manufacturing" class="headerlink" title="2. AI-empowered scientific discovery and digital twin in additive manufacturing"></a>2. AI-empowered scientific discovery and digital twin in additive manufacturing</h3><p>Metal additive manufacturing provides remarkable flexibility in geometry and component design, but localized heating/cooling heterogeneity leads to spatial variations of as-built mechanical properties, significantly complicating the materials design process. …</p>
+<h3 id="2-AI-for-physics"><a href="#2-AI-for-physics" class="headerlink" title="2. AI for physics"></a><strong>2. AI for physics</strong></h3><p><strong>AI-empowered scientific discovery and digital twin in additive manufacturing</strong></p>
+<p>Metal additive manufacturing provides remarkable flexibility in geometry and component design, but localized heating/cooling heterogeneity leads to spatial variations of as-built mechanical properties, significantly complicating the materials design process. …</p>
 <details>
     <summary>Read more </summary>
 
