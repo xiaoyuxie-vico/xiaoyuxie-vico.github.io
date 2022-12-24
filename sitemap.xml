@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2022/02/25/What-is-Scientific-Machine-Learning-and-Physics-informed-Machine-Learning/</loc>
+    
+    <lastmod>2022-12-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/Research/index.html</loc>
+    
+    <lastmod>2022-12-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2022/02/25/About/</loc>
     
     <lastmod>2022-12-23</lastmod>
@@ -11,25 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/02/25/What-is-Scientific-Machine-Learning-and-Physics-informed-Machine-Learning/</loc>
-    
-    <lastmod>2022-02-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/about/index.html</loc>
-    
-    <lastmod>2022-02-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/Research/index.html</loc>
     
     <lastmod>2022-02-26</lastmod>
     
@@ -58,7 +58,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/Blog/</loc>
+    <loc>http://example.com/categories/Research/</loc>
     <lastmod>2022-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
