@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2022/02/25/What-is-Scientific-Machine-Learning-and-Physics-informed-Machine-Learning/</loc>
+    <loc>http://example.com/2022/02/25/About/</loc>
     
     <lastmod>2022-12-24</lastmod>
     
@@ -20,9 +20,9 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/02/25/About/</loc>
+    <loc>http://example.com/2022/02/25/What-is-Scientific-Machine-Learning-and-Physics-informed-Machine-Learning/</loc>
     
-    <lastmod>2022-12-23</lastmod>
+    <lastmod>2022-12-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

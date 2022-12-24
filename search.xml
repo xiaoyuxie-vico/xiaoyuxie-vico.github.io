@@ -37,25 +37,30 @@
 <li>[12/2022]: Our latest work called <a href="https://www.nature.com/articles/s41467-022-35084-w#Sec2"><strong>“Data-driven discovery of dimensionless numbers and governing laws from scarce measurements”</strong></a> was published on <strong><em>Nature Communications</em></strong>!</li>
 <li>[08/2022]: Our team won <strong>three 1st places</strong> and <strong>two 2nd places</strong> in Additive Manufacturing Benchmark Challenge (AM-Bench), NIST, US, 2022!</li>
 </ul>
-<h1 id="Research"><a href="#Research" class="headerlink" title="Research"></a>Research</h1><h3 id="1-Physics-for-AI"><a href="#1-Physics-for-AI" class="headerlink" title="1. Physics for AI"></a><strong>1. Physics for AI</strong></h3><p><strong>Dimensionless Learning (Dimensional Analysis + Machine Learning) for scientific discovery</strong></p>
-<p>Dimensionless numbers and scaling laws provide elegant insights into the characteristic properties of physical systems. Classical dimensional analysis and similitude theory fail to identify a set of unique dimensionless numbers for a highly-multivariable system with incomplete governing equations. …</p>
+<h1 id="Research"><a href="#Research" class="headerlink" title="Research"></a>Research</h1><h3 id="1-Physics-for-AI"><a href="#1-Physics-for-AI" class="headerlink" title="1. Physics for AI"></a><strong>1. Physics for AI</strong></h3><p><strong>1.1 Dimensionless Learning (Dimensional Analysis + Machine Learning) for scientific discovery</strong></p>
+<p>Dimensionless learning combines fundamental physics principles with state-of-the-art machine learning techniques to solve scientific and engineering problems. By embedding the principle of dimensional invariance into a two-level machine learning scheme, it can automatically discover dominant dimensionless numbers and governing laws (scaling laws and differential equations) from noisy and scarce measurements. <a href="https://www.nature.com/articles/s41467-022-35084-w#Sec2"><strong>Paper (Nature Communications)</strong></a>, <a href="https://github.com/xiaoyuxie-vico/PyDimension"><strong>Code</strong></a>.</p>
 <details>
     <summary>Read more </summary>
 
-<p>In this study, we embed the principle of dimensional invariance into a two-level machine learning scheme to automatically discover dominant and unique dimensionless numbers and scaling laws from data. The proposed methodology, called dimensionless learning, can reduce high-dimensional parametric spaces into descriptions involving just a few physically-interpretable dimensionless parameters, which significantly simplifies the process design and optimization of the system. We demonstrate the algorithm by solving several challenging engineering problems with noisy experimental measurements (not synthetic data) collected from the literature. The examples include turbulent Rayleigh-Benard convection, vapor depression dynamics in laser melting of metals, and porosity formation in 3D printing. We also show that the proposed approach can identify dimensionally-homogeneous differential equations with minimal parameters by leveraging sparsity-promoting techniques.</p>
 <ul>
 <li><strong>Xie, X.</strong>, Samaei, A., Guo, J., Liu, W. K., &amp; Gan, Z., (2022). Data-driven discovery of dimensionless numbers and governing laws from scarce measurements. <strong><em>Nature Communications</em></strong>, 13, 7562. <a href="https://doi.org/10.1038/s41467-022-35084-w">https://doi.org/10.1038/s41467-022-35084-w</a></li>
 </ul>
-<p><a href="http://arxiv.org/abs/2111.03583"><strong>Paper</strong></a>, <a href="https://github.com/xiaoyuxie-vico/PyDimension"><strong>Code</strong></a>.</p>
 <p align="center">
   <img height="500px" src="/images/DimensionlessLearning.png">
 </p>
+
+</details>
+
+<p><strong>1.2 Dimensionally invariant Neural Network (DimensionNet) for scientific discovery</strong></p>
+<p>The DimensionNet reduces the dimensionality of the original input parameters by automatically discovering a smaller set of governing dimensionless numbers and transforming the high-dimensional inputs to the dimensionless set. </p>
+<details>
+    <summary>Read more </summary>
 
 <ul>
 <li>Saha, S., Gan, Z., Cheng, L., Gao, J., Kafka, O. L., <strong>Xie, X.</strong>, Li, H., Tajdari, M., Kim, H. A., &amp; Liu, W. K. (2021). Hierarchical Deep Learning Neural Network (HiDeNN): An artificial intelligence (AI) framework for computational science and engineering. <strong><em>Computer Methods in Applied Mechanics and Engineering</em></strong>, 373, 113452. <br><a href="https://doi.org/10.1016/j.cma.2020.113452"><strong>Paper</strong></a></li>
 </ul>
 <p align="center">
-  <img height="300px" src="/images/DimensionNet.png">
+  <img height="200px" src="/images/DimensionNet.png">
 </p>
 
 </details>
@@ -92,15 +97,29 @@
 </ul>
 <h1 id="Conference-presentations"><a href="#Conference-presentations" class="headerlink" title="Conference presentations"></a>Conference presentations</h1><ul>
 <li><strong>Xie, X.</strong>, Gan, Z., Liu, W., Dimensionless learning for discovering new dimensionless numbers, 16th U.S. National Congress on Computational Mechanics (USNCCM16), July 25-29, 2021, Virtual Event.</li>
-<li><strong>Xie, X.</strong>, Gan, Z., Saha, S., Liu, W., Mechanistic digital twin of metal additive manufacturing, Mechanistic Machine Learning and Digital Twins for Computational Science, Engineering &amp; Technology (MMLDT-CSET 2021), Sep. 2021, San Diego, USA.</li>
+<li><strong>Xie, X.</strong>, Gan, Z., Saha, S., Liu, W., Mechanistic digital twin of metal additive manufacturing, Mechanistic Machine Learning and Digital Twins for Computational Science, Engineering &amp; Technology (MMLDT-CSET 2021), Sep. 2021, San Diego, USA. <a href="https://www.morressier.com/o/event/6128fdff7000f900128c7f3b/sessions/612f6737bc981037241008d7?poster-id=612f6737bc981037241008da"><strong>Video</strong></a></li>
+</ul>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><ul>
+<li><a href="https://github.com/xiaoyuxie-vico/PyDimension">PyDimension</a>: A Python package for automatically data-driven scientific discovery;</li>
+<li><a href="https://xiaoyuxie.top/PyDimension-Book/intro.html">PyDimension Documentation</a>: Online documentation and tutorials for PyDimension;</li>
+<li><a href="https://github.com/xiaoyuxie-vico/DL-AM">DL-AM</a>: An implementation for our paper called [Mechanistic data-driven prediction of as-built mechanical properties in metal additive manufacturing](<a href="https://www.nature.com/articles/s41524-021-00555-z]">https://www.nature.com/articles/s41524-021-00555-z]</a>;</li>
 </ul>
 <h1 id="Reviewer"><a href="#Reviewer" class="headerlink" title="Reviewer"></a>Reviewer</h1><ul>
 <li>Computational Mechanics, Springer;</li>
 </ul>
 <h1 id="Teaching"><a href="#Teaching" class="headerlink" title="Teaching"></a>Teaching</h1><ul>
-<li>Teaching Assistant for <a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/205-3-ea3.html">Engineering Analysis 3</a>, 2022-spring, Northwestern University</li>
-<li>Teaching Assistant for <a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/327-finite-element-methods-in-mechanics.html">MECH_ENG 327: Finite Elements Methods in Mechanics (CEE 327)</a>, 2022-fall, Northwestern University</li>
-<li>Teaching Assistant and mentor for <a href="https://mechanistic-data-science.mech.northwestern.edu/about/">Mechanistic Data Science Tutorials, Training, and Research Experience</a>, 2019 - 2022, Northwestern University</li>
+<li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/205-3-ea3.html">EA3: Engineering Analysis 3</a>, 2022-spring, Northwestern University<ul>
+<li>Teaching Assistant;</li>
+</ul>
+</li>
+<li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/327-finite-element-methods-in-mechanics.html">CEE/ME 327: Finite Elements Methods in Mechanics</a>, 2022-fall, Northwestern University<ul>
+<li>Teaching Assistant</li>
+</ul>
+</li>
+<li><a href="https://class-descriptions.northwestern.edu/4840/MEAS/MECH_ENG/14722">ME 395: Mechanistic Data Science Tutorials, Training, and Research Experience</a>, 2019 - 2022, Northwestern University<ul>
+<li>Teaching Assistant and mentor</li>
+</ul>
+</li>
 </ul>
 <h1 id="Awards"><a href="#Awards" class="headerlink" title="Awards"></a>Awards</h1><ul>
 <li><a href="https://www.nist.gov/ambench/am-bench-2022-challenge-submissions-and-awards">Additive Manufacturing Benchmark Challenge Awards, National Institute of Standards and Technology, US, 2022</a>:<ul>
@@ -110,10 +129,28 @@
 <li>CHAL-AMB2022-03-TTAM Track Time Above Melting Temperature, 2nd place</li>
 </ul>
 </li>
-<li>Predictive Science and Engineering Design Fellowship, Northwestern University, 2021</li>
+<li><a href="https://www.mccormick.northwestern.edu/predictive-science-engineering-design/">Predictive Science and Engineering Design Fellowship</a>, Northwestern University, 2021</li>
 <li>Mechanistic Machine Learning and Digital Twins for Computational Science, Engineering &amp; Technology (MMLDT-CSET 2021) NSF Fellowship, 2021</li>
 <li>16th U.S. National Congress on Computational Mechanics (USNCCM16) conference award, July 25-29, 2021</li>
 <li>Water P. Murphy Fellowship, Northwestern University, 2020</li>
+</ul>
+<h1 id="Certificates"><a href="#Certificates" class="headerlink" title="Certificates"></a>Certificates</h1><p>Coursera:</p>
+<ul>
+<li><a href="https://www.coursera.org/specializations/deep-learning">Deep Learning Specialization</a><ul>
+<li><a href="https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning">Neural Networks and Deep Learning</a></li>
+<li><a href="https://www.coursera.org/learn/deep-neural-network?specialization=deep-learning">Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization</a></li>
+<li><a href="https://www.coursera.org/learn/machine-learning-projects?specialization=deep-learning">Structuring Machine Learning Projects</a></li>
+<li><a href="https://www.coursera.org/learn/convolutional-neural-networks?specialization=deep-learning">Convolutional Neural Networks</a></li>
+<li><a href="https://www.coursera.org/learn/nlp-sequence-models?specialization=deep-learning">Sequence Models</a></li>
+</ul>
+</li>
+<li><a href="https://www.coursera.org/learn/bayesian-statistics">Bayesian Statistics: From Concept to Data Analysis</a></li>
+<li><a href="https://www.coursera.org/specializations/generative-adversarial-networks-gans">Generative Adversarial Networks (GANs) Specialization</a><ul>
+<li><a href="https://www.coursera.org/learn/build-basic-generative-adversarial-networks-gans">Build Basic Generative Adversarial Networks (GANs)</a></li>
+<li><a href="https://www.coursera.org/learn/build-better-generative-adversarial-networks-gans">Build Better Generative Adversarial Networks (GANs)</a></li>
+<li><a href="https://www.coursera.org/learn/apply-generative-adversarial-networks-gans">Apply Generative Adversarial Networks (GANs)</a></li>
+</ul>
+</li>
 </ul>
 ]]></content>
   </entry>
