@@ -209,15 +209,4 @@
 </ul>
 ]]></content>
   </entry>
-  <entry>
-    <title>Home</title>
-    <url>/Home/index.html</url>
-    <content><![CDATA[<p>Welcome to my personal academic blog! I am Xiaoyu Xie, a third-year PhD candidate in Mechanical Engineering Department at Northwestern University. My advisor is <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/liu-kam-wing.html">Prof. Wing Kam Liu</a>. In my research, I focus on developing robust and flexible artificial intelligence (AI) to uncover hidden patterns and knowledge from data in manufacturing, fluid mechanics, and solid mechanics. Through my work on scientific/mechanistic machine learning or AI4Science, I aim to improve the interpretability, generalization, and small-dataset scalability of AI algorithms by incorporating existing scientific insight. My research in dimensionless learning is a prime example of this approach, as it uses fundamental physical invariance to discover three levels of knowledge through machine learning. </p>
-<h1 id="News"><a href="#News" class="headerlink" title="News"></a>News</h1><ul>
-<li>[12/2022]: Our official <a href="https://xiaoyuxie.top/PyDimension-Book/intro.html"><strong>PyDimension Documentation</strong></a> for dimensionless learning was released, in which you can try different tutorials and examples interactively!</li>
-<li>[12/2022]: Our latest work called <a href="https://www.nature.com/articles/s41467-022-35084-w#Sec2"><strong>“Data-driven discovery of dimensionless numbers and governing laws from scarce measurements”</strong></a> was published on <strong><em>Nature Communications</em></strong>!</li>
-<li>[08/2022]: Our team won <strong>three 1st places</strong> and <strong>two 2nd places</strong> in Additive Manufacturing Benchmark Challenge (AM-Bench), NIST, US, 2022!</li>
-</ul>
-]]></content>
-  </entry>
 </search>
