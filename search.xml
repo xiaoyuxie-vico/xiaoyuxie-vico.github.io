@@ -12,68 +12,13 @@
 ]]></content>
   </entry>
   <entry>
-    <title>What is Scientific Machine Learning and Physics-informed Machine Learning?</title>
-    <url>/2022/02/25/What-is-Scientific-Machine-Learning-and-Physics-informed-Machine-Learning/</url>
-    <content><![CDATA[<p>Machine learning (ML) and deep learning (DL) have been widely applied in diverse disciplines in science and engineering due to the promising results in image recognition, natural language processing, speech recognition, etc. However, it is still challenging to discover explicit physical models from data because most ML and DL methods are black-box that cannot be interpreted by human beings. For example, Neural Network is a network composed of a series of structured neurons or nodes. Even though it can be regarded as a universal approximation to any function, it is difficult to explain the relationship for different neurons or nodes. This limitation greatly hinders the development of ML and DL in scientific problems because we desire to discover simple but powerful physical models in these problems, such as Newton’s law or Einstein’s law. Therefore, there is an emerging need to discover explicit and interpretable physical models from data using ML and DL. This emerging field is called <strong>scientific machine learning</strong> or <strong>physics-informed machine learning</strong>.</p>
-<p>One typical example is <strong>Physics-Informed Neural Networks (PINNs)</strong>. The basic idea for PINNs is that since many complex dynamics systems can be described as partial differential equations, PINNs aim to inform Neural Networks with such physical knowledge to solve the equations numerically. Unlike standard ML or DL which generally need to spend a lot of time in preparing a large dataset to train a model, PINNs only need the equations governing the systems and do not need a training set. That is to say, PINNs avoid a time-consuming procedure in data collection.</p>
-<p>Another example is <strong>Dimensionless Learning</strong>, which is a physics-informed and explainable machine learning methodology. It aims to find some causal relationships between different variables in a complex system by using another fundamental physical knowledge: the dimensions or units of different variables. By incorporating physical dimensions among variables into machine learning algorithms, it can successfully reduce the high-dimensional parameter space into low-dimensional descriptions. One important advantage of the low-dimensional space is that it can be described as a few physically interpretable dimensionless parameters. Because the parameter space is reduced, dimensionless learning can work well for small datasets effectively.</p>
-<p>Despite different formulations of scientific machine learning methods, one common thing is that they want to incorporate our existing physical knowledge into ML to make the train a model efficiently and effectively. After hundreds of years of unremitting efforts of scientists, we already have tons of physical knowledge in various fields. The application of partial differential equations and physical dimensions are just a small part of them. We still have vast physical knowledge waiting to be explored.</p>
-]]></content>
-      <categories>
-        <category>Research</category>
-        <category>About</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Xiaoyu Xie</title>
     <url>/2022/02/25/index/</url>
-    <content><![CDATA[<!-- <img src="https://vico-image.oss-cn-hongkong.aliyuncs.com/avatar.jpg" width = "300" height = "200" alt="" align=center /> -->
-
-<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>I am a second-year PhD student in Mechanical Engineering at Northwestern University. Before that, I graduated from University of Chinese Academy of Sciences and China University of Mining and Technology with master and undergraduate degree respectively.</p>
-<h1 id="Research-Interests"><a href="#Research-Interests" class="headerlink" title="Research Interests:"></a>Research Interests:</h1><ul>
-<li>Scientific/Mechanistic Machine Learning;</li>
-<li>Deep Learning in Manufacturing and Mechanics;</li>
-<li>Computer Vision;</li>
-</ul>
-<h1 id="Publications"><a href="#Publications" class="headerlink" title="Publications"></a>Publications</h1><ul>
-<li><strong>Xie, X.</strong>, Liu, W. K., &amp; Gan, Z. (2021). Data-driven discovery of dimensionless numbers and scaling laws from experimental measurements. ArXiv:2111.03583 [Physics]. <a href="http://arxiv.org/abs/2111.03583">http://arxiv.org/abs/2111.03583</a></li>
-<li><strong>Xie, X.</strong>, Bennett, J., Saha, S., Lu, Y., Cao, J., Liu, W. K., &amp; Gan, Z. (2021). Mechanistic data-driven prediction of as-built mechanical properties in metal additive manufacturing. <strong>Npj Computational Materials</strong>, 7(1), 1–12. <a href="https://doi.org/10.1038/s41524-021-00555-z">https://doi.org/10.1038/s41524-021-00555-z</a></li>
-<li>Mozaffar, M., Liao, S., <strong>Xie, X.</strong>, Saha, S., Park, C., Cao, J., Liu, W. K., &amp; Gan, Z. (2021). Mechanistic artificial intelligence (Mechanistic-AI) for modeling, design, and control of advanced manufacturing processes: Current state and perspectives. <strong>Journal of Materials Processing Technology</strong>, 117485. <a href="https://doi.org/10.1016/j.jmatprotec.2021.117485">https://doi.org/10.1016/j.jmatprotec.2021.117485</a></li>
-<li>Saha, S., Gan, Z., Cheng, L., Gao, J., Kafka, O. L., <strong>Xie, X.</strong>, Li, H., Tajdari, M., Kim, H. A., &amp; Liu, W. K. (2021). Hierarchical Deep Learning Neural Network (HiDeNN): An artificial intelligence (AI) framework for computational science and engineering. <strong>Computer Methods in Applied Mechanics and Engineering</strong>, 373, 113452. <a href="https://doi.org/10.1016/j.cma.2020.113452">https://doi.org/10.1016/j.cma.2020.113452</a></li>
-</ul>
-<h1 id="Conference-Presentation"><a href="#Conference-Presentation" class="headerlink" title="Conference Presentation"></a>Conference Presentation</h1><ul>
-<li><a href="http://16.usnccm.org/">16th U.S. National Congress on Computational Mechanics (USNCCM16) - July 25-29, 2021 - Virtual Event</a>-[Conference award]</li>
-<li><a href="https://mmldt.eng.ucsd.edu/%22%20%5Ct%20%22_blank">Mechanistic Machine Learning and Digital Twins for Computational Science, Engineering &amp; Technology (MMLDT-CSET 2021) - Sep. 2021, San Diego, USA</a>-[Fellowship award]</li>
-</ul>
-<h1 id="Machine-Learning-related-courses-I-have-taken"><a href="#Machine-Learning-related-courses-I-have-taken" class="headerlink" title="Machine Learning related courses I have taken"></a>Machine Learning related courses I have taken</h1><p>Northwestern University:</p>
-<ul>
-<li><a href="https://www.mccormick.northwestern.edu/electrical-computer/academics/courses/descriptions/375-475.html">Machine Learning: Foundations, Applications, and Algorithms</a></li>
-<li><a href="https://www.mccormick.northwestern.edu/electrical-computer/academics/courses/descriptions/433.html">Statistical Pattern Recognition</a></li>
-<li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/395-mechanistic-data-science-for-engineering.html">Mechanistic Data Science for Engineering</a></li>
-<li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/441-engineering-optimization-for-product-design-and-manufacturing.html">Engineering Optimization for Product Design and Manufacturing</a></li>
-<li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/470-high-performance-computing-for-multiphysics-applications.html">High Performance Computing for Multiphysics Applications</a></li>
-</ul>
-<p>Coursera:</p>
-<ul>
-<li><a href="https://www.coursera.org/specializations/deep-learning">Deep Learning Specialization</a><ul>
-<li><a href="https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning">Neural Networks and Deep Learning</a></li>
-<li><a href="https://www.coursera.org/learn/deep-neural-network?specialization=deep-learning">Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization</a></li>
-<li><a href="https://www.coursera.org/learn/machine-learning-projects?specialization=deep-learning">Structuring Machine Learning Projects</a></li>
-<li><a href="https://www.coursera.org/learn/convolutional-neural-networks?specialization=deep-learning">Convolutional Neural Networks</a></li>
-<li><a href="https://www.coursera.org/learn/nlp-sequence-models?specialization=deep-learning">Sequence Models</a></li>
-</ul>
-</li>
-<li><a href="https://www.coursera.org/learn/bayesian-statistics">Bayesian Statistics: From Concept to Data Analysis</a></li>
-<li><a href="https://www.coursera.org/specializations/generative-adversarial-networks-gans">Generative Adversarial Networks (GANs) Specialization</a><ul>
-<li><a href="https://www.coursera.org/learn/build-basic-generative-adversarial-networks-gans">Build Basic Generative Adversarial Networks (GANs)</a></li>
-<li><a href="https://www.coursera.org/learn/build-better-generative-adversarial-networks-gans">Build Better Generative Adversarial Networks (GANs)</a></li>
-<li><a href="https://www.coursera.org/learn/apply-generative-adversarial-networks-gans">Apply Generative Adversarial Networks (GANs)</a></li>
-</ul>
-</li>
-</ul>
-<p>Online courses:</p>
-<ul>
-<li><a href="https://speech.ee.ntu.edu.tw/~hylee/ml/2017-fall.html">Machine Lerning by Hung-yi Lee</a></li>
+    <content><![CDATA[<p>Welcome to my personal academic blog! I am Xiaoyu Xie, a third-year PhD candidate in Mechanical Engineering Department at Northwestern University. My advisor is <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/liu-kam-wing.html">Prof. Wing Kam Liu</a>. In my research, I focus on developing robust and flexible artificial intelligence (AI) to uncover hidden patterns and knowledge from data in manufacturing, fluid mechanics, and solid mechanics. Through my work on scientific/mechanistic machine learning or AI4Science, I aim to improve the interpretability, generalization, and small-dataset scalability of AI algorithms by incorporating existing scientific insight. My research in dimensionless learning is a prime example of this approach, as it uses fundamental physical invariance to discover three levels of knowledge through machine learning. </p>
+<h1 id="News"><a href="#News" class="headerlink" title="News"></a>News</h1><ul>
+<li>[12/2022]: Our official <a href="https://xiaoyuxie.top/PyDimension-Book/intro.html"><strong>PyDimension Documentation</strong></a> for dimensionless learning was released, in which you can try different tutorials and examples interactively!</li>
+<li>[12/2022]: Our latest work called <a href="https://www.nature.com/articles/s41467-022-35084-w#Sec2"><strong>“Data-driven discovery of dimensionless numbers and governing laws from scarce measurements”</strong></a> was published on <strong><em>Nature Communications</em></strong>!</li>
+<li>[08/2022]: Our team won <strong>three 1st places</strong> and <strong>two 2nd places</strong> in Additive Manufacturing Benchmark Challenge (AM-Bench), NIST, US, 2022!</li>
 </ul>
 ]]></content>
   </entry>
