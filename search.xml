@@ -121,37 +121,6 @@
 </ul>
 </li>
 </ul>
-<h1 id="Awards"><a href="#Awards" class="headerlink" title="Awards"></a>Awards</h1><ul>
-<li><a href="https://www.nist.gov/ambench/am-bench-2022-challenge-submissions-and-awards">Additive Manufacturing Benchmark Challenge Awards, National Institute of Standards and Technology, US, 2022</a>:<ul>
-<li>CHAL-A-AMB2022-01-Scan-MWD &amp; ASR Scan Geometry, 1st place</li>
-<li>CHAL-AMB2022-03-PSCR Pad Solid Cooling Rate, 1st place</li>
-<li>CHAL-AMB2022-03-PMPG Pad Melt Pool Geometry, 1st place</li>
-<li>CHAL-AMB2022-03-TTAM Track Time Above Melting Temperature, 2nd place</li>
-</ul>
-</li>
-<li><a href="https://www.mccormick.northwestern.edu/predictive-science-engineering-design/">Predictive Science and Engineering Design Fellowship</a>, Northwestern University, 2021</li>
-<li>Mechanistic Machine Learning and Digital Twins for Computational Science, Engineering &amp; Technology (MMLDT-CSET 2021) NSF Fellowship, 2021</li>
-<li>16th U.S. National Congress on Computational Mechanics (USNCCM16) conference award, July 25-29, 2021</li>
-<li>Water P. Murphy Fellowship, Northwestern University, 2020</li>
-</ul>
-<h1 id="Certificates"><a href="#Certificates" class="headerlink" title="Certificates"></a>Certificates</h1><p>Coursera:</p>
-<ul>
-<li><a href="https://www.coursera.org/specializations/deep-learning">Deep Learning Specialization</a><ul>
-<li><a href="https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning">Neural Networks and Deep Learning</a></li>
-<li><a href="https://www.coursera.org/learn/deep-neural-network?specialization=deep-learning">Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization</a></li>
-<li><a href="https://www.coursera.org/learn/machine-learning-projects?specialization=deep-learning">Structuring Machine Learning Projects</a></li>
-<li><a href="https://www.coursera.org/learn/convolutional-neural-networks?specialization=deep-learning">Convolutional Neural Networks</a></li>
-<li><a href="https://www.coursera.org/learn/nlp-sequence-models?specialization=deep-learning">Sequence Models</a></li>
-</ul>
-</li>
-<li><a href="https://www.coursera.org/learn/bayesian-statistics">Bayesian Statistics: From Concept to Data Analysis</a></li>
-<li><a href="https://www.coursera.org/specializations/generative-adversarial-networks-gans">Generative Adversarial Networks (GANs) Specialization</a><ul>
-<li><a href="https://www.coursera.org/learn/build-basic-generative-adversarial-networks-gans">Build Basic Generative Adversarial Networks (GANs)</a></li>
-<li><a href="https://www.coursera.org/learn/build-better-generative-adversarial-networks-gans">Build Better Generative Adversarial Networks (GANs)</a></li>
-<li><a href="https://www.coursera.org/learn/apply-generative-adversarial-networks-gans">Apply Generative Adversarial Networks (GANs)</a></li>
-</ul>
-</li>
-</ul>
 ]]></content>
   </entry>
   <entry>
@@ -164,6 +133,7 @@
 ]]></content>
       <categories>
         <category>Research</category>
+        <category>About</category>
       </categories>
   </entry>
   <entry>
@@ -220,13 +190,146 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Research</title>
-    <url>/Research/index.html</url>
-    <content><![CDATA[]]></content>
+    <title>About</title>
+    <url>/About/index.html</url>
+    <content><![CDATA[<p>There is a quote (with modifications) from the TV show <em>Westworld</em>:</p>
+<blockquote>
+<p>Some people choose to see the chaos and disarray in this world. I choose to see the <strong>beauty</strong>. To believe there is an <strong>order</strong> to our days, a purpose.</p>
+</blockquote>
+<p>For me, <strong>knowledge is the beauty</strong>. Whether it’s something as “simple” as Newton’s laws of motion (F=ma) or the mass-energy equivalence equation (e=mc^2), mathematical knowledge has the power to explain and improve various aspects of our world, including nature, technology, and culture. Scientists have been using assumptions, hypotheses, and principles to derive equations and discover knowledge for centuries, laying the foundations for our modern world. But this was a process that took decades of labor and effort. </p>
+<p>Artificial intelligence (AI) has the potential to accelerate this process of uncovering hidden patterns and knowledge. However, many AI research efforts focus solely on data-driven approaches, which can result in low interpretability, limited generalization, and reliance on large datasets. These models are prone to inaccuracy and lack methods to explain their failures.</p>
+<p>To address these issues, AI needs to incorporate scientific insights, such as partial differential equations and physical invariance, into its algorithms. This integration of existing knowledge, rather than solely relying on data, is what I refer to as <strong>Scientific/Mechanistic Machine Learning</strong> or <strong>AI4Science</strong>. </p>
+<p>My research in <strong>Dimensionless Learning</strong> exemplifies this new research direction. We incorporate fundamental physical invariance, such as dimensional invariance, into machine learning to discover three levels of knowledge, including dimensionless numbers at the <strong>feature level</strong>, scaling laws at the <strong>algebraic equation level</strong>, and governing equations at the <strong>differential equation level</strong>.</p>
+<p>Moving forward, my research will focus on two directions: </p>
+<ol>
+<li><strong>Physics for AI</strong>: incorporating fundamental physical knowledge into AI algorithms to improve interpretability, generalization, and small-dataset scalability;</li>
+<li><strong>AI for physics</strong>: developing robust and flexible AI algorithms to discover hidden patterns, equations, and scientific insights from data.</li>
+</ol>
+<h1 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h1><ul>
+<li><strong>Northwestern University</strong>, Evanston, IL, US<ul>
+<li>Ph.D. candidate in Mechanical Engineering, Sep. 2020 – Present</li>
+<li>Advisor: <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/liu-kam-wing.html">Prof. Wing Kam Liu</a></li>
+</ul>
+</li>
+<li><strong>University of Chinese Academy of Sciences</strong>, Beijing, China<ul>
+<li>Inistitute of Mechanics</li>
+<li>M.S. in General and Fundamental Mechanics, Sep. 2014 – Jul. 2017</li>
+</ul>
+</li>
+<li><strong>China University of Mining and Technology</strong>, Xuzhou, China<ul>
+<li>B.S. in Engineering Mechanics, Sep. 2010 – Jul. 2014</li>
+</ul>
+</li>
+</ul>
+]]></content>
   </entry>
   <entry>
-    <title>About</title>
-    <url>/about/index.html</url>
-    <content><![CDATA[]]></content>
+    <title>Publications</title>
+    <url>/Publications/index.html</url>
+    <content><![CDATA[<p><strong>Journals</strong>:</p>
+<ul>
+<li><strong>Xie, X.</strong>, Samaei, A., Guo, J., Liu, W. K., &amp; Gan, Z., (2022). Data-driven discovery of dimensionless numbers and governing laws from scarce measurements. <strong><em>Nature Communications</em></strong>, 13, 7562. <a href="https://doi.org/10.1038/s41467-022-35084-w">https://doi.org/10.1038/s41467-022-35084-w</a></li>
+<li><strong>Xie, X.</strong>, Liu, W. K., &amp; Gan, Z. (2021). Data-driven discovery of dimensionless numbers and scaling laws from experimental measurements. arXiv preprint arXiv:2111.03583.</li>
+<li><strong>Xie, X.</strong>, Bennett, J., Saha, S., Lu, Y., Cao, J., Liu, W. K., &amp; Gan, Z. (2021). Mechanistic data-driven prediction of as-built mechanical properties in metal additive manufacturing. <strong><em>Npj Computational Materials - Nature</em></strong>, 7(1), 1–12. <a href="https://doi.org/10.1038/s41524-021-00555-z">https://doi.org/10.1038/s41524-021-00555-z</a></li>
+<li>Mozaffar, M., Liao, S., <strong>Xie, X.</strong>, Saha, S., Park, C., Cao, J., Liu, W. K., &amp; Gan, Z. (2021). Mechanistic artificial intelligence (Mechanistic-AI) for modeling, design, and control of advanced manufacturing processes: Current state and perspectives. <strong><em>Journal of Materials Processing Technology</em></strong>, 117485. <a href="https://doi.org/10.1016/j.jmatprotec.2021.117485">https://doi.org/10.1016/j.jmatprotec.2021.117485</a></li>
+<li>Saha, S., Gan, Z., Cheng, L., Gao, J., Kafka, O. L., <strong>Xie, X.</strong>, Li, H., Tajdari, M., Kim, H. A., &amp; Liu, W. K. (2021). Hierarchical Deep Learning Neural Network (HiDeNN): An artificial intelligence (AI) framework for computational science and engineering. <strong><em>Computer Methods in Applied Mechanics and Engineering</em></strong>, 373, 113452. <a href="https://doi.org/10.1016/j.cma.2020.113452">https://doi.org/10.1016/j.cma.2020.113452</a></li>
+<li>Xue, T., Liao, S., Gan, Z., Park, C., <strong>Xie, X.</strong>, Liu, W. K., &amp; Cao, J. (2022). JAX-FEM: A differentiable GPU-accelerated 3D finite element solver for automatic inverse design and mechanistic data science. arXiv preprint arXiv:2212.00964.</li>
+<li>Zhang, L., Yu, G., Li, S., He, X., <strong>Xie, X.</strong>, Xia, C., Ning, W., &amp; Zheng, C. (2019). The effect of laser surface melting on grain refinement of phase separated Cu-Cr alloy. <strong><em>Optics &amp; Laser Technology</em></strong>, 119, 105577. <a href="https://doi.org/10.1016/j.optlastec.2019.105577">https://doi.org/10.1016/j.optlastec.2019.105577</a></li>
+</ul>
+<p><strong>Patents</strong>:</p>
+<ul>
+<li>Liu, W. K., Saha, S., Mojumder, S., Suarez, D., Lu, Y., Li, H., <strong>Xie, X.</strong>, Gan, Z., Invention ID: Disc-ID-NU2021-102-01 (Invention disclosure filed on April 21, 2021), Title: HiDeNN: An AI Platform for Scientific and Materials Systems Innovation (Serial No. 63/177,517)”. </li>
+<li>Yu, G., <strong>Xie, X.</strong>, et al. An evaluation method for the relationship between plasma and final modification effect during laser modification, CN 106296649 A, (Granted patent; Chinese patent)</li>
+</ul>
+<h1 id="Conference-presentations"><a href="#Conference-presentations" class="headerlink" title="Conference presentations"></a>Conference presentations</h1><ul>
+<li><strong>Xie, X.</strong>, Gan, Z., Liu, W., Dimensionless learning for discovering new dimensionless numbers, 16th U.S. National Congress on Computational Mechanics (USNCCM16), July 25-29, 2021, Virtual Event.</li>
+<li><strong>Xie, X.</strong>, Gan, Z., Saha, S., Liu, W., Mechanistic digital twin of metal additive manufacturing, Mechanistic Machine Learning and Digital Twins for Computational Science, Engineering &amp; Technology (MMLDT-CSET 2021), Sep. 2021, San Diego, USA. <a href="https://www.morressier.com/o/event/6128fdff7000f900128c7f3b/sessions/612f6737bc981037241008d7?poster-id=612f6737bc981037241008da"><strong>Video</strong></a></li>
+</ul>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><ul>
+<li><a href="https://github.com/xiaoyuxie-vico/PyDimension">PyDimension</a>: A Python package for automatically data-driven scientific discovery;</li>
+<li><a href="https://xiaoyuxie.top/PyDimension-Book/intro.html">PyDimension Documentation</a>: Online documentation and tutorials for PyDimension;</li>
+<li><a href="https://github.com/xiaoyuxie-vico/DL-AM">DL-AM</a>: An implementation for our paper called [Mechanistic data-driven prediction of as-built mechanical properties in metal additive manufacturing](<a href="https://www.nature.com/articles/s41524-021-00555-z]">https://www.nature.com/articles/s41524-021-00555-z]</a>;</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>Research</title>
+    <url>/Research/index.html</url>
+    <content><![CDATA[<h2 id="1-Physics-for-AI"><a href="#1-Physics-for-AI" class="headerlink" title="1. Physics for AI"></a><strong>1. Physics for AI</strong></h2><p><strong>1.1 Dimensionless Learning (Dimensional Analysis + Machine Learning) for scientific discovery</strong></p>
+<p>Dimensionless learning combines fundamental physics principles with state-of-the-art machine learning techniques to solve scientific and engineering problems. By embedding the principle of dimensional invariance into a two-level machine learning scheme, it can automatically discover dominant dimensionless numbers and governing laws (scaling laws and differential equations) from noisy and scarce measurements.</p>
+<ul>
+<li><strong>Xie, X.</strong>, Samaei, A., Guo, J., Liu, W. K., &amp; Gan, Z., (2022). Data-driven discovery of dimensionless numbers and governing laws from scarce measurements. <strong><em>Nature Communications</em></strong>, 13, 7562. <a href="https://doi.org/10.1038/s41467-022-35084-w">https://doi.org/10.1038/s41467-022-35084-w</a>. <a href="https://github.com/xiaoyuxie-vico/PyDimension"><strong>Code</strong></a>.</li>
+</ul>
+<p align="center">
+  <img height="500px" src="/images/DimensionlessLearning.png">
+</p>
+
+<p><strong>1.2 Dimensionally invariant Neural Network (DimensionNet) for scientific discovery</strong></p>
+<p>The DimensionNet reduces the dimensionality of the original input parameters by automatically discovering a smaller set of governing dimensionless numbers and transforming the high-dimensional inputs to the dimensionless set. </p>
+<ul>
+<li>Saha, S., Gan, Z., Cheng, L., Gao, J., Kafka, O. L., <strong>Xie, X.</strong>, Li, H., Tajdari, M., Kim, H. A., &amp; Liu, W. K. (2021). Hierarchical Deep Learning Neural Network (HiDeNN): An artificial intelligence (AI) framework for computational science and engineering. <strong><em>Computer Methods in Applied Mechanics and Engineering</em></strong>, 373, 113452. <br><a href="https://doi.org/10.1016/j.cma.2020.113452"><strong>Paper</strong></a></li>
+</ul>
+<p align="center">
+  <img height="300px" src="/images/DimensionNet.png">
+</p>
+
+<h2 id="2-AI-for-physics"><a href="#2-AI-for-physics" class="headerlink" title="2. AI for physics"></a><strong>2. AI for physics</strong></h2><p><strong>AI-empowered scientific discovery and digital twin in additive manufacturing</strong></p>
+<p>Metal additive manufacturing provides remarkable flexibility in geometry and component design, but localized heating/cooling heterogeneity leads to spatial variations of as-built mechanical properties, significantly complicating the materials design process. To this end, we develop a mechanistic data-driven framework integrating wavelet transforms and convolutional neural networks to predict location-dependent mechanical properties over fabricated parts based on process-induced temperature sequences, i.e., thermal histories. The framework enables multiresolution analysis and importance analysis to reveal dominant mechanistic features underlying the additive manufacturing process, such as critical temperature ranges and fundamental thermal frequencies. We systematically compare the developed approach with other machine learning methods. The results demonstrate that the developed approach achieves reasonably good predictive capability using a small amount of noisy experimental data. It provides a concrete foundation for a revolutionary methodology that predicts spatial and temporal evolution of mechanical properties leveraging domain-specific knowledge and cutting-edge machine and deep learning technologies.</p>
+<p align="center">
+  <img height="500px" src="/images/npj.png">
+</p>
+
+<ul>
+<li><strong>Xie, X.</strong>, Bennett, J., Saha, S., Lu, Y., Cao, J., Liu, W. K., &amp; Gan, Z. (2021). Mechanistic data-driven prediction of as-built mechanical properties in metal additive manufacturing. <strong><em>Npj Computational Materials</em></strong>, 7(1), 1–12.<br><a href="https://doi.org/10.1038/s41524-021-00555-z"><strong>Paper</strong></a></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>Awards</title>
+    <url>/Awards/index.html</url>
+    <content><![CDATA[<ul>
+<li><a href="https://www.nist.gov/ambench/am-bench-2022-challenge-submissions-and-awards">Additive Manufacturing Benchmark Challenge Awards, National Institute of Standards and Technology, US, 2022</a>:<ul>
+<li>CHAL-A-AMB2022-01-Scan-MWD &amp; ASR Scan Geometry, 1st place</li>
+<li>CHAL-AMB2022-03-PSCR Pad Solid Cooling Rate, 1st place</li>
+<li>CHAL-AMB2022-03-PMPG Pad Melt Pool Geometry, 1st place</li>
+<li>CHAL-AMB2022-03-TTAM Track Time Above Melting Temperature, 2nd place</li>
+</ul>
+</li>
+<li><a href="https://www.mccormick.northwestern.edu/predictive-science-engineering-design/">Predictive Science and Engineering Design Fellowship</a>, Northwestern University, 2021</li>
+<li>Mechanistic Machine Learning and Digital Twins for Computational Science, Engineering &amp; Technology (MMLDT-CSET 2021) NSF Fellowship, 2021</li>
+<li>16th U.S. National Congress on Computational Mechanics (USNCCM16) conference award, July 25-29, 2021</li>
+<li>Water P. Murphy Fellowship, Northwestern University, 2020</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>Teaching</title>
+    <url>/Teaching/index.html</url>
+    <content><![CDATA[<ul>
+<li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/205-3-ea3.html">EA3: Engineering Analysis 3</a>, 2022-spring, Northwestern University<ul>
+<li>Teaching Assistant;</li>
+</ul>
+</li>
+<li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/327-finite-element-methods-in-mechanics.html">CEE/ME 327: Finite Elements Methods in Mechanics</a>, 2022-fall, Northwestern University<ul>
+<li>Teaching Assistant</li>
+</ul>
+</li>
+<li><a href="https://class-descriptions.northwestern.edu/4840/MEAS/MECH_ENG/14722">ME 395: Mechanistic Data Science Tutorials, Training, and Research Experience</a>, 2019 - 2022, Northwestern University<ul>
+<li>Teaching Assistant and mentor</li>
+</ul>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>Home</title>
+    <url>/Home/index.html</url>
+    <content><![CDATA[<p>Welcome to my personal academic blog! I am Xiaoyu Xie, a third-year PhD candidate in Mechanical Engineering Department at Northwestern University. My advisor is <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/liu-kam-wing.html">Prof. Wing Kam Liu</a>. In my research, I focus on developing robust and flexible artificial intelligence (AI) to uncover hidden patterns and knowledge from data in manufacturing, fluid mechanics, and solid mechanics. Through my work on scientific/mechanistic machine learning or AI4Science, I aim to improve the interpretability, generalization, and small-dataset scalability of AI algorithms by incorporating existing scientific insight. My research in dimensionless learning is a prime example of this approach, as it uses fundamental physical invariance to discover three levels of knowledge through machine learning. </p>
+<h1 id="News"><a href="#News" class="headerlink" title="News"></a>News</h1><ul>
+<li>[12/2022]: Our official <a href="https://xiaoyuxie.top/PyDimension-Book/intro.html"><strong>PyDimension Documentation</strong></a> for dimensionless learning was released, in which you can try different tutorials and examples interactively!</li>
+<li>[12/2022]: Our latest work called <a href="https://www.nature.com/articles/s41467-022-35084-w#Sec2"><strong>“Data-driven discovery of dimensionless numbers and governing laws from scarce measurements”</strong></a> was published on <strong><em>Nature Communications</em></strong>!</li>
+<li>[08/2022]: Our team won <strong>three 1st places</strong> and <strong>two 2nd places</strong> in Additive Manufacturing Benchmark Challenge (AM-Bench), NIST, US, 2022!</li>
+</ul>
+]]></content>
   </entry>
 </search>
