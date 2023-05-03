@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Xiaoyu Xie</title>
-    <url>/2023/04/06/index/</url>
+    <url>/2023/05/03/index/</url>
     <content><![CDATA[<h1 id="Home"><a href="#Home" class="headerlink" title="Home"></a>Home</h1><p>Welcome to my academic website! I am Xiaoyu Xie, a third-year PhD candidate in Mechanical Engineering Department at Northwestern University. I am supervised by <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/liu-kam-wing.html">Prof. Wing Kam Liu</a>. My research focuses on developing robust and flexible artificial intelligence (AI) algorithms to discover hidden patterns and knowledge from data in manufacturing, fluid mechanics, and solid mechanics. My goal is to improve the interpretability, generalization, and small-dataset scalability of AI algorithms by incorporating existing scientific insight. My research in dimensionless learning is a prime example of this approach, as it incorporates fundamental physical invariance to discover multiple levels of knowledge through machine learning.</p>
 <h1 id="News"><a href="#News" class="headerlink" title="News"></a>News</h1><ul>
 <li>[03/2023]: I was invited to give a talk on “Data-Driven Identification of Dimensionless Numbers and Governing Laws from Limited Measurements” as part of the <a href="https://www.cmu.edu/aced/sciML.html">Scientific Machine Learning Webinar Series</a> at Carnegie Mellon University. The recording can be found here: <a href="https://www.youtube.com/watch?v=b3y4ksYzcig">CMU talk recording</a>.</li>
@@ -26,10 +26,6 @@
 <li><strong>University of Chinese Academy of Sciences</strong>, Beijing, China<ul>
 <li>Inistitute of Mechanics</li>
 <li>M.S. in General and Fundamental Mechanics, Sep. 2014 – Jul. 2017</li>
-</ul>
-</li>
-<li><strong>China University of Mining and Technology</strong>, Xuzhou, China<ul>
-<li>B.S. in Engineering Mechanics, Sep. 2010 – Jul. 2014</li>
 </ul>
 </li>
 </ul>
