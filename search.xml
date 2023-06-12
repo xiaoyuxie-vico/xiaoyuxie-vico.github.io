@@ -117,6 +117,10 @@
     <title>Teaching</title>
     <url>/Teaching/index.html</url>
     <content><![CDATA[<ul>
+<li>CEE-ME395: Deep Learning Discrete Calculus (DLDC) for Engineering Applications, 2023-spring, Northwestern University<ul>
+<li>Prepare lectures about data-driven PDE discovery and differentiable simulation for inverse design.</li>
+</ul>
+</li>
 <li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/205-3-ea3.html">EA3: Engineering Analysis 3</a>, 2022-spring, Northwestern University<ul>
 <li>Teaching Assistant;</li>
 </ul>
