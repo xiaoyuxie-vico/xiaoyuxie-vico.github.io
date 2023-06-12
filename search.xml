@@ -117,7 +117,7 @@
     <title>Teaching</title>
     <url>/Teaching/index.html</url>
     <content><![CDATA[<ul>
-<li>CEE-ME395: Deep Learning Discrete Calculus (DLDC) for Engineering Applications, 2023-spring, Northwestern University<ul>
+<li><a href="https://class-descriptions.northwestern.edu/4900/MEAS/MECH_ENG/39144">CEE-ME395: Deep Learning Discrete Calculus (DLDC) for Engineering Applications</a>, 2023-spring, Northwestern University<ul>
 <li>Prepare lectures about data-driven PDE discovery and differentiable simulation for inverse design.</li>
 </ul>
 </li>
