@@ -2,22 +2,24 @@
 <search>
   <entry>
     <title>Xiaoyu Xie</title>
-    <url>/2024/01/14/index/</url>
+    <url>/2024/02/27/index/</url>
     <content><![CDATA[<h1 id="Home"><a href="#Home" class="headerlink" title="Home"></a>Home</h1><p>Welcome to my academic website! I am Xiaoyu Xie, a fourth-year PhD candidate in Mechanical Engineering Department at Northwestern University. I am supervised by <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/liu-kam-wing.html">Prof. Wing Kam Liu</a>. My research focuses on developing robust and flexible artificial intelligence (AI) algorithms to discover hidden patterns and knowledge from data in manufacturing, fluid mechanics, and solid mechanics. My goal is to improve the interpretability, generalization, and small-dataset scalability of AI algorithms by incorporating fundamental scientific insights. My research in dimensionless learning is a prime example of this approach, as it incorporates fundamental physical invariance to discover multiple levels of knowledge through machine learning.</p>
 <h1 id="News"><a href="#News" class="headerlink" title="News"></a>News</h1><ul>
-<li>[06/2023]: I did a three-month Research Internship at <a href="https://www.merl.com/">Mitsubishi Electric Research Laboratories</a>.</li>
+<li>[02/2024]: My internship paper about operator learning was released on Arxiv (<a href="https://arxiv.org/abs/2402.15636">Smooth and Sparse Latent Dynamics in Operator Learning with Jerk Regularization</a>)</li>
+<li>[06/2023]: I did a three-month Research Internship at <a href="https://www.merl.com/">Mitsubishi Electric Research Laboratories</a> (MERL).</li>
 <li>[03/2023]: I was invited to give a talk about <strong>Dimensionless Learning</strong> on the <a href="https://www.cmu.edu/aced/sciML.html"><strong>CMU SciML Webinar</strong></a>. <a href="https://www.youtube.com/watch?v=b3y4ksYzcig"><strong>(Recording)</strong></a></li>
 <li>[11/2022]: I have been organizing a weekly <a href="https://www.nico.northwestern.edu/news-events/nico-reading-group.html"><strong>AI and Science Reading Group</strong></a> affiliated with the Northwestern Institute on Complex Systems (NICO). </li>
 <li>[12/2022]: Our paper called <a href="https://www.nature.com/articles/s41467-022-35084-w#Sec2">“<em>Data-driven discovery of dimensionless numbers and governing laws from scarce measurements</em>“</a> was published on <span style="color:red"><strong><em>Nature Communications</em></strong></span>!</li>
 <li>[08/2022]: Our team won <strong>three 1st places</strong> and <strong>two 2nd places</strong> in <a href="https://www.nist.gov/ambench/am-bench-2022-measurements-and-challenge-problems">AM-Bench Challenge</a>, NIST, US!</li>
-<li>[06/2021]: Our work was published on <strong><em>npj Computational Materials-Nature</em></strong>!</li>
+<li>[06/2021]: Our <a href="https://doi.org/10.1038/s41524-021-00555-z">work</a> was published on <strong><em>npj Computational Materials-Nature</em></strong>!</li>
 </ul>
-<h1 id="Hands-on-scientific-machine-learning"><a href="#Hands-on-scientific-machine-learning" class="headerlink" title="Hands-on scientific machine learning"></a>Hands-on scientific machine learning</h1><p>I created a online interactive eBook for Scientific machine learning. You can check the details on this <a href="https://xiaoyuxie.top/Sci-ML-Book/intro.html">website</a>. Each hands-on tutorial includes code, visualization, and youtube video for paper and implementation. You can also directly run all toturials in Colab or your local computers.</p>
-<h1 id="Research-interests"><a href="#Research-interests" class="headerlink" title="Research interests:"></a>Research interests:</h1><ul>
-<li>Scientific/Mechanistic Machine Learning, AI for Science;</li>
-<li>Data-driven Scientific Discovery;</li>
-<li>Machine Learning;</li>
-<li>Computer Vision;</li>
+<h1 id="eBook-Hands-on-Scientific-Machine-Learning"><a href="#eBook-Hands-on-Scientific-Machine-Learning" class="headerlink" title="eBook: Hands-on Scientific Machine Learning"></a>eBook: Hands-on Scientific Machine Learning</h1><p>I created a online interactive eBook for Scientific machine learning. You can check the details on this <a href="https://xiaoyuxie.top/Sci-ML-Book/intro.html">website</a>. Each hands-on tutorial includes code, visualization, and youtube video for paper and implementation. You can also directly run all toturials in Colab or your local computers.</p>
+<h1 id="Research-Interests"><a href="#Research-Interests" class="headerlink" title="Research Interests:"></a>Research Interests:</h1><ul>
+<li>Scientific machine learning, AI for science;</li>
+<li>Data-driven reduced-order modeling;</li>
+<li>Data-driven scientific discovery;</li>
+<li>Machine learning-based digital twin;</li>
+<li>Computer vision;</li>
 </ul>
 <h1 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h1><ul>
 <li><strong>Northwestern University</strong>, Evanston, IL, US<ul>
@@ -38,11 +40,13 @@
     <url>/Publications/index.html</url>
     <content><![CDATA[<p><strong>Journals</strong>:</p>
 <ul>
+<li><strong>Xie, X.</strong>, Mowlavi, S., Benosman, M., (2024). Smooth and sparse latent dynamics in operator learning with jerk regularization. arXiv preprint arXiv:2402.15636.</li>
 <li><strong>Xie, X.</strong>, Samaei, A., Guo, J., Liu, W. K., &amp; Gan, Z., (2022). Data-driven discovery of dimensionless numbers and governing laws from scarce measurements. <strong><em>Nature Communications</em></strong>, 13, 7562. <a href="https://doi.org/10.1038/s41467-022-35084-w">https://doi.org/10.1038/s41467-022-35084-w</a></li>
 <li><strong>Xie, X.</strong>, Liu, W. K., &amp; Gan, Z. (2021). Data-driven discovery of dimensionless numbers and scaling laws from experimental measurements. arXiv preprint arXiv:2111.03583.</li>
-<li><strong>Xie, X.</strong>, Bennett, J., Saha, S., Lu, Y., Cao, J., Liu, W. K., &amp; Gan, Z. (2021). Mechanistic data-driven prediction of as-built mechanical properties in metal additive manufacturing. <strong><em>Npj Computational Materials - Nature</em></strong>, 7(1), 1–12. <a href="https://doi.org/10.1038/s41524-021-00555-z">https://doi.org/10.1038/s41524-021-00555-z</a></li>
+<li><strong>Xie, X.</strong>, Bennett, J., Saha, S., Lu, Y., Cao, J., Liu, W. K., &amp; Gan, Z. (2021). Mechanistic data-driven prediction of as-built mechanical properties in metal additive manufacturing. <strong><em>npj Computational Materials - Nature</em></strong>, 7(1), 1–12. <a href="https://doi.org/10.1038/s41524-021-00555-z">https://doi.org/10.1038/s41524-021-00555-z</a></li>
+<li>Amin, A. A., Li, Y., Lu, Y., <strong>Xie, X.</strong>, Gan, Z., Mojumder, S., … &amp; Liu, W. K. (2024). Physics guided heat source for quantitative prediction of IN718 laser additive manufacturing processes. <strong><em>npj Computational Materials - Nature</em></strong>, 10(1), 37.</li>
 <li>Mozaffar, M., Liao, S., <strong>Xie, X.</strong>, Saha, S., Park, C., Cao, J., Liu, W. K., &amp; Gan, Z. (2021). Mechanistic artificial intelligence (Mechanistic-AI) for modeling, design, and control of advanced manufacturing processes: Current state and perspectives. <strong><em>Journal of Materials Processing Technology</em></strong>, 117485. <a href="https://doi.org/10.1016/j.jmatprotec.2021.117485">https://doi.org/10.1016/j.jmatprotec.2021.117485</a></li>
-<li>Amin, A., Li, Y., Lu, Y., <strong>Xie, X.</strong>, Mojumder, S., Gan, Z., Wagner, G.,  &amp; Liu, W. K. (2023). Physics Guided Heat Source for Quantitative Prediction of the Laser Track Measurements of IN718 in 2022 NIST AM Benchmark Test.</li>
+<li>Li, Y., Mojumder, S., Lu, Y., Amin, A. A., Guo, J., <strong>Xie, X.</strong>, … &amp; Liu, W. K. (2023). Statistical Parameterized Physics-Based Machine Learning Digital Twin Models for Laser Powder Bed Fusion Process. arXiv preprint arXiv:2311.07821.</li>
 <li>Saha, S., Gan, Z., Cheng, L., Gao, J., Kafka, O. L., <strong>Xie, X.</strong>, Li, H., Tajdari, M., Kim, H. A., &amp; Liu, W. K. (2021). Hierarchical Deep Learning Neural Network (HiDeNN): An artificial intelligence (AI) framework for computational science and engineering. <strong><em>Computer Methods in Applied Mechanics and Engineering</em></strong>, 373, 113452. <a href="https://doi.org/10.1016/j.cma.2020.113452">https://doi.org/10.1016/j.cma.2020.113452</a></li>
 <li>Shao, J., Samaei, A., Xue, T., Xie, X., Guo, S., Cao, J., MacDonald, E., Gan, Z., Additive friction stir deposition of metallic materials: process, structure and properties. <strong><em>Materials &amp; Design</em></strong>, <a href="https://doi.org/10.1016/j.matdes.2023.112356">https://doi.org/10.1016/j.matdes.2023.112356</a>, 112356.</li>
 <li>Xue, T., Liao, S., Gan, Z., Park, C., <strong>Xie, X.</strong>, Liu, W. K., &amp; Cao, J. (2023). JAX-FEM: A differentiable GPU-accelerated 3D finite element solver for automatic inverse design and mechanistic data science. <strong><em>Computer Physics Communications</em></strong>, 108802.</li>
@@ -68,17 +72,7 @@
   <entry>
     <title>Research</title>
     <url>/Research/index.html</url>
-    <content><![CDATA[<p>There’s a memorable quote from the TV show <em>Westworld</em> that resonates deeply with my research motivation and direction:</p>
-<blockquote>
-<p> Some people choose to see the ugliness in this world. I choose to see the beauty. To believe there is an order to our days, a purpose.</p>
-</blockquote>
-<p>To me, this order and beauty take shape in the form of equations—like Newton’s laws of motion (F=ma) or Einstein’s mass-energy equivalence (e=mc^2). Mathematical equations and principles underlie the world as we know it, elucidating natural phenomena, accelerating technological advancements, and refining our understanding of life.</p>
-<p>Traditionally, scientists have devoted centuries to foundational work based on assumptions, hypotheses, and principles to derive transformative equations. But the arrival of artificial intelligence (AI) promises to expedite this discovery process, unearthing the hidden patterns and knowledge in intricate systems and phenomena.</p>
-<p>However,  most AI research today focuses solely on data-driven approaches, often leading to “black box” models. These models tend to possess low interpretability, limited generalization, and a heavy dependence on vast datasets, presenting challenges to their accuracy and elucidation.</p>
-<p>In order to mitigate these issues, there is a pressing need to interweave AI with our existing body of knowledge. In other words, AI must embrace mathematical and natural principles, such as partial differential equations and physical invariance. There’s an urgent need for innovative strategies and frameworks that incorporate our existing knowledge into machine learning and deep learning, rather than merely leaning on data. This kind of integration paves the way for <em>Scientific or Mechanistic Machine Learning</em>, also referred to as <em>AI4Science</em>.</p>
-<p>My research on Dimensionless Learning stands as an embodiment of this progressive paradigm. We embed fundamental physical invariances, such as dimensional invariance, into machine learning algorithms. This innovative approach allows us to discover three levels of knowledge: dimensionless numbers at the feature level, scaling laws at the algebraic equation level, and governing equations at the differential equation level. This fusion of knowledge and AI could unlock an exciting new era of scientific discovery and understanding.</p>
-<p>The details of my research are shown below:</p>
-<h2 id="1-Physics-for-AI"><a href="#1-Physics-for-AI" class="headerlink" title="1. Physics for AI"></a><strong>1. Physics for AI</strong></h2><p><strong>1.1 Dimensionless Learning (Dimensional Analysis + Machine Learning) for scientific discovery</strong></p>
+    <content><![CDATA[<h2 id="1-Data-driven-discovery-of-universal-laws"><a href="#1-Data-driven-discovery-of-universal-laws" class="headerlink" title="1. Data-driven discovery of universal laws"></a><strong>1. Data-driven discovery of universal laws</strong></h2><p><strong>1.1 Dimensionless Learning (Dimensional Analysis + Machine Learning) for scientific discovery</strong></p>
 <p>Dimensionless learning combines fundamental physics principles with state-of-the-art machine learning techniques to solve scientific and engineering problems. By embedding the principle of dimensional invariance into a two-level machine learning scheme, it can automatically discover dominant dimensionless numbers and governing laws (scaling laws and differential equations) from noisy and scarce measurements.</p>
 <ul>
 <li><strong>Xie, X.</strong>, Samaei, A., Guo, J., Liu, W. K., &amp; Gan, Z., (2022). Data-driven discovery of dimensionless numbers and governing laws from scarce measurements. <strong><em>Nature Communications</em></strong>, 13, 7562. <a href="https://doi.org/10.1038/s41467-022-35084-w">https://doi.org/10.1038/s41467-022-35084-w</a>. <a href="https://github.com/xiaoyuxie-vico/PyDimension"><span style="color:red"><strong>Code</strong></span></a>. <a href="https://www.youtube.com/watch?v=b3y4ksYzcig"><span style="color:red"><strong>CMU talk recording</strong></span></a>.</li>
@@ -96,10 +90,19 @@
   <img height="300px" src="/images/DimensionNet.png">
 </p>
 
-<h2 id="2-AI-for-physics"><a href="#2-AI-for-physics" class="headerlink" title="2. AI for physics"></a><strong>2. AI for physics</strong></h2><p><strong>AI-empowered scientific discovery and digital twin in additive manufacturing</strong></p>
+<h2 id="2-Data-driven-reduced-order-modeling"><a href="#2-Data-driven-reduced-order-modeling" class="headerlink" title="2. Data-driven reduced-order modeling"></a><strong>2. Data-driven reduced-order modeling</strong></h2><p><strong>Smooth and sparse latent dynamics in operator learning with jerk regularization</strong></p>
+<p>Spatiotemporal modeling is critical for understanding complex systems across various scientific and engineering disciplines, but governing equations are often not fully known or computationally intractable due to inherent system complexity. Data-driven reduced-order models (ROMs) offer a promising approach for fast and accurate spatiotemporal forecasting by computing solutions in a compressed latent space. However, these models often neglect temporal correlations between consecutive snapshots when constructing the latent space, leading to suboptimal compression, jagged latent trajectories, and limited extrapolation ability over time. To address these issues, this paper introduces a continuous operator learning framework that incorporates jerk regularization into the learning of the compressed latent space. This jerk regularization promotes smoothness and sparsity of latent space dynamics, which not only yields enhanced accuracy and convergence speed but also helps identify intrinsic latent space coordinates. Consisting of an implicit neural representation (INR)-based autoencoder and a neural ODE latent dynamics model, the framework allows for inference at any desired spatial or temporal resolution. The effectiveness of this framework is demonstrated through a two-dimensional unsteady flow problem governed by the Navier-Stokes equations, highlighting its potential to expedite high-fidelity simulations in various scientific and engineering applications.</p>
+<p align="center">
+  <img height="800px" src="/images/OperatorLearning.png">
+</p>
+
+<ul>
+<li><strong>Xie, X.</strong>, Mowlavi, S., Benosman, M., (2024). Smooth and sparse latent dynamics in operator learning with jerk regularization. arXiv preprint arXiv:2402.15636.<br><a href="https://arxiv.org/abs/2402.15636"><strong>Paper</strong></a></li>
+</ul>
+<h2 id="3-Machine-Learning-based-Digital-Twin"><a href="#3-Machine-Learning-based-Digital-Twin" class="headerlink" title="3. Machine Learning-based Digital Twin"></a><strong>3. Machine Learning-based Digital Twin</strong></h2><p><strong>AI-empowered scientific discovery and digital twin in additive manufacturing</strong></p>
 <p>Metal additive manufacturing provides remarkable flexibility in geometry and component design, but localized heating/cooling heterogeneity leads to spatial variations of as-built mechanical properties, significantly complicating the materials design process. To this end, we develop a mechanistic data-driven framework integrating wavelet transforms and convolutional neural networks to predict location-dependent mechanical properties over fabricated parts based on process-induced temperature sequences, i.e., thermal histories. The framework enables multiresolution analysis and importance analysis to reveal dominant mechanistic features underlying the additive manufacturing process, such as critical temperature ranges and fundamental thermal frequencies. We systematically compare the developed approach with other machine learning methods. The results demonstrate that the developed approach achieves reasonably good predictive capability using a small amount of noisy experimental data. It provides a concrete foundation for a revolutionary methodology that predicts spatial and temporal evolution of mechanical properties leveraging domain-specific knowledge and cutting-edge machine and deep learning technologies.</p>
 <p align="center">
-  <img height="500px" src="/images/npj.png">
+  <img height="600px" src="/images/npj.png">
 </p>
 
 <ul>
@@ -129,6 +132,10 @@
     <title>Teaching</title>
     <url>/Teaching/index.html</url>
     <content><![CDATA[<ul>
+<li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/224-experimental-engineering-I.html">MECH_ENG 224: Scientific and Embedded Programming in Python</a>, 2023-fall, Northwestern University<ul>
+<li>Teaching Assistant;</li>
+</ul>
+</li>
 <li><a href="https://class-descriptions.northwestern.edu/4900/MEAS/MECH_ENG/39144">CEE-ME395: Deep Learning Discrete Calculus (DLDC) for Engineering Applications</a>, 2023-spring, Northwestern University<ul>
 <li>Prepare lectures about data-driven PDE discovery and differentiable simulation for inverse design.</li>
 </ul>
