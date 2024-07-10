@@ -47,7 +47,8 @@
 <li>Park, C., Saha, S., Guo, J., <strong>Xie, X.</strong>, Mojumder, S., Bessa, M. A., Qian, D., Chen, W., Wagner, G., Cao, J. and Liu, W. K. (2024). Engineering software 2.0 by interpolating neural networks: unifying training, solving, and calibration. arXiv preprint arXiv:2404.10296.</li>
 <li>Amin, A. A., Li, Y., Lu, Y., <strong>Xie, X.</strong>, Gan, Z., Mojumder, S., … &amp; Liu, W. K. (2024). Physics guided heat source for quantitative prediction of IN718 laser additive manufacturing processes. <strong><em>npj Computational Materials - Nature</em></strong>, 10(1), 37.</li>
 <li>Mozaffar, M., Liao, S., <strong>Xie, X.</strong>, Saha, S., Park, C., Cao, J., Liu, W. K., &amp; Gan, Z. (2021). Mechanistic artificial intelligence (Mechanistic-AI) for modeling, design, and control of advanced manufacturing processes: Current state and perspectives. <strong><em>Journal of Materials Processing Technology</em></strong>, 117485. <a href="https://doi.org/10.1016/j.jmatprotec.2021.117485">https://doi.org/10.1016/j.jmatprotec.2021.117485</a></li>
-<li>Li, Y., Mojumder, S., Lu, Y., Amin, A. A., Guo, J., <strong>Xie, X.</strong>, … &amp; Liu, W. K. (2023). Statistical Parameterized Physics-Based Machine Learning Digital Twin Models for Laser Powder Bed Fusion Process. arXiv preprint arXiv:2311.07821.</li>
+<li>Samaei, A., Leonor, J. P., Gan, Z., Sang, Z., <strong>Xie, X.</strong>, Simonds, B. J., Liu, W. K. &amp; Wagner, G. J. (2024). Benchmark study of melt pool and keyhole dynamics, laser absorptance, and porosity in additive manufacturing of Ti-6Al-4V. Progress in Additive Manufacturing, 1-25.</li>
+<li>Li, Y., Mojumder, S., Lu, Y., Al Amin, A., Guo, J., <strong>Xie, X.</strong>, W Chen, GJ Wagner, J Cao &amp; Liu, W. K. (2024). Statistical parameterized physics-based machine learning digital shadow models for laser powder bed fusion process. Additive Manufacturing, 87, 104214.</li>
 <li>Saha, S., Gan, Z., Cheng, L., Gao, J., Kafka, O. L., <strong>Xie, X.</strong>, Li, H., Tajdari, M., Kim, H. A., &amp; Liu, W. K. (2021). Hierarchical Deep Learning Neural Network (HiDeNN): An artificial intelligence (AI) framework for computational science and engineering. <strong><em>Computer Methods in Applied Mechanics and Engineering</em></strong>, 373, 113452. <a href="https://doi.org/10.1016/j.cma.2020.113452">https://doi.org/10.1016/j.cma.2020.113452</a></li>
 <li>Shao, J., Samaei, A., Xue, T., Xie, X., Guo, S., Cao, J., MacDonald, E., Gan, Z., Additive friction stir deposition of metallic materials: process, structure and properties. <strong><em>Materials &amp; Design</em></strong>, <a href="https://doi.org/10.1016/j.matdes.2023.112356">https://doi.org/10.1016/j.matdes.2023.112356</a>, 112356.</li>
 <li>Xue, T., Liao, S., Gan, Z., Park, C., <strong>Xie, X.</strong>, Liu, W. K., &amp; Cao, J. (2023). JAX-FEM: A differentiable GPU-accelerated 3D finite element solver for automatic inverse design and mechanistic data science. <strong><em>Computer Physics Communications</em></strong>, 108802.</li>
@@ -55,7 +56,7 @@
 </ul>
 <p><strong>Patents</strong>:</p>
 <ul>
-<li>Liu, W. K., Saha, S., Mojumder, S., Suarez, D., Lu, Y., Li, H., <strong>Xie, X.</strong>, Gan, Z., Invention ID: Disc-ID-NU2021-102-01 (Invention disclosure filed on April 21, 2021), Title: HiDeNN: An AI Platform for Scientific and Materials Systems Innovation (Serial No. 63/177,517)”. </li>
+<li>Liu, W. K., Saha, S., Mojumder, S., Suarez, D. A., Lu, Y., Li, H., <strong>Xie, X.</strong> &amp; Gan, Z. (2024). U.S. Patent Application No. 18/286,619.</li>
 <li>Yu, G., <strong>Xie, X.</strong>, et al. An evaluation method for the relationship between plasma and final modification effect during laser modification, CN 106296649 A, (Granted patent; Chinese patent)</li>
 </ul>
 <h1 id="Talks"><a href="#Talks" class="headerlink" title="Talks"></a>Talks</h1><ul>
@@ -151,7 +152,7 @@
 <li>Prepare lectures about data-driven PDE discovery and differentiable simulation for inverse design.</li>
 </ul>
 </li>
-<li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/205-3-ea3.html">EA3: Engineering Analysis 3</a>, 2022-spring, Northwestern University<ul>
+<li><a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/205-3-ea3.html">EA3: Engineering Analysis 3</a>, 2022-spring &amp; 2023-spring, Northwestern University<ul>
 <li>Teaching Assistant;</li>
 </ul>
 </li>
