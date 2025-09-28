@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Xiaoyu Xie</title>
-    <url>/2025/06/07/index/</url>
+    <url>/2025/09/28/index/</url>
     <content><![CDATA[<h1 id="Home"><a href="#Home" class="headerlink" title="Home"></a>Home</h1><p>Welcome to my academic website! I am Xiaoyu Xie, a Research Scientist at Meta. I received my Ph.D. in Mechanical Engineering from Northwestern University, where I was advised by <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/liu-kam-wing.html">Prof. Wing Kam Liu</a>. My research focuses on developing robust and flexible artificial intelligence (AI) algorithms to discover hidden patterns and knowledge from data in manufacturing, fluid mechanics, solid mechanics, and more complex systems. My research goal is to improve the interpretability, generalization, and small-dataset scalability of AI algorithms by incorporating fundamental scientific insights. My research in dimensionless learning is a prime example of this approach, as it incorporates fundamental physical invariance to discover multiple levels of knowledge through machine learning.</p>
 <h1 id="News"><a href="#News" class="headerlink" title="News"></a>News</h1><ul>
 <li>[09/2024]: I joined Meta as a Research Scientist.</li>
@@ -20,12 +20,11 @@
 <li>Scientific machine learning, AI for science;</li>
 <li>Data-driven reduced-order modeling;</li>
 <li>Data-driven scientific discovery;</li>
-<li>Machine learning-based digital twin;</li>
-<li>Computer vision;</li>
+<li>Computer vision, Multimodal learning</li>
 </ul>
 <h1 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h1><ul>
 <li><strong>Northwestern University</strong>, Evanston, IL, US<ul>
-<li>Ph.D. candidate in Mechanical Engineering, Sep. 2020 – Present</li>
+<li>Ph.D. candidate in Mechanical Engineering, Sep. 2020 – Jun. 2025</li>
 <li>Advisor: <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/liu-kam-wing.html">Prof. Wing Kam Liu</a></li>
 </ul>
 </li>
