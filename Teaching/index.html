@@ -3,26 +3,274 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
 <!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Xiaoyu Xie's Blog" type="application/atom+xml">
-</head><body><header id="page_header"><div class="header_wrap"><div id="blog_name"><a class="blog_title" id="site-name" href="/">Xiaoyu Xie's Blog</a></div><button class="menus_icon"><div class="navicon"></div></button><ul class="menus_items"><li class="menus_item"><a class="site-page" href="/#Home"> Home</a></li><li class="menus_item"><a class="site-page" href="/Research"> Research</a></li><li class="menus_item"><a class="site-page" href="/Publications"> Publications</a></li><li class="menus_item"><a class="site-page" href="/Awards"> Awards</a></li><li class="menus_item"><a class="site-page" href="/Teaching"> Teaching</a></li><li class="menus_item"><a class="site-page" href="/Media"> Media</a></li></ul></div></header><main id="page_main"><div class="side-card sticky"><div class="card-wrap" itemscope itemtype="http://schema.org/Person"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/profile.png'" alt="avatar"></div><div class="author-discrip"><h3>Xiaoyu Xie</h3><p class="author-bio">Research Scientist @ Meta | PhD @ Northwestern University</p></div><div class="author-links"><button class="btn m-social-links">Links</button><ul class="social-icons"><li><a class="social-icon" href="https://github.com/xiaoyuxie-vico" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li><li><a class="social-icon" href="https://www.linkedin.com/in/xyxie" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li><li><a class="social-icon" href="xiaoyuxie2020@u.northwestern.edu" target="_blank"><i class="fas fa-envelope" aria-hidden="true"></i></a></li></ul><ul class="social-links"><li><a class="e-social-link" href="https://scholar.google.com/citations?user=A5idlREAAAAJ&amp;hl=en&amp;oi=ao" target="_blank"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Google Scholar</span></a></li></ul></div></div></div><div class="page" itemscope itemtype="http://schema.org/CreativeWork"><h2 class="page-title">Teaching</h2><article><ul>
-<li><a target="_blank" rel="noopener" href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/224-experimental-engineering-I.html">MECH_ENG 224: Scientific and Embedded Programming in Python</a>, 2023-fall, Northwestern University<ul>
-<li>Teaching Assistant;</li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener" href="https://class-descriptions.northwestern.edu/4900/MEAS/MECH_ENG/39144">CEE-ME395: Deep Learning Discrete Calculus (DLDC) for Engineering Applications</a>, 2023-spring, Northwestern University<ul>
-<li>Prepare lectures about data-driven PDE discovery and differentiable simulation for inverse design.</li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener" href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/205-3-ea3.html">EA3: Engineering Analysis 3</a>, 2022-spring &amp; 2023-spring, Northwestern University<ul>
-<li>Teaching Assistant;</li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener" href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/327-finite-element-methods-in-mechanics.html">CEE/ME 327: Finite Elements Methods in Mechanics</a>, 2022-fall, Northwestern University<ul>
-<li>Teaching Assistant</li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener" href="https://class-descriptions.northwestern.edu/4840/MEAS/MECH_ENG/14722">ME 395: Mechanistic Data Science Tutorials, Training, and Research Experience</a>, 2019 - 2022, Northwestern University<ul>
-<li>Teaching Assistant and mentor</li>
-</ul>
-</li>
-</ul>
+</head><body><header id="page_header"><div class="header_wrap"><div id="blog_name"><a class="blog_title" id="site-name" href="/">Xiaoyu Xie's Blog</a></div><button class="menus_icon"><div class="navicon"></div></button><ul class="menus_items"><li class="menus_item"><a class="site-page" href="/#Home"> Home</a></li><li class="menus_item"><a class="site-page" href="/Research"> Research</a></li><li class="menus_item"><a class="site-page" href="/Publications"> Publications</a></li><li class="menus_item"><a class="site-page" href="/Awards"> Awards</a></li><li class="menus_item"><a class="site-page" href="/Teaching"> Teaching</a></li><li class="menus_item"><a class="site-page" href="/Media"> Media</a></li></ul></div></header><main id="page_main"><div class="side-card sticky"><div class="card-wrap" itemscope itemtype="http://schema.org/Person"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/profile.png'" alt="avatar"></div><div class="author-discrip"><h3>Xiaoyu Xie</h3><p class="author-bio">Research Scientist @ Meta | PhD @ Northwestern University</p></div><div class="author-links"><button class="btn m-social-links">Links</button><ul class="social-icons"><li><a class="social-icon" href="https://github.com/xiaoyuxie-vico" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li><li><a class="social-icon" href="https://www.linkedin.com/in/xyxie" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li><li><a class="social-icon" href="xiaoyuxie2020@u.northwestern.edu" target="_blank"><i class="fas fa-envelope" aria-hidden="true"></i></a></li></ul><ul class="social-links"><li><a class="e-social-link" href="https://scholar.google.com/citations?user=A5idlREAAAAJ&amp;hl=en&amp;oi=ao" target="_blank"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Google Scholar</span></a></li></ul></div></div></div><div class="page" itemscope itemtype="http://schema.org/CreativeWork"><h2 class="page-title">Teaching</h2><article><style>
+.teaching-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.teaching-section {
+  margin: 3rem 0;
+}
+
+.year-header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1353d7;
+  margin: 2.5rem 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.year-header::before {
+  content: "";
+  width: 4px;
+  height: 1.8rem;
+  background: #1353d7;
+  border-radius: 2px;
+}
+
+.course-item {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-left: 4px solid #1353d7;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.course-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateX(4px);
+  border-left-color: #096494;
+}
+
+.course-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1353d7 0%, #096494 100%);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.course-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.course-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.course-code {
+  color: #1353d7;
+  font-weight: 500;
+  font-size: 0.95em;
+  margin-bottom: 0.4rem;
+}
+
+.course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.course-semester {
+  display: inline-block;
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.course-role {
+  display: inline-block;
+  background: #e8f4f8;
+  color: #1353d7;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.course-link {
+  color: #1353d7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.course-link:hover {
+  color: #096494;
+  text-decoration: underline;
+}
+
+.course-link i {
+  font-size: 0.85em;
+}
+
+.course-description {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #f0f0f0;
+  color: #555;
+  font-size: 0.9em;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .course-item {
+    flex-direction: column;
+  }
+
+  .course-icon {
+    align-self: center;
+  }
+}
+</style>
+
+<div class="teaching-container">
+
+<div class="teaching-section">
+
+<div class="year-header">2023</div>
+
+<div class="course-item">
+  <div class="course-icon">
+    <i class="fas fa-laptop-code"></i>
+  </div>
+  <div class="course-content">
+    <div class="course-title">Scientific and Embedded Programming in Python</div>
+    <div class="course-code">MECH_ENG 224</div>
+    <div class="course-meta">
+      <span class="course-semester">Fall 2023</span>
+      <span class="course-role">Teaching Assistant</span>
+    </div>
+    <a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/224-experimental-engineering-I.html" class="course-link" target="_blank">
+      <i class="fas fa-external-link-alt"></i> Course Description
+    </a>
+  </div>
+</div>
+
+<div class="course-item">
+  <div class="course-icon">
+    <i class="fas fa-network-wired"></i>
+  </div>
+  <div class="course-content">
+    <div class="course-title">Deep Learning Discrete Calculus (DLDC) for Engineering Applications</div>
+    <div class="course-code">CEE-ME 395</div>
+    <div class="course-meta">
+      <span class="course-semester">Spring 2023</span>
+      <span class="course-role">Lecturer</span>
+    </div>
+    <div class="course-description">
+      Prepared and delivered lectures on data-driven partial differential equation (PDE) discovery and differentiable simulation techniques for inverse design applications.
+    </div>
+    <a href="https://class-descriptions.northwestern.edu/4900/MEAS/MECH_ENG/39144" class="course-link" target="_blank">
+      <i class="fas fa-external-link-alt"></i> Course Description
+    </a>
+  </div>
+</div>
+
+<div class="course-item">
+  <div class="course-icon">
+    <i class="fas fa-chart-line"></i>
+  </div>
+  <div class="course-content">
+    <div class="course-title">Engineering Analysis 3</div>
+    <div class="course-code">EA3</div>
+    <div class="course-meta">
+      <span class="course-semester">Spring 2023</span>
+      <span class="course-role">Teaching Assistant</span>
+    </div>
+    <a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/205-3-ea3.html" class="course-link" target="_blank">
+      <i class="fas fa-external-link-alt"></i> Course Description
+    </a>
+  </div>
+</div>
+
+<div class="year-header">2022</div>
+
+<div class="course-item">
+  <div class="course-icon">
+    <i class="fas fa-chart-line"></i>
+  </div>
+  <div class="course-content">
+    <div class="course-title">Engineering Analysis 3</div>
+    <div class="course-code">EA3</div>
+    <div class="course-meta">
+      <span class="course-semester">Spring 2022</span>
+      <span class="course-role">Teaching Assistant</span>
+    </div>
+    <a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/205-3-ea3.html" class="course-link" target="_blank">
+      <i class="fas fa-external-link-alt"></i> Course Description
+    </a>
+  </div>
+</div>
+
+<div class="course-item">
+  <div class="course-icon">
+    <i class="fas fa-cube"></i>
+  </div>
+  <div class="course-content">
+    <div class="course-title">Finite Elements Methods in Mechanics</div>
+    <div class="course-code">CEE/ME 327</div>
+    <div class="course-meta">
+      <span class="course-semester">Fall 2022</span>
+      <span class="course-role">Teaching Assistant</span>
+    </div>
+    <a href="https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/327-finite-element-methods-in-mechanics.html" class="course-link" target="_blank">
+      <i class="fas fa-external-link-alt"></i> Course Description
+    </a>
+  </div>
+</div>
+
+<div class="course-item">
+  <div class="course-icon">
+    <i class="fas fa-database"></i>
+  </div>
+  <div class="course-content">
+    <div class="course-title">Mechanistic Data Science Tutorials, Training, and Research Experience</div>
+    <div class="course-code">ME 395</div>
+    <div class="course-meta">
+      <span class="course-semester">2019 - 2022</span>
+      <span class="course-role">Teaching Assistant & Mentor</span>
+    </div>
+    <a href="https://class-descriptions.northwestern.edu/4840/MEAS/MECH_ENG/14722" class="course-link" target="_blank">
+      <i class="fas fa-external-link-alt"></i> Course Description
+    </a>
+  </div>
+</div>
+
+</div>
+
+</div>
 </article></div></main><div class="nav-wrap"><div class="nav"><button class="site-nav"><div class="navicon"></div></button><ul class="nav_items"><li class="nav_item"><a class="nav-page" href="/#Home"> Home</a></li><li class="nav_item"><a class="nav-page" href="/Research"> Research</a></li><li class="nav_item"><a class="nav-page" href="/Publications"> Publications</a></li><li class="nav_item"><a class="nav-page" href="/Awards"> Awards</a></li><li class="nav_item"><a class="nav-page" href="/Teaching"> Teaching</a></li><li class="nav_item"><a class="nav-page" href="/Media"> Media</a></li></ul></div><div class="cd-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div></div><footer id="page_footer"><div class="footer_wrap"><div class="copyright">&copy;2020 - 2025 by Xiaoyu Xie</div><div class="theme-info">Powered by <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a> & <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script><script src="/js/main.js"></script></body></html>
