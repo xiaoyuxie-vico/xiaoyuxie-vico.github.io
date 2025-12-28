@@ -307,6 +307,7 @@
     <div><span class="pub-venue"><em>arXiv preprint arXiv:2512.15760</em></span> <span class="pub-year">2025</span></div>
     <div class="pub-links">
       <a href="https://arxiv.org/abs/2512.15760" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a>
+      <a href="https://github.com/xiaoyuxie-vico/PyDimension" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
     </div>
   </div>
 </div>
@@ -923,6 +924,9 @@ My research focuses on integrating physics and prior knowledge into machine lear
   <div class="publication-links">
     <a href="https://arxiv.org/abs/2512.15760" class="pub-link" target="_blank">
       <i class="fas fa-file-pdf"></i> Paper
+    </a>
+    <a href="https://github.com/xiaoyuxie-vico/PyDimension" class="pub-link" target="_blank">
+      <i class="fab fa-github"></i> Code
     </a>
   </div>
 </div>
