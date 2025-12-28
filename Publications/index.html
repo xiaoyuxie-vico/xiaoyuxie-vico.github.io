@@ -262,9 +262,21 @@
 
 <div class="pub-container">
 
-<h2 id="Journal-Articles"><a href="#Journal-Articles" class="headerlink" title="Journal Articles"></a>Journal Articles</h2><div class="pub-section">
+<div class="pub-section">
 
 <div class="year-header">2025</div>
+
+<div class="pub-item">
+  <img src="/images/paper-pydimension2.0-12-2025.png" alt="A Tutorial on Dimensionless Learning" class="pub-thumbnail" onerror="this.style.display='none'">
+  <div class="pub-content">
+    <div class="pub-title">A Tutorial on Dimensionless Learning: Geometric Interpretation and the Effect of Noise</div>
+    <div class="pub-authors">Gan, Z. J., & <strong>Xie, X.</strong></div>
+    <div><span class="pub-venue"><em>arXiv preprint arXiv:2512.15760</em></span> <span class="pub-year">2025</span></div>
+    <div class="pub-links">
+      <a href="https://arxiv.org/abs/2512.15760" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a>
+    </div>
+  </div>
+</div>
 
 <div class="pub-item">
   <img src="/images/Interpolating Neural Network (INN) in 3D input domain.png" alt="Interpolating Neural Network (INN) in 3D input domain" class="pub-thumbnail" onerror="this.style.display='none'">
@@ -283,7 +295,55 @@
   </div>
 </div>
 
+<div class="pub-item">
+  <img src="/images/OperatorLearning.png" alt="Paper thumbnail" class="pub-thumbnail" onerror="this.style.display='none'">
+  <div class="pub-content">
+    <div class="pub-title">Smooth and sparse latent dynamics in operator learning with jerk regularization</div>
+    <div class="pub-authors"><strong>Xie, X.</strong>, Mowlavi, S., & Benosman, M.</div>
+    <div><span class="pub-venue"><em>NeurIPS 2025 Workshop ML4PS</em></span> <span class="pub-year">2025</span></div>
+    <div class="pub-links">
+      <a href="https://arxiv.org/abs/2402.15636" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a>
+      <a href="#" class="pub-link abstract-toggle" onclick="toggleAbstract('operator-learning-abstract'); return false;"><i class="fas fa-align-left"></i> Abstract</a>
+    </div>
+    <div id="operator-learning-abstract" class="pub-abstract">
+      Spatiotemporal modeling is critical for understanding complex systems across various scientific and engineering disciplines, but governing equations are often not fully known or computationally intractable due to inherent system complexity. Data-driven reduced-order models (ROMs) offer a promising approach for fast and accurate spatiotemporal forecasting by computing solutions in a compressed latent space. However, these models often neglect temporal correlations between consecutive snapshots when constructing the latent space, leading to suboptimal compression, jagged latent trajectories, and limited extrapolation ability over time. To address these issues, this paper introduces a continuous operator learning framework that incorporates jerk regularization into the learning of the compressed latent space. This jerk regularization promotes smoothness and sparsity of latent space dynamics, which not only yields enhanced accuracy and convergence speed but also helps identify intrinsic latent space coordinates. Consisting of an implicit neural representation (INR)-based autoencoder and a neural ODE latent dynamics model, the framework allows for inference at any desired spatial or temporal resolution. The effectiveness of this framework is demonstrated through a two-dimensional unsteady flow problem governed by the Navier-Stokes equations, highlighting its potential to expedite high-fidelity simulations in various scientific and engineering applications.
+    </div>
+  </div>
+</div>
+
+<div class="pub-item">
+  <img src="/images/paper-INN TD.png" alt="Interpolating Neural Network-Tensor Decomposition" class="pub-thumbnail" onerror="this.style.display='none'">
+  <div class="pub-content">
+    <div class="pub-title">Interpolating Neural Network–Tensor Decomposition (INN-TD): a scalable and interpretable approach for large-scale physics-based problems</div>
+    <div class="pub-authors">Guo, J., <strong>Xie, X.</strong>, Park, C., Zhang, H., Politis, M., Domel, G., Hughes, T. J., & Liu, W. K.</div>
+    <div><span class="pub-venue"><em>International Conference on Machine Learning (ICML)</em></span> <span class="pub-year">2025</span></div>
+    <div class="pub-links">
+      <a href="https://arxiv.org/abs/2503.02041" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a>
+      <a href="#" class="pub-link abstract-toggle" onclick="toggleAbstract('inn-td-abstract'); return false;"><i class="fas fa-align-left"></i> Abstract</a>
+    </div>
+    <div id="inn-td-abstract" class="pub-abstract">
+      Deep learning has been extensively employed as a powerful function approximator for modeling physics-based problems described by partial differential equations (PDEs). Despite their popularity, standard deep learning models often demand prohibitively large computational resources and yield limited accuracy when scaling to large-scale, high-dimensional physical problems. Their black-box nature further hinders the application in industrial problems where interpretability and high precision are critical. To overcome these challenges, this paper introduces Interpolating Neural Network-Tensor Decomposition (INN-TD), a scalable and interpretable framework that has the merits of both machine learning and finite element methods for modeling large-scale physical systems. By integrating locally supported interpolation functions from finite element into the network architecture, INN-TD achieves a sparse learning structure with enhanced accuracy, faster training/solving speed, and reduced memory footprint. This makes it particularly effective for tackling large-scale high-dimensional parametric PDEs in training, solving, and inverse optimization tasks in physical problems where high precision is required.
+    </div>
+  </div>
+</div>
+
 <div class="year-header">2024</div>
+
+<div class="pub-item">
+  <img src="/images/paper-Chidenn-td.png" alt="Convolutional Hierarchical Deep Learning Neural Networks-Tensor Decomposition" class="pub-thumbnail" onerror="this.style.display='none'">
+  <div class="pub-content">
+    <div class="pub-title">Convolutional Hierarchical Deep Learning Neural Networks–Tensor Decomposition (C-HiDeNN-TD): a scalable surrogate modeling approach for large-scale physical systems</div>
+    <div class="pub-authors">Guo, J., Park, C., <strong>Xie, X.</strong>, Sang, Z., Wagner, G. J., & Liu, W. K.</div>
+    <div><span class="pub-venue"><em>NeurIPS 2024 Workshop D3S3</em></span> <span class="pub-year">2024</span></div>
+    <div class="pub-links">
+      <a href="https://arxiv.org/abs/2409.00329" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a>
+      <a href="#" class="pub-link abstract-toggle" onclick="toggleAbstract('chidenn-td-abstract'); return false;"><i class="fas fa-align-left"></i> Abstract</a>
+    </div>
+    <div id="chidenn-td-abstract" class="pub-abstract">
+      A common trend in simulation-driven engineering applications is the ever-increasing size and complexity of the problem, where classical numerical methods typically suffer from significant computational time and huge memory cost. Methods based on artificial intelligence have been extensively investigated to accelerate partial differential equations (PDE) solvers using data-driven surrogates. However, most data-driven surrogates require an extremely large amount of training data. In this paper, we propose the Convolutional Hierarchical Deep Learning Neural Network-Tensor Decomposition (C-HiDeNN-TD) method, which can directly obtain surrogate models by solving large-scale space-time PDE without generating any offline training data. We compare the performance of the proposed method against classical numerical methods for extremely large-scale systems.
+    </div>
+  </div>
+</div>
 
 <div class="pub-item">
   <img src="/images/paper-Benchmark study of melt pool and keyhole dynamics.png" alt="Benchmark study of melt pool and keyhole dynamics" class="pub-thumbnail" onerror="this.style.display='none'">
@@ -452,63 +512,6 @@
     </div>
     <div id="cu-cr-abstract" class="pub-abstract">
       Grain refinement and homogenization of Cr phase were achieved by laser surface melting (LSM) method, and the properties of Cu-Cr alloy were significantly improved. In this study, LSM of Cu-50Cr alloy (wt.%) was conducted with a high power density (10⁶–10⁷ W/cm²) laser beam, the microstructure and the properties of melt layer were investigated. The size of Cr phase was effectively refined from hundreds of micron scale to several micron scale, and the average size of Cr particles decreased to a few hundred nanometers. High cooling rate effectively inhibited coarsening effect on the Cr particles during liquid phase separation. Spherical Cr particles were dispersed in the melt layer with a thickness of 165 ± 20 μm. Microhardness was obviously enhanced and the maximum hardness was 232HV, which was 2.8 times that of the substrate. Arc duration of the LSM treated contacts increased up to 18%. The withstanding voltage of the fixed and the moving contact increased to 28.7% and 35.4%, respectively. The results show that LSM is an effective method to refine the microstructure of Cu-Cr alloy, and it is a promising modification method for electrical Cu-Cr vacuum contacts.
-    </div>
-  </div>
-</div>
-
-</div>
-
-<hr>
-<h2 id="Conference-Papers"><a href="#Conference-Papers" class="headerlink" title="Conference Papers"></a>Conference Papers</h2><div class="pub-section">
-
-<div class="year-header">2025</div>
-
-<div class="pub-item">
-  <img src="/images/OperatorLearning.png" alt="Paper thumbnail" class="pub-thumbnail" onerror="this.style.display='none'">
-  <div class="pub-content">
-    <div class="pub-title">Smooth and sparse latent dynamics in operator learning with jerk regularization</div>
-    <div class="pub-authors"><strong>Xie, X.</strong>, Mowlavi, S., & Benosman, M.</div>
-    <div><span class="pub-venue"><em>NeurIPS 2025 Workshop ML4PS</em></span> <span class="pub-year">2025</span></div>
-    <div class="pub-links">
-      <a href="https://arxiv.org/abs/2402.15636" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a>
-      <a href="#" class="pub-link abstract-toggle" onclick="toggleAbstract('operator-learning-abstract'); return false;"><i class="fas fa-align-left"></i> Abstract</a>
-    </div>
-    <div id="operator-learning-abstract" class="pub-abstract">
-      Spatiotemporal modeling is critical for understanding complex systems across various scientific and engineering disciplines, but governing equations are often not fully known or computationally intractable due to inherent system complexity. Data-driven reduced-order models (ROMs) offer a promising approach for fast and accurate spatiotemporal forecasting by computing solutions in a compressed latent space. However, these models often neglect temporal correlations between consecutive snapshots when constructing the latent space, leading to suboptimal compression, jagged latent trajectories, and limited extrapolation ability over time. To address these issues, this paper introduces a continuous operator learning framework that incorporates jerk regularization into the learning of the compressed latent space. This jerk regularization promotes smoothness and sparsity of latent space dynamics, which not only yields enhanced accuracy and convergence speed but also helps identify intrinsic latent space coordinates. Consisting of an implicit neural representation (INR)-based autoencoder and a neural ODE latent dynamics model, the framework allows for inference at any desired spatial or temporal resolution. The effectiveness of this framework is demonstrated through a two-dimensional unsteady flow problem governed by the Navier-Stokes equations, highlighting its potential to expedite high-fidelity simulations in various scientific and engineering applications.
-    </div>
-  </div>
-</div>
-
-<div class="pub-item">
-  <img src="/images/paper-INN TD.png" alt="Interpolating Neural Network-Tensor Decomposition" class="pub-thumbnail" onerror="this.style.display='none'">
-  <div class="pub-content">
-    <div class="pub-title">Interpolating Neural Network–Tensor Decomposition (INN-TD): a scalable and interpretable approach for large-scale physics-based problems</div>
-    <div class="pub-authors">Guo, J., <strong>Xie, X.</strong>, Park, C., Zhang, H., Politis, M., Domel, G., Hughes, T. J., & Liu, W. K.</div>
-    <div><span class="pub-venue"><em>International Conference on Machine Learning (ICML)</em></span> <span class="pub-year">2025</span></div>
-    <div class="pub-links">
-      <a href="https://arxiv.org/abs/2503.02041" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a>
-      <a href="#" class="pub-link abstract-toggle" onclick="toggleAbstract('inn-td-abstract'); return false;"><i class="fas fa-align-left"></i> Abstract</a>
-    </div>
-    <div id="inn-td-abstract" class="pub-abstract">
-      Deep learning has been extensively employed as a powerful function approximator for modeling physics-based problems described by partial differential equations (PDEs). Despite their popularity, standard deep learning models often demand prohibitively large computational resources and yield limited accuracy when scaling to large-scale, high-dimensional physical problems. Their black-box nature further hinders the application in industrial problems where interpretability and high precision are critical. To overcome these challenges, this paper introduces Interpolating Neural Network-Tensor Decomposition (INN-TD), a scalable and interpretable framework that has the merits of both machine learning and finite element methods for modeling large-scale physical systems. By integrating locally supported interpolation functions from finite element into the network architecture, INN-TD achieves a sparse learning structure with enhanced accuracy, faster training/solving speed, and reduced memory footprint. This makes it particularly effective for tackling large-scale high-dimensional parametric PDEs in training, solving, and inverse optimization tasks in physical problems where high precision is required.
-    </div>
-  </div>
-</div>
-
-<div class="year-header">2024</div>
-
-<div class="pub-item">
-  <img src="/images/paper-Chidenn-td.png" alt="Convolutional Hierarchical Deep Learning Neural Networks-Tensor Decomposition" class="pub-thumbnail" onerror="this.style.display='none'">
-  <div class="pub-content">
-    <div class="pub-title">Convolutional Hierarchical Deep Learning Neural Networks–Tensor Decomposition (C-HiDeNN-TD): a scalable surrogate modeling approach for large-scale physical systems</div>
-    <div class="pub-authors">Guo, J., Park, C., <strong>Xie, X.</strong>, Sang, Z., Wagner, G. J., & Liu, W. K.</div>
-    <div><span class="pub-venue"><em>NeurIPS 2024 Workshop D3S3</em></span> <span class="pub-year">2024</span></div>
-    <div class="pub-links">
-      <a href="https://arxiv.org/abs/2409.00329" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a>
-      <a href="#" class="pub-link abstract-toggle" onclick="toggleAbstract('chidenn-td-abstract'); return false;"><i class="fas fa-align-left"></i> Abstract</a>
-    </div>
-    <div id="chidenn-td-abstract" class="pub-abstract">
-      A common trend in simulation-driven engineering applications is the ever-increasing size and complexity of the problem, where classical numerical methods typically suffer from significant computational time and huge memory cost. Methods based on artificial intelligence have been extensively investigated to accelerate partial differential equations (PDE) solvers using data-driven surrogates. However, most data-driven surrogates require an extremely large amount of training data. In this paper, we propose the Convolutional Hierarchical Deep Learning Neural Network-Tensor Decomposition (C-HiDeNN-TD) method, which can directly obtain surrogate models by solving large-scale space-time PDE without generating any offline training data. We compare the performance of the proposed method against classical numerical methods for extremely large-scale systems.
     </div>
   </div>
 </div>
